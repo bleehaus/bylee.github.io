@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html class="wf-dblv-i4-active wf-dblv-i5-active wf-dblv-n4-active wf-dblv-n5-active wf-vkzk-n4-active wf-vkzk-n5-active wf-vkzk-n7-active wf-yyqq-i4-active wf-yyqq-i6-active wf-yyqq-n4-active wf-yyqq-n5-active wf-yyqq-n6-active wf-yyqq-n7-active wf-yyqq-n8-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/nr-1216.min.js"></script><script async="" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/google-analytics_analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="miles lee,washu,wustl,washington university in st louis,sam fox,sam fox school">
+      <meta name="description" content="Website remake for the St. Louis Queer+ Support Helpline improving access to information">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Miles Lee - SQSH Website Revamp">
+      <meta property="og:description" content="Website remake for the St. Louis Queer+ Support Helpline improving access to information">
+      <meta property="og:image" content="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63a26ff3-7baa-4ef1-b2fe-03bb8174c54b_rwc_0x0x3315x2210x3315.jpg?h=e5d2f5c276737cec3ba1a9442964c365">
+        <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/983fae17-2ff3-4346-8243-8ad84f425f9e_carw_1x1x32.png?h=3f91ef71ed99140263ea59549b2bbe0b">
+        <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/main.css" type="text/css">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/fdb77fc41f8fc28fa5c01274052e29fc1673042888.css" type="text/css">
+    <link rel="canonical" href="https://bylee.work/sqsh-site">
+      <title>Miles Lee - SQSH Website Revamp</title>
+    <script type="text/javascript" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/-NcbJ3-LIZeZjCpL2DLsm9RNzzp6oRa4w_6L3LRy9WqfezjffHYEBsJzwD9oF.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script><style type="text/css">@font-face{font-family:dblv;src:url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/330541/00000000000000007735943a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/l?subset_id=2&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/d?subset_id=2&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/a?subset_id=2&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/l?subset_id=2&fvd=n8&v=3) format("woff2"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/d?subset_id=2&fvd=n8&v=3) format("woff"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/a?subset_id=2&fvd=n8&v=3) format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header  js-fixed-nav" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="https://bylee.work/home" class="preserve-whitespace">MILES LEE</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5ec59a299ddb4c89ace3f6b57f8e131116f2df8f14ada54a80d98" data-hover-hint="pageHeader" data-hover-hint-id="p5ec59a299ddb4c89ace3f6b57f8e131116f2df8f14ada54a80d98">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">SQSH Website Revamp</h1>
+            <p class="description">Website remake for the St. Louis Queer+ Support Helpline improving access to information</p>
+            <div class="custom1 preserve-whitespace">Figma, Webflow, HTML, CSS, UIkit, Content Strategy, Information Architecture / 2020–present</div>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5ec59a299ddb4c89ace3f6b57f8e131116f2df8f14ada54a80d98">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62ba739a2e2196ec7babf63c8eec388c140ada9625f22c41a3e92" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  1
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="406.90157958688" style="width: 1103px; flex-grow: 406.902;" data-width="1920" data-height="1226">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_1920.png?h=93311f1c6ca4023a45672323fc9651be" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_600.png?h=d74ea49296a7b04a377fe23e3d4c10bf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_1200.png?h=f58bf8375dc6b6c40c202d51780eef38 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_1920.png?h=93311f1c6ca4023a45672323fc9651be 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_1920.png" srcset="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_600.png 600w, Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_1200.png 1200w, Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/4febb44e-7e50-4da5-92bf-ad8a461212d0_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:63.89751552795%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="406.90157958688" style="width: 1103px; flex-grow: 406.902;" data-width="1920" data-height="1226">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_1920.png?h=228e94c8649390fe5dc6cb69a15a495e" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_600.png?h=03bdc5c01336c88f2973c93b1e1ecb77 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_1200.png?h=0fdb6a2e261013f922a09ec3ddbd5a4e 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_1920.png?h=228e94c8649390fe5dc6cb69a15a495e 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_1920.png" srcset="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_600.png 600w, Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_1200.png 1200w, Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/ed7ea5a9-60ca-4be1-9c1a-cd3596cf0252_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:63.89751552795%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 40px;
+padding-bottom: px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><a href="http://thesqsh.org/" target="_blank">SQSH</a>,
+ or the St. Louis Queer+ Support Helpline, is a nonprofit organization 
+that aims to support the St. Louis LGBTQIA+ community via “free, 
+confidential, and identity-affirming emotional support, resources, and 
+referrals.”<br></div><div>I spearheaded the design and development for 
+one website revamp and three migrations from Google Sites to Webflow to a
+ web hosting service (HTML, CSS, JS) to Squarespace. I worked closely 
+with the Board of Directors to revamp information architecture and 
+expand content to ensure SQSH can best serve its community.<br></div><div><div class="sub-title">Project Brief<br></div><div><span style="font-family:yyqq; font-weight:600;">Challenge: </span>The
+ old website is hard to navigate, doesn’t follow best practices for 
+contemporary web design, and doesn’t represent SQSH as an organization.<br></div><div><span style="font-family:yyqq; font-weight:600;">Solution: </span>A
+ website, not hosted on Google Sites, with a revamped sitemap, content 
+architecture, and design system that better conveys SQSH’s brand and 
+mission.<br></div><div><span style="font-family:yyqq; font-weight:600;">Timeline:</span>
+ April 2020 to August 2020 (revamp and migration from Google Sites to 
+Webflow), September 2020 to May 2021 (migration to web host service, 
+maintenance), June 2021 to September 2021 (migration to Squarespace), 
+and September 2021 to present (maintenance).<br></div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m635f2c257f5ce376b1d55af6697d35789bc3a263252b7622de886" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.71428571429" style="width: 377.143px; flex-grow: 377.143;" data-width="900" data-height="525">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ad7b03c1-feba-4f7f-a601-9d2c29db95db_rw_1200.gif?h=5c890b96e414aa03e711566b196dedf2" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ad7b03c1-feba-4f7f-a601-9d2c29db95db_rw_600.gif?h=bd3bcb6c651ab6e297158e34ad2b35ca 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ad7b03c1-feba-4f7f-a601-9d2c29db95db_rw_1200.gif?h=5c890b96e414aa03e711566b196dedf2 900w," alt="Before" sizes="(max-width: 900px) 100vw, 900px">
+            <div class="grid__image-caption-lightbox">
+              <h6 class="grid__caption-text">Before</h6>
+            </div>
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Before" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ad7b03c1-feba-4f7f-a601-9d2c29db95db_rw_1200.gif?h=5c890b96e414aa03e711566b196dedf2" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ad7b03c1-feba-4f7f-a601-9d2c29db95db_rw_600.gif?h=bd3bcb6c651ab6e297158e34ad2b35ca 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ad7b03c1-feba-4f7f-a601-9d2c29db95db_rw_1200.gif?h=5c890b96e414aa03e711566b196dedf2 900w," sizes="571px" data-sizes="571px">
+        <div class="grid__image-caption">
+          <h6 class="grid__caption-text">Before</h6>
+        </div>
+      <span class="grid__item-filler" style="padding-bottom:58.333333333333%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="407.54716981132" style="width: 344.848px; flex-grow: 344.848;" data-width="1080" data-height="689">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f8bd4df8-84f3-4e22-8097-8cc059390112_rw_1200.gif?h=fc117432ad11c71f0fbb05beb04c5453" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f8bd4df8-84f3-4e22-8097-8cc059390112_rw_600.gif?h=47c245fc3a3d7c33666602df37f966c0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f8bd4df8-84f3-4e22-8097-8cc059390112_rw_1200.gif?h=fc117432ad11c71f0fbb05beb04c5453 1080w," alt="After" sizes="(max-width: 1080px) 100vw, 1080px">
+            <div class="grid__image-caption-lightbox">
+              <h6 class="grid__caption-text">After</h6>
+            </div>
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="After" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f8bd4df8-84f3-4e22-8097-8cc059390112_rw_1200.gif?h=fc117432ad11c71f0fbb05beb04c5453" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f8bd4df8-84f3-4e22-8097-8cc059390112_rw_600.gif?h=47c245fc3a3d7c33666602df37f966c0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f8bd4df8-84f3-4e22-8097-8cc059390112_rw_1200.gif?h=fc117432ad11c71f0fbb05beb04c5453 1080w," sizes="522px" data-sizes="522px">
+        <div class="grid__image-caption">
+          <h6 class="grid__caption-text">After</h6>
+        </div>
+      <span class="grid__item-filler" style="padding-bottom:63.796296296296%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">During
+ the Summer of 2019, I worked with Luka and the website team to launch 
+SQSH’s first site. They’d already built most of it in Google Sites. I’d 
+never worked with Google Sites and found it rudimentary and frustrating 
+to use. The original SQSH site wasn’t&nbsp;the greatest to read or 
+navigate. One year later in 2020, I re-joined the team to help with 
+building a complete revamp of the site, this time using <a href="http://webflow.io/" target="_blank">Webflow</a> instead of Google Sites. In the Spring, I built <a href="https://bleehaus.github.io/layout2020spring/layout-framework-implementation/final/index.html" target="_blank">a live prototype</a> using HTML, CSS, and the <a href="https://getuikit.com/" target="_blank">UIkit</a> framework&nbsp;to help with planning.<br></div><div style="text-align:left;">Since then, I’ve assisted with migrating the website from Webflow to a web host to Squarespace.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;" class="sub-title">Squarespace Site</div><div style="text-align:left;" class="main-text">September 2021–present. Built and hosted with Squarespace<br></div><div style="text-align:left;" class="main-text">I onboarded the Executive Director, volunteers, and staff onto Squarespace to empower them to upkeep the website.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m629e9570e10c977dc9a1b29c7b4271a71b5521cf4e864357d34dd" style="padding-top: 0px;
+padding-bottom: px;
+  width: 80%;
+  max-width: 800px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="407.54716981132" style="width: 266.473px; flex-grow: 266.473;" data-width="1080" data-height="689">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ee526dd6-379d-4a7c-953f-051fc4da8e5a_rw_1200.gif?h=4ee74acf2b421dc0cf37d1e88e019f22" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ee526dd6-379d-4a7c-953f-051fc4da8e5a_rw_600.gif?h=562e87506586d37ce7638b9a57b4b7f9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ee526dd6-379d-4a7c-953f-051fc4da8e5a_rw_1200.gif?h=4ee74acf2b421dc0cf37d1e88e019f22 1080w,"  sizes="(max-width: 1080px) 100vw, 1080px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ee526dd6-379d-4a7c-953f-051fc4da8e5a_rw_1200.gif?h=4ee74acf2b421dc0cf37d1e88e019f22" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ee526dd6-379d-4a7c-953f-051fc4da8e5a_rw_600.gif?h=562e87506586d37ce7638b9a57b4b7f9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ee526dd6-379d-4a7c-953f-051fc4da8e5a_rw_1200.gif?h=4ee74acf2b421dc0cf37d1e88e019f22 1080w," sizes="798px" data-sizes="798px">
+      <span class="grid__item-filler" style="padding-bottom:63.796296296296%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:center;" class="caption">Revamped SQSH site as of June 2022<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Web Host Site<br></div><div><div>January
+ 2021–September 2021. Built with HTML/CSS exported from Webflow and 
+hosted on a web host. I onboarded the Executive Director and volunteers 
+onto GitHub and explained best practices for code management.<br></div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62a196f20e5587c670ede0ceb69cb07e3458e3a82170b0781a51c" style="padding-top: px;
+padding-bottom: px;
+  width: 80%;
+  max-width: 800px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="428.33607907743" style="width: 280.066px; flex-grow: 280.066;" data-width="1000" data-height="607">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b4600339-9c17-4bfe-a972-91881ae3cf90_rw_1200.gif?h=d6d1dc77aad63c118f489c96b4ef6dc0" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b4600339-9c17-4bfe-a972-91881ae3cf90_rw_600.gif?h=186e3fcf00396e98a1faf2a6693adc31 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b4600339-9c17-4bfe-a972-91881ae3cf90_rw_1200.gif?h=d6d1dc77aad63c118f489c96b4ef6dc0 1000w,"  sizes="(max-width: 1000px) 100vw, 1000px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b4600339-9c17-4bfe-a972-91881ae3cf90_rw_1200.gif?h=d6d1dc77aad63c118f489c96b4ef6dc0" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b4600339-9c17-4bfe-a972-91881ae3cf90_rw_600.gif?h=186e3fcf00396e98a1faf2a6693adc31 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b4600339-9c17-4bfe-a972-91881ae3cf90_rw_1200.gif?h=d6d1dc77aad63c118f489c96b4ef6dc0 1000w," sizes="798px" data-sizes="798px">
+      <span class="grid__item-filler" style="padding-bottom:60.7%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: 30px;
+">
+  <div class="rich-text js-text-editable module-text"><div class="caption" style="text-align:center;">Revamped SQSH site as of January 2021<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m600a44d3849102a8baec1c19cddb506ddfccda1f7281f3d7db471" style="padding-top: 40px;
+padding-bottom: 0px;
+  width: 100%;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  2
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="428.08716707022" style="width: 548px; flex-grow: 428.087;" data-width="1920" data-height="1166">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_1920.png?h=fa1a8f86d2a0e2a95cde0833f612c05a" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_600.png?h=e3ba675e0da48f7c83b2bb07b7a4117c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_1200.png?h=12fc06dfba3d1414280c557c4cbb75a9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_1920.png?h=fa1a8f86d2a0e2a95cde0833f612c05a 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_1920.png?h=fa1a8f86d2a0e2a95cde0833f612c05a" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_600.png?h=e3ba675e0da48f7c83b2bb07b7a4117c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_1200.png?h=12fc06dfba3d1414280c557c4cbb75a9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76b076b1-a237-4f5b-904f-8e5c422ddfc4_rw_1920.png?h=fa1a8f86d2a0e2a95cde0833f612c05a 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:60.735294117647%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="428.08716707022" style="width: 548px; flex-grow: 428.087;" data-width="1920" data-height="1166">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_1920.png?h=953ffecaf35b5b1061d6c44fa13bcc2d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_600.png?h=575606dfc1bef231b27e849019331b58 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_1200.png?h=f4e01913c9e07b4f0826c7eb4c575c56 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_1920.png?h=953ffecaf35b5b1061d6c44fa13bcc2d 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_1920.png?h=953ffecaf35b5b1061d6c44fa13bcc2d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_600.png?h=575606dfc1bef231b27e849019331b58 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_1200.png?h=f4e01913c9e07b4f0826c7eb4c575c56 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fc699726-1e82-46a4-b175-bc4914e4b7c0_rw_1920.png?h=953ffecaf35b5b1061d6c44fa13bcc2d 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:60.735294117647%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="428.08716707022" style="width: 548px; flex-grow: 428.087;" data-width="1920" data-height="1166">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_1920.png?h=f690b370639196058942c08aa2c64de2" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_600.png?h=f29517ee1814cc6bc9c2a5c392163145 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_1200.png?h=4308c4b098bab9a12082ca3eba0aa1d0 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_1920.png?h=f690b370639196058942c08aa2c64de2 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_1920.png?h=f690b370639196058942c08aa2c64de2" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_600.png?h=f29517ee1814cc6bc9c2a5c392163145 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_1200.png?h=4308c4b098bab9a12082ca3eba0aa1d0 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/38626269-609b-48a1-9fa8-060b66732dde_rw_1920.png?h=f690b370639196058942c08aa2c64de2 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:60.735294117647%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="428.08716707022" style="width: 548px; flex-grow: 428.087;" data-width="1920" data-height="1166">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_1920.png?h=762dcdb44b840232d1c9f0127720a183" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_600.png?h=3551588c8506a0954fe10885ca7f132e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_1200.png?h=cbe9724bef00f929a18d2f56935cedeb 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_1920.png?h=762dcdb44b840232d1c9f0127720a183 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_1920.png?h=762dcdb44b840232d1c9f0127720a183" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_600.png?h=3551588c8506a0954fe10885ca7f132e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_1200.png?h=cbe9724bef00f929a18d2f56935cedeb 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d336c8e7-e95e-47a3-b3d0-44fca01fa724_rw_1920.png?h=762dcdb44b840232d1c9f0127720a183 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:60.735294117647%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align: left;" class="sub-title">Webflow Site<br></div><div style="text-align:left;" class="main-text">August 2020–January 2021. Built and hosted with Webflow<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62a2dab45d026804a199cea960fa452e192a07e44007f8f2e21ad" style="padding-top: px;
+padding-bottom: px;
+  width: 80%;
+  max-width: 800px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="419.91924629879" style="width: 274.563px; flex-grow: 274.563;" data-width="1200" data-height="743">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/95c3c7d8-4333-4423-bd6d-f0e661612066_rw_1200.gif?h=fbee0917cdb6a3b558af42bca61a024f" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/95c3c7d8-4333-4423-bd6d-f0e661612066_rw_600.gif?h=4263c1b1c30def4ab3c634e37d3d4ad6 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/95c3c7d8-4333-4423-bd6d-f0e661612066_rw_1200.gif?h=fbee0917cdb6a3b558af42bca61a024f 1200w,"  sizes="(max-width: 1200px) 100vw, 1200px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/95c3c7d8-4333-4423-bd6d-f0e661612066_rw_1200.gif?h=fbee0917cdb6a3b558af42bca61a024f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/95c3c7d8-4333-4423-bd6d-f0e661612066_rw_600.gif?h=4263c1b1c30def4ab3c634e37d3d4ad6 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/95c3c7d8-4333-4423-bd6d-f0e661612066_rw_1200.gif?h=fbee0917cdb6a3b558af42bca61a024f 1200w," sizes="798px" data-sizes="798px">
+      <span class="grid__item-filler" style="padding-bottom:61.916666666667%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: 40px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:center;" class="caption">Revamped SQSH site as of September 2020<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>We launched the <a href="https://www.thesqsh.org/index.html" target="_blank">SQSH site revamp</a>
+ in August 2020. Throughout the summer, I worked with the team to add 
+content and styling using Webflow. It was a long process to refine the 
+website, but I’m glad my prototype could help it along. As a team, we 
+re-structured the sitemap, collected and implemented two rounds of user 
+feedback, and improved accessibility (such as: adding “alt” text to 
+links, testing color contrast, adding a “leave page” button, and making 
+sure all elements are responsive).<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5f5aa3e3588758bb80be2bc39f8ddf1136e693c398dba148e6691" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="352.71623672231" style="width: 298.452px; flex-grow: 298.452;" data-width="1788" data-height="1318">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_1920.png?h=4fa2ceffd2f81ddd19d9bebb5af81c2c" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_600.png?h=ec2ad1f10c91095d715c66863d379719 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_1200.png?h=fe9705c65df59784faa7d36b3a9ce5f9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_1920.png?h=4fa2ceffd2f81ddd19d9bebb5af81c2c 1788w,"  sizes="(max-width: 1788px) 100vw, 1788px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_1920.png?h=4fa2ceffd2f81ddd19d9bebb5af81c2c" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_600.png?h=ec2ad1f10c91095d715c66863d379719 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_1200.png?h=fe9705c65df59784faa7d36b3a9ce5f9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a9bde014-2b2a-4190-9fbf-7aaf96fb4a55_rw_1920.png?h=4fa2ceffd2f81ddd19d9bebb5af81c2c 1788w," sizes="1103px" data-sizes="1103px">
+      <span class="grid__item-filler" style="padding-bottom:73.713646532438%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">“At
+ SQSH, we believe in using design as a tool to promote social justice 
+and increase our community’s access to resources. That’s why we 
+completely redesigned our website to better represent our organization, 
+mission, and services. Check it out today at&nbsp;thesqsh.org! We value 
+your feedback and welcome your comments in this thread. Alternatively, 
+email our SQSHWeb Team at&nbsp;sqshweb@gmail.com&nbsp;or fill out our 
+General Contact Form (linked in our website’s footer) if you’d like to 
+provide feedback privately!”&nbsp;<br></div><div style="text-align:right;">—SQSH website launch post on <a href="https://www.instagram.com/p/CEpdLfTD1fN/" target="_blank">Instagram</a>​​​​​​​</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Live prototype<br></div><div>April 2020. Built with HTML, CSS, UIkit</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62a1945eecef60c01499630710d91e26a56550b7474a29a24e2a8" style="padding-top: px;
+padding-bottom: px;
+  width: 80%;
+  max-width: 800px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.71428571429" style="width: 291.429px; flex-grow: 291.429;" data-width="900" data-height="525">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dbae8fdd-9a2a-4544-bb26-49a24b4ec891_rw_1200.gif?h=92edc549a24ab111467a1453c4bfc2e9" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dbae8fdd-9a2a-4544-bb26-49a24b4ec891_rw_600.gif?h=877f85cd19cf487c4e9afc0ee61c914a 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dbae8fdd-9a2a-4544-bb26-49a24b4ec891_rw_1200.gif?h=92edc549a24ab111467a1453c4bfc2e9 900w,"  sizes="(max-width: 900px) 100vw, 900px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dbae8fdd-9a2a-4544-bb26-49a24b4ec891_rw_1200.gif?h=92edc549a24ab111467a1453c4bfc2e9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dbae8fdd-9a2a-4544-bb26-49a24b4ec891_rw_600.gif?h=877f85cd19cf487c4e9afc0ee61c914a 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dbae8fdd-9a2a-4544-bb26-49a24b4ec891_rw_1200.gif?h=92edc549a24ab111467a1453c4bfc2e9 900w," sizes="798px" data-sizes="798px">
+      <span class="grid__item-filler" style="padding-bottom:58.333333333333%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:center;" class="caption">My prototype remake of the SQSH site as of May 2020<br></div></div>
+</div>
+
+              
+              
+              
+              
+              <div class="js-project-module project-module module button project-module-button" data-id="m5f5aa2116885fd98df3962ecd7805c53b1f59dbca1065a9f79738" style=" padding-top: px;
+padding-bottom: px;
+">
+    <div class="button-container" style="">
+      
+      <a href="https://bleehaus.github.io/layout2020spring/layout-framework-implementation/final/index.html" target="_blank" class="button-module preserve-whitespace--nowrap">View prototype</a>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5ec5bb77df61507acc5c4841aaf70844d8f25874430fb1d5b3b5d" style="padding-top: 20px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  2
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.62719812427" style="width: 546px; flex-grow: 445.627;" data-width="1920" data-height="1120">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_1920.png?h=ffccd99a85dfeccfbb318ec81ba4e4ad" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_600.png?h=6523d7681f755ebb815c2050f8283384 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_1200.png?h=4531beaad7b031aef56229a3daea44aa 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_1920.png?h=ffccd99a85dfeccfbb318ec81ba4e4ad 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_1920.png?h=ffccd99a85dfeccfbb318ec81ba4e4ad" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_600.png?h=6523d7681f755ebb815c2050f8283384 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_1200.png?h=4531beaad7b031aef56229a3daea44aa 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bb0d4ccf-83e4-43b7-9bf5-479de968e52f_rw_1920.png?h=ffccd99a85dfeccfbb318ec81ba4e4ad 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.344733242134%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.01758499414" style="width: 546px; flex-grow: 445.018;" data-width="1920" data-height="1121">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_1920.png?h=e15418dc90b34f7b990b022fbd553ae4" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_600.png?h=d124ecb2cb5ff97224ef8bba5456cceb 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_1200.png?h=28e7a97771709fec6a6dd112ca5c622f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_1920.png?h=e15418dc90b34f7b990b022fbd553ae4 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_1920.png?h=e15418dc90b34f7b990b022fbd553ae4" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_600.png?h=d124ecb2cb5ff97224ef8bba5456cceb 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_1200.png?h=28e7a97771709fec6a6dd112ca5c622f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/13dc52f9-be55-40a5-835a-cf9df53bace4_rw_1920.png?h=e15418dc90b34f7b990b022fbd553ae4 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.424657534247%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.01758499414" style="width: 546px; flex-grow: 445.018;" data-width="1920" data-height="1121">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_1920.png?h=b4e3bcc9ed49cc48290f749392657541" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_600.png?h=ac564420df6e9fab28267ffb05e2fb4b 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_1200.png?h=f1c6b9e40e3da0d8e206117f0bd59bd6 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_1920.png?h=b4e3bcc9ed49cc48290f749392657541 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_1920.png?h=b4e3bcc9ed49cc48290f749392657541" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_600.png?h=ac564420df6e9fab28267ffb05e2fb4b 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_1200.png?h=f1c6b9e40e3da0d8e206117f0bd59bd6 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2899359f-5d12-449e-9cc9-895193ba679c_rw_1920.png?h=b4e3bcc9ed49cc48290f749392657541 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.424657534247%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.01758499414" style="width: 546px; flex-grow: 445.018;" data-width="1920" data-height="1121">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_1920.png?h=68c735df9d28a6a4dbc8b10fbd195332" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_600.png?h=93d4fd940f132a9d74854b2b2ee43cb5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_1200.png?h=e4187003e5587351d4b567ab0e94c224 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_1920.png?h=68c735df9d28a6a4dbc8b10fbd195332 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_1920.png?h=68c735df9d28a6a4dbc8b10fbd195332" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_600.png?h=93d4fd940f132a9d74854b2b2ee43cb5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_1200.png?h=e4187003e5587351d4b567ab0e94c224 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fdd0c263-a0d1-455b-887c-e25d7ced2406_rw_1920.png?h=68c735df9d28a6a4dbc8b10fbd195332 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.424657534247%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5ec5aa6ee50e22a96b096299af426679de92986eb58a98705e403" style="padding-top: 40px;
+padding-bottom: 0px;
+  width: 25%;
+  max-width: 400px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="133.7807606264" style="width: 46.3087px; flex-grow: 46.3087;" data-width="460" data-height="894">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e597be56-7ba4-4619-9bca-9d47983e8375_rw_600.gif?h=6f9874a58bc91dee6e7402bd86f06d25" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e597be56-7ba4-4619-9bca-9d47983e8375_rw_600.gif?h=6f9874a58bc91dee6e7402bd86f06d25 460w,"  sizes="(max-width: 460px) 100vw, 460px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e597be56-7ba4-4619-9bca-9d47983e8375_rw_600.gif?h=6f9874a58bc91dee6e7402bd86f06d25" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e597be56-7ba4-4619-9bca-9d47983e8375_rw_600.gif?h=6f9874a58bc91dee6e7402bd86f06d25 460w," sizes="276px" data-sizes="276px">
+      <span class="grid__item-filler" style="padding-bottom:194.34782608696%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:center;" class="caption">My mock remake of the SQSH site as of May 2020<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Google Sites<br></div><div><div>Summer 2019–August 2020. Built and hosted with Google Sites. Pre-revamp<br></div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62a196c969576eebea6c05f238dd8793c7f097cdf701fe4c25f22" style="padding-top: px;
+padding-bottom: px;
+  width: 80%;
+  max-width: 800px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="445.71428571429" style="width: 291.429px; flex-grow: 291.429;" data-width="900" data-height="525">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0e294d43-d1b8-4381-8da4-8bdb140dbbe5_rw_1200.gif?h=1b510d76ab76c1b15c1422aab2b4f4f8" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0e294d43-d1b8-4381-8da4-8bdb140dbbe5_rw_600.gif?h=76344ef3380a17bef6bc0f2ae7806200 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0e294d43-d1b8-4381-8da4-8bdb140dbbe5_rw_1200.gif?h=1b510d76ab76c1b15c1422aab2b4f4f8 900w,"  sizes="(max-width: 900px) 100vw, 900px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0e294d43-d1b8-4381-8da4-8bdb140dbbe5_rw_1200.gif?h=1b510d76ab76c1b15c1422aab2b4f4f8" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0e294d43-d1b8-4381-8da4-8bdb140dbbe5_rw_600.gif?h=76344ef3380a17bef6bc0f2ae7806200 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0e294d43-d1b8-4381-8da4-8bdb140dbbe5_rw_1200.gif?h=1b510d76ab76c1b15c1422aab2b4f4f8 900w," sizes="798px" data-sizes="798px">
+      <span class="grid__item-filler" style="padding-bottom:58.333333333333%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:center;" class="caption">Old SQSH site as of May 2020<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>The Google Sites&nbsp;site had a lot of different information that could be better presented using&nbsp;<a href="https://getuikit.com/docs/introduction">UIkit elements</a>&nbsp;such
+ as Accordion (for “How to use the Helpline”), Navbar (for the 
+navigation), Card (for team members and/or the FAQ). On the old Google 
+Site, information is hard to read and navigate. Much of the text is 
+centered, which isn’t good for legibility either.</div><div style="text-align:left;">The
+ Summer 2019 web team also grappled with making the site responsive 
+(mobile-friendly), which they began considering&nbsp;too late in the 
+process. In my prototype, I wanted to pay close attention to 
+responsiveness, accessibility, functionality, and overall visuals. SQSH 
+is an important resource that deserves a better website.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div><div class="sub-title">Background Generator<br></div><div>May 2020<br></div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module" style="padding-top: px;
+padding-bottom: px;
+  width: 80%;
+  max-width: 800px;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23dafb3c-77f4-4526-ba83-da985c4b1420.gif?h=353302c6282ac7b29a9c8e2a2233d64f">
+           <img class="js-lazy e2e-site-project-module-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23dafb3c-77f4-4526-ba83-da985c4b1420_rw_1200.gif?h=2ad6d318c422d415f289ae98d2e2a3c0" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23dafb3c-77f4-4526-ba83-da985c4b1420_rw_600.gif?h=92ad5c170d6e58e450882c86cc9058d4 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23dafb3c-77f4-4526-ba83-da985c4b1420_rw_1200.gif?h=2ad6d318c422d415f289ae98d2e2a3c0 800w," data-sizes="(max-width: 800px) 100vw, 800px" style="padding-bottom: 102.83%; background: rgba(0, 0, 0, 0.03)" width="800" height="0">
+     </div>
+  
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>When I 
+started to build the site, the web team was discussing what imagery and 
+visuals we could use to liven up the new site. Ideally, the imagery 
+would be quickly and easily made but still visually interesting. I was 
+concurrently taking <a href="https://benkiel.com/" target="_blank">Ben Kiel</a>'s Programming Design course, in which we created visuals using Python in <a href="https://www.drawbot.com/index.html" target="_blank">DrawBot</a>. Inspired by designers like <a href="http://www.andyclymer.com/" target="_blank">Andy Clymer</a> and <a href="https://agyei.design/" target="_blank">Agyei Archer</a>,
+ I&nbsp;wanted to see if I could utilize DrawBot to create an 
+infinitely-varying yet similar set of graphics to use as backgrounds or 
+images on the site.</div><div>I created an easy-to-use programmed background generator for SQSH PR materials.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62ba95cff13f94cb965bdd8df4e9804c03c405e370946869a7257" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  2
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="415.64383561644" style="width: 546px; flex-grow: 415.644;" data-width="1920" data-height="1201">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_1920.png?h=0607101fb5e51e84f8d96c7ea8d3896c" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_600.png?h=4325b9edbf555a906e3081a9f9918047 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_1200.png?h=823cd61bc671350cef0de379790ed43d 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_1920.png?h=0607101fb5e51e84f8d96c7ea8d3896c 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_1920.png?h=0607101fb5e51e84f8d96c7ea8d3896c" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_600.png?h=4325b9edbf555a906e3081a9f9918047 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_1200.png?h=823cd61bc671350cef0de379790ed43d 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5ba16aeb-0e76-4802-851c-36a06ce8ef77_rw_1920.png?h=0607101fb5e51e84f8d96c7ea8d3896c 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:62.553556126821%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="415.64383561644" style="width: 546px; flex-grow: 415.644;" data-width="1920" data-height="1201">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_1920.png?h=dc181bd515803ab1726f9d5101d7bb78" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_600.png?h=d3aab2d59a802fe6f971f68564fadbce 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_1200.png?h=2abc23aecf93a7cf9b283ea35f6eeee1 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_1920.png?h=dc181bd515803ab1726f9d5101d7bb78 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_1920.png?h=dc181bd515803ab1726f9d5101d7bb78" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_600.png?h=d3aab2d59a802fe6f971f68564fadbce 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_1200.png?h=2abc23aecf93a7cf9b283ea35f6eeee1 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/703fbcc9-bdc8-4046-9ab4-5884af807ec7_rw_1920.png?h=dc181bd515803ab1726f9d5101d7bb78 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:62.553556126821%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="415.64383561644" style="width: 546px; flex-grow: 415.644;" data-width="1920" data-height="1201">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_1920.png?h=cee0bf7261b96206f2050bff9bce7320" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_600.png?h=981952232fc42ed97f0f674ae3e29e11 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_1200.png?h=3c10b248882a51a1735d1f68c1ef75c2 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_1920.png?h=cee0bf7261b96206f2050bff9bce7320 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_1920.png?h=cee0bf7261b96206f2050bff9bce7320" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_600.png?h=981952232fc42ed97f0f674ae3e29e11 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_1200.png?h=3c10b248882a51a1735d1f68c1ef75c2 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b75433a7-3abf-4820-801f-1934f7cc705f_rw_1920.png?h=cee0bf7261b96206f2050bff9bce7320 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:62.553556126821%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="415.64383561644" style="width: 546px; flex-grow: 415.644;" data-width="1920" data-height="1201">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_1920.png?h=bae6dccc81b8994785b73b982c185ded" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_600.png?h=36bc102905e560ca0e7fcc9ec38b6053 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_1200.png?h=e360b7913d5dd6ea540cb1ed1a8f44b0 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_1920.png?h=bae6dccc81b8994785b73b982c185ded 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_1920.png?h=bae6dccc81b8994785b73b982c185ded" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_600.png?h=36bc102905e560ca0e7fcc9ec38b6053 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_1200.png?h=e360b7913d5dd6ea540cb1ed1a8f44b0 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e296b62f-ca2e-48ff-ae97-401d4ae4647a_rw_1920.png?h=bae6dccc81b8994785b73b982c185ded 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:62.553556126821%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="415.64383561644" style="width: 546px; flex-grow: 415.644;" data-width="1920" data-height="1201">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_1920.png?h=5300ad7d31ea2e58c490e254f7ac11ac" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_600.png?h=a21cc6392e7434919465f2310bea4bb7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_1200.png?h=310cde54706481e23e0aa52332bd15f1 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_1920.png?h=5300ad7d31ea2e58c490e254f7ac11ac 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_1920.png?h=5300ad7d31ea2e58c490e254f7ac11ac" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_600.png?h=a21cc6392e7434919465f2310bea4bb7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_1200.png?h=310cde54706481e23e0aa52332bd15f1 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/feb64b23-4052-4b09-a495-ffd88f351229_rw_1920.png?h=5300ad7d31ea2e58c490e254f7ac11ac 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:62.553556126821%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="415.64383561644" style="width: 546px; flex-grow: 415.644;" data-width="1920" data-height="1201">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_1920.png?h=0453ee2f7286915f3619934797855c34" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_600.png?h=c82913f80b93d099eb7534d6eebb235f 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_1200.png?h=295fe5ba42fae358c9eefaa1240fbc6e 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_1920.png?h=0453ee2f7286915f3619934797855c34 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_1920.png?h=0453ee2f7286915f3619934797855c34" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_600.png?h=c82913f80b93d099eb7534d6eebb235f 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_1200.png?h=295fe5ba42fae358c9eefaa1240fbc6e 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd9f7d89-b31d-4f36-9f0b-265d97fd7c8a_rw_1920.png?h=0453ee2f7286915f3619934797855c34 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:62.553556126821%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="caption">def generateBG():<br>&nbsp;&nbsp;&nbsp; fill(*randColor)<br>&nbsp;&nbsp;&nbsp; rect(0, 0, width(), height())<br><br>def generateCircle1():<br>&nbsp;&nbsp;&nbsp; color1, vals1 = random.choice(list(colors.items()))<br>&nbsp;&nbsp;&nbsp; r1, g1, b1 = vals1<br>&nbsp;&nbsp;&nbsp; print("circle 1 is " + color1)<br>&nbsp;&nbsp;&nbsp; r1 = int(r1)/255<br>&nbsp;&nbsp;&nbsp; g1 = int(g1)/255<br>&nbsp;&nbsp;&nbsp; b1 = int(b1)/255<br>&nbsp;&nbsp;&nbsp; realVals = (r1, g1, b1)<br>&nbsp;&nbsp;&nbsp; fill(r1, g1, b1, random.choice(opacityList))<br>&nbsp;&nbsp;&nbsp; oval(random.choice(leftRangeArray), random.choice(topRangeArray), circleSize, circleSize)<br><br>def generateCircle2():<br>&nbsp;&nbsp;&nbsp; color1, vals1 = random.choice(list(colors.items()))<br>&nbsp;&nbsp;&nbsp; r1, g1, b1 = vals1<br>&nbsp;&nbsp;&nbsp; print("circle 2 is " + color1)<br>&nbsp;&nbsp;&nbsp; r1 = int(r1)/255<br>&nbsp;&nbsp;&nbsp; g1 = int(g1)/255<br>&nbsp;&nbsp;&nbsp; b1 = int(b1)/255<br>&nbsp;&nbsp;&nbsp; fill(r1, g1, b1, random.choice(opacityList))<br>&nbsp;&nbsp;&nbsp; oval(random.choice(rightRangeArray), random.choice(btmRangeArray), circleSize, circleSize)<br><br>def generateCircle3():<br>&nbsp;&nbsp;&nbsp; color1, vals1 = random.choice(list(colors.items()))<br>&nbsp;&nbsp;&nbsp; r1, g1, b1 = vals1<br>&nbsp;&nbsp;&nbsp; print("circle 3 is " + color1)<br>&nbsp;&nbsp;&nbsp; r1 = int(r1)/255<br>&nbsp;&nbsp;&nbsp; g1 = int(g1)/255<br>&nbsp;&nbsp;&nbsp; b1 = int(b1)/255<br>&nbsp;&nbsp;&nbsp; realVals = (r1, g1, b1)<br>&nbsp;&nbsp;&nbsp; fill(r1, g1, b1, random.choice(opacityList))<br>&nbsp;&nbsp;&nbsp; oval(random.choice(xmidRangeArray), random.choice(ymidRangeArray), circleSize, circleSize)<br><br>generateBG()<br>generateCircle1()<br>generateCircle2()<br>generateCircle3()<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62ba71b1a55a926810506f1be766f0c14fb7b4cb8220052e8ac3c" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  4
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="468.31901840491" style="width: 268px; flex-grow: 468.319;" data-width="1920" data-height="1065">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_1920.png?h=dd4af4b9a954b199d09abc049db9dbc7" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_600.png?h=531ad2b88fbf124e6181b55ce345a125 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_1200.png?h=2d65187c482523aba651ffc039409566 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_1920.png?h=dd4af4b9a954b199d09abc049db9dbc7 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_1920.png?h=dd4af4b9a954b199d09abc049db9dbc7" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_600.png?h=531ad2b88fbf124e6181b55ce345a125 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_1200.png?h=2d65187c482523aba651ffc039409566 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ba26fc8-9431-4f3d-8bf3-a0304cd5a6fe_rw_1920.png?h=dd4af4b9a954b199d09abc049db9dbc7 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.517711171662%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="467.17258261934" style="width: 268px; flex-grow: 467.173;" data-width="1920" data-height="1068">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_1920.png?h=07e0e8b26cf961d4289851840b8ae960" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_600.png?h=9bcce74277f72d80cd8e40b533e0bbd7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_1200.png?h=4fc3669bf355d1f86630776f8800b6bb 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_1920.png?h=07e0e8b26cf961d4289851840b8ae960 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_1920.png?h=07e0e8b26cf961d4289851840b8ae960" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_600.png?h=9bcce74277f72d80cd8e40b533e0bbd7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_1200.png?h=4fc3669bf355d1f86630776f8800b6bb 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9e872cd6-3d65-4138-84a3-eba96fd5294f_rw_1920.png?h=07e0e8b26cf961d4289851840b8ae960 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.653950953678%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="467.17258261934" style="width: 268px; flex-grow: 467.173;" data-width="1920" data-height="1068">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_1920.png?h=22afa75a90297edd3bbe06ebc84377d7" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_600.png?h=0ef48ad82427648112c2ca5c13f3a121 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_1200.png?h=2ba605d41ae763805dfde1d707c409ab 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_1920.png?h=22afa75a90297edd3bbe06ebc84377d7 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_1920.png?h=22afa75a90297edd3bbe06ebc84377d7" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_600.png?h=0ef48ad82427648112c2ca5c13f3a121 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_1200.png?h=2ba605d41ae763805dfde1d707c409ab 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/bace0e82-6f67-495e-9809-1726f5fc8da4_rw_1920.png?h=22afa75a90297edd3bbe06ebc84377d7 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.653950953678%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="467.17258261934" style="width: 268px; flex-grow: 467.173;" data-width="1920" data-height="1068">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_1920.png?h=5ac34cdf52c42739207fee23df9aad70" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_600.png?h=e5274d47505ff2706960a15d80c79d62 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_1200.png?h=579850965ff874e8229acea24eaf258b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_1920.png?h=5ac34cdf52c42739207fee23df9aad70 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_1920.png?h=5ac34cdf52c42739207fee23df9aad70" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_600.png?h=e5274d47505ff2706960a15d80c79d62 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_1200.png?h=579850965ff874e8229acea24eaf258b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f133bf39-0e5b-4a3c-ba30-cc36b95c74eb_rw_1920.png?h=5ac34cdf52c42739207fee23df9aad70 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.653950953678%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="467.17258261934" style="width: 268px; flex-grow: 467.173;" data-width="1920" data-height="1068">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_1920.png?h=624502be54553076d322abbe0e25919a" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_600.png?h=55b93bacf9a0e38b18eae58a12b0b4d5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_1200.png?h=d7796fb954a7922401947da6e044e96b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_1920.png?h=624502be54553076d322abbe0e25919a 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_1920.png?h=624502be54553076d322abbe0e25919a" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_600.png?h=55b93bacf9a0e38b18eae58a12b0b4d5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_1200.png?h=d7796fb954a7922401947da6e044e96b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b2462fa-f5b2-49f8-9989-801ffec403b3_rw_1920.png?h=624502be54553076d322abbe0e25919a 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.653950953678%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="467.17258261934" style="width: 268px; flex-grow: 467.173;" data-width="1920" data-height="1068">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_1920.png?h=1e6b630be13902ababce4155dca709c9" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_600.png?h=10eff4787c14440264457c9a611c93af 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_1200.png?h=d292b08097cf36d4188b76d70173b5af 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_1920.png?h=1e6b630be13902ababce4155dca709c9 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_1920.png?h=1e6b630be13902ababce4155dca709c9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_600.png?h=10eff4787c14440264457c9a611c93af 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_1200.png?h=d292b08097cf36d4188b76d70173b5af 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b19e01d-4cb2-453f-b602-69ebf3979844_rw_1920.png?h=1e6b630be13902ababce4155dca709c9 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.653950953678%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="467.17258261934" style="width: 268px; flex-grow: 467.173;" data-width="1920" data-height="1068">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_1920.png?h=230575d95a2f08ffa05dc37cd88538a5" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_600.png?h=97825ff64e940c7b47b01a1776b11ebf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_1200.png?h=1a0dfabd2d18641d01b06335d2c03da4 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_1920.png?h=230575d95a2f08ffa05dc37cd88538a5 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_1920.png?h=230575d95a2f08ffa05dc37cd88538a5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_600.png?h=97825ff64e940c7b47b01a1776b11ebf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_1200.png?h=1a0dfabd2d18641d01b06335d2c03da4 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1b267661-06e0-4147-a61f-079e1af7d905_rw_1920.png?h=230575d95a2f08ffa05dc37cd88538a5 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.653950953678%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="468.31901840491" style="width: 268px; flex-grow: 468.319;" data-width="1920" data-height="1065">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_1920.png?h=c6f29440bd95736222b7cd0f0a078f37" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_600.png?h=1bac18164f30a3c30738359550f16c40 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_1200.png?h=319421e1c8c9276250db54e96057dd9f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_1920.png?h=c6f29440bd95736222b7cd0f0a078f37 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_1920.png?h=c6f29440bd95736222b7cd0f0a078f37" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_600.png?h=1bac18164f30a3c30738359550f16c40 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_1200.png?h=319421e1c8c9276250db54e96057dd9f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8eb4bc69-83b6-433f-b4f8-57e0912430f6_rw_1920.png?h=c6f29440bd95736222b7cd0f0a078f37 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:55.517711171662%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text" style="padding-top: 10px;
+padding-bottom: 0px;
+">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:center;" class="caption">The tops of select pages of my prototype of the SQSH site. Built with HTML, CSS, and UIkit<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>I handed over
+ my generator (with instructions)&nbsp;to the Social Media Coordinator 
+who, to my relief, was able to use it for social media posts.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              <div class="project-module module image project-module-image js-js-project-module" style="padding-top: 0px;
+padding-bottom: 20px;
+  width: 80%;
+  max-width: 800px;
+">
+
+  
+
+  
+     <div class="js-lightbox lightbox-link" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9157ec52-1758-4481-ad5c-08922154d250.gif?h=9307f57ac13cfdaf6fe5aebd978d467b">
+           <img class="js-lazy e2e-site-project-module-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9157ec52-1758-4481-ad5c-08922154d250_rw_1920.gif?h=cb31be81e7a6653699c11ae099d9bea1" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9157ec52-1758-4481-ad5c-08922154d250_rw_600.gif?h=746ff752f76c01fec8fc0848af4123d1 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9157ec52-1758-4481-ad5c-08922154d250_rw_1200.gif?h=6a1cc8d704bfaf875669de3a33c3dc7f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9157ec52-1758-4481-ad5c-08922154d250_rw_1920.gif?h=cb31be81e7a6653699c11ae099d9bea1 1920w," data-sizes="(max-width: 1920px) 100vw, 1920px" style="padding-bottom: 74.17%; background: rgba(0, 0, 0, 0.03)" width="1920" height="0">
+     </div>
+  
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>The SQSH 
+Design team has largely moved on to manually creating backgrounds with 
+two or three overlapping circles (which can be blurred to create 
+gradients), but I’m happy that my background generator opened up that 
+conversation!</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m62ba7351394bca86e945dcd82b11c0345580daaed674671cb90b1" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  1
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="390.18335684062" style="width: 1105px; flex-grow: 390.183;" data-width="1920" data-height="1279">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_1920.png?h=730c6b2f73b49cadda548a7e70d18819" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_600.png?h=bcddb0fde2213dfe1945dc5bf96aa4be 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_1200.png?h=a984dcef39fb32c0201b9f62c46fc2a1 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_1920.png?h=730c6b2f73b49cadda548a7e70d18819 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_1920.png?h=730c6b2f73b49cadda548a7e70d18819" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_600.png?h=bcddb0fde2213dfe1945dc5bf96aa4be 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_1200.png?h=a984dcef39fb32c0201b9f62c46fc2a1 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/beda0ee6-de11-4961-93a1-e9e619883303_rw_1920.png?h=730c6b2f73b49cadda548a7e70d18819 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:66.635338345865%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="390.18335684062" style="width: 1105px; flex-grow: 390.183;" data-width="1920" data-height="1279">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_1920.png?h=a85255f95dfe5a9885461a1d9cd2f685" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_600.png?h=1c35a67d74fc2f128b5af5b87d55aa23 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_1200.png?h=fbbf02a0dde5b7cbaf643eda79061754 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_1920.png?h=a85255f95dfe5a9885461a1d9cd2f685 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_1920.png?h=a85255f95dfe5a9885461a1d9cd2f685" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_600.png?h=1c35a67d74fc2f128b5af5b87d55aa23 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_1200.png?h=fbbf02a0dde5b7cbaf643eda79061754 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f67c35f3-08ad-411c-852b-ada6723e4f36_rw_1920.png?h=a85255f95dfe5a9885461a1d9cd2f685 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:66.635338345865%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Impact<br></div><div>“Your
+ website is actually really great—looks really good, great 
+functionality, user experience, etc...I think your website is possibly 
+your biggest asset” <br></div><div style="text-align:right;">—<a href="https://www.thehivemarketingcollective.com/" target="_blank">The Hive Marketing Collective</a><br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Attribution</div><div>Montserrat designed by Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly</div><div>Edwin Q set up the site on Webflow, made base structure, and implemented content and feedback.</div><div>Luka Cai provided content and constant user feedback.</div><div>Lisa Bergman provided user feedback and set up user testing.</div><div>Abram Siemsen provided mentorship as I developed&nbsp;my prototype.<br></div></div>
+</div>
+
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">Want to see more?</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/switch" data-context="pages" data-identity="id:p5fc1cc231e3dede6208b834d7a67ac15f4c310a1aee1a4590fd7d">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x1664.gif?h=147a03490d2870928c05aab49e0dc3ef" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x640.gif?h=c7edb82cc3ac5c1974ae80f38024dc47 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x1280.gif?h=ae947640c227cb4cdd873b14b4c29de2 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x1366.gif?h=825baae5dd552dfbaf490626b6a2a4a1 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x1664.gif?h=147a03490d2870928c05aab49e0dc3ef 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x1664.gif?h=147a03490d2870928c05aab49e0dc3ef 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/e50a4892-5bb4-42fd-82b7-402775e45b38_rwc_0x0x1664x998x1664.gif?h=147a03490d2870928c05aab49e0dc3ef 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x1904.gif?h=e8c5f774fe7828d25e12a3ad0148fbb8" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x640.gif?h=1aff9c40142bd119de7a86110ad9c2c2 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x1280.gif?h=5b223a15b7f1cffd61dbdf0b116a57a9 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x1366.gif?h=600de8d9a3fa9910098d3825d1ab1245 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x1920.gif?h=24d4b5bfe210dd5f1c1ff0809fa81bc8 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x1904.gif?h=e8c5f774fe7828d25e12a3ad0148fbb8 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/78e247f2-798a-4718-bf18-257810277a80_rwc_0x0x1904x1359x1904.gif?h=e8c5f774fe7828d25e12a3ad0148fbb8 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Switch</div>
+                            <div class="custom2 preserve-whitespace">Type specimen website / Fall 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/venmo-together" data-context="pages" data-identity="id:p63419a698985bc74aaf83feced23b943fafd2ff36319cf8cbf8fc">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x2533.png?h=589d2608452fc94503afbbdef8ef2bf3" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x640.png?h=8bba064054c11997b43901f60c104a3e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x1280.png?h=74bc4bb157040999e22ae36e269d9c11 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x1366.png?h=ce91afe9feb57f3cb4e45f1ecca48523 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x1920.png?h=f30413d24361e359c39f4308b95dd093 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x2533.png?h=589d2608452fc94503afbbdef8ef2bf3 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa96cdeb-ba39-444a-89cb-9796a8463f22_rwc_0x0x2533x1520x2533.png?h=589d2608452fc94503afbbdef8ef2bf3 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x1666.gif?h=36c8b36914eaa004c37088a965ccae82" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x640.gif?h=7f03d5cc4c0818bbb24ba967be88b920 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x1280.gif?h=effe08de754cc039951c72945e98b4f0 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x1366.gif?h=c5055b5f229a02c693545f9781cd2a1b 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x1666.gif?h=36c8b36914eaa004c37088a965ccae82 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x1666.gif?h=36c8b36914eaa004c37088a965ccae82 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/441b1193-e75b-4102-9643-14413e2ca217_rwc_0x0x1666x1000x1666.gif?h=36c8b36914eaa004c37088a965ccae82 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Case Study: Venmo Together</div>
+                            <div class="custom2 preserve-whitespace">UX Research, Roadmapping / Spring 2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/birthday-zoomers" data-context="pages" data-identity="id:p5f5a6f8435ff884bcf9cbac52a6d59833a7988e231fa8558cbc44">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x1561.png?h=0284ba6c41ec12ea1664af8f62f2af15" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x640.png?h=28cc0d76631d6b49b83d6c6295ed6c09 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x1280.png?h=353f40525cc72a865e16c61025881335 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x1366.png?h=e4b8aeabfb4fb7668b249d89e9a1e16a 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x1920.png?h=c1501d525c9feb6ec060d30166ad5129 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x1561.png?h=0284ba6c41ec12ea1664af8f62f2af15 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/958b01c6-d1b7-484a-a282-f19a1ea2e5b9_rwc_255x0x1561x937x1561.png?h=0284ba6c41ec12ea1664af8f62f2af15 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x1863.png?h=1ca4d5156b0a265459deb2275b9dc28f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x640.png?h=87c28ec1106e32e9f26689e566a4226d 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x1280.png?h=cc136e6097df1b0e7ae09fda4cf41fe2 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x1366.png?h=16a2c827cb84071b5d2c53b307194df3 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x1920.png?h=11c7c5c0ec0df8ceec9e5cd3c5da82b7 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x1863.png?h=1ca4d5156b0a265459deb2275b9dc28f 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2b32c45d-2c39-42b7-b5f0-6d77bd611376_rwc_25x0x1863x1118x1863.png?h=1ca4d5156b0a265459deb2275b9dc28f 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Birthday Zoomers</div>
+                            <div class="custom2 preserve-whitespace">Machine learning website / Spring 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/capstone" data-context="pages" data-identity="id:p6080b96697f9c455169375e112d249d509e8e195cc47c1de613e8">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x1585.png?h=81a823bd391476413eef854b656d8448" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x640.png?h=44f7eaaacba62652657300df3ebd7ffe 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x1280.png?h=b24e0340f2ab9b0e6c39f6e478d29c3f 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x1366.png?h=508bf40f6e69672a52f6a5b6378d5e0a 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x1585.png?h=81a823bd391476413eef854b656d8448 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x1585.png?h=81a823bd391476413eef854b656d8448 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7cc9d0be-0d2f-413b-b57d-8d25f3a645c5_rwc_0x158x1585x951x1585.png?h=81a823bd391476413eef854b656d8448 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x1737.gif?h=2877ab55bc15ed1c9cf270f7b5891334" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x640.gif?h=6e55702242f825d8fcc02a6a14c173c1 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x1280.gif?h=7de0a058bffa7722db7bfd2d19867910 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x1366.gif?h=55be4f2a5f586eec13c9466de0454902 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x1737.gif?h=2877ab55bc15ed1c9cf270f7b5891334 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x1737.gif?h=2877ab55bc15ed1c9cf270f7b5891334 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dca3a511-6f04-480d-b05a-9ab033bfa73c_rwc_0x15x1737x1042x1737.gif?h=2877ab55bc15ed1c9cf270f7b5891334 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Capstone: Practice Buddy</div>
+                            <div class="custom2 preserve-whitespace">Gamified chatbot website / Spring 2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  © Miles Lee 2022. All rights reserved. Last updated December 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":27,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5ec59a299ddb4c89ace3f6b57f8e131116f2df8f14ada54a80d98","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"UA-57221920-3","anonymization":false}};</script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/translations"></script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20SQSH%20Website%20Revamp_files/main.js"></script><div class="js-lightbox-wrap offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>

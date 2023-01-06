@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html class="wf-dblv-i4-active wf-dblv-i5-active wf-dblv-n4-active wf-dblv-n5-active wf-vkzk-n4-active wf-vkzk-n5-active wf-vkzk-n7-active wf-yyqq-i4-active wf-yyqq-i6-active wf-yyqq-n4-active wf-yyqq-n5-active wf-yyqq-n6-active wf-yyqq-n7-active wf-yyqq-n8-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="Miles%20Lee%20-%20Quaranteen_files/nr-1216.min.js"></script><script async="" src="Miles%20Lee%20-%20Quaranteen_files/google-analytics_analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="wustl,washu,portfolio,interaction design,design,graphic design,ui/ux design,user experience,ui/ux,college,intern,design intern,sam fox,bread lee,miles lee,washington university,st louis,dallas,texas,austin,washington university in,rob giampietro,designer,design internship,internship">
+      <meta name="description" content="Visual Designer at Attentive. Graduated 2021 from Washington University in St. Louis with a BFA from the Sam Fox School in Communication Design and minors in Writing and Computer Science.">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Miles Lee - Quaranteen">
+      <meta property="og:description" content="Visual Designer at Attentive. Graduated 2021 from Washington University in St. Louis with a BFA from the Sam Fox School in Communication Design and minors in Writing and Computer Science.">
+      <meta property="og:image" content="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63a26ff3-7baa-4ef1-b2fe-03bb8174c54b_rwc_0x0x3315x2210x3315.jpg?h=e5d2f5c276737cec3ba1a9442964c365">
+        <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/983fae17-2ff3-4346-8243-8ad84f425f9e_carw_1x1x32.png?h=3f91ef71ed99140263ea59549b2bbe0b">
+        <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Quaranteen_files/main.css" type="text/css">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Quaranteen_files/38f962591b5a8f18467e245cf727b2091673042888.css" type="text/css">
+    <link rel="canonical" href="https://bylee.work/quaranteen">
+      <title>Miles Lee - Quaranteen</title>
+    <script type="text/javascript" src="Miles%20Lee%20-%20Quaranteen_files/-NcbJ3-LIZeZjCpL2DLsm9RNzzp6oRa4w_6L3LRy9WqfezjffHYEBsJzwD9oF.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script><style type="text/css">@font-face{font-family:dblv;src:url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/330541/00000000000000007735943a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/l?subset_id=2&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/d?subset_id=2&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/a?subset_id=2&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/l?subset_id=2&fvd=n8&v=3) format("woff2"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/d?subset_id=2&fvd=n8&v=3) format("woff"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/a?subset_id=2&fvd=n8&v=3) format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header js-fixed-nav on-scroll" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="https://bylee.work/home" class="preserve-whitespace">MILES LEE</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0" data-hover-hint="pageHeader" data-hover-hint-id="p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">Quaranteen</h1>
+            <p class="description"></p>
+            <div class="custom1 preserve-whitespace">Group project, Java, Git, GitHub, the command line, GUI, unit testing, code management, project management / March to May 2021</div>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>Quaranteen is
+ a small desktop app with a variety of modules to keep the user 
+informed, safe, healthy, and entertained while isolated at home.<br></div><div><a href="https://github.com/muzemils" target="_blank">Sonia Muzemil</a>, <a href="https://bylee.work/jduan.work/" target="_blank">Jefferson Duan</a>, <a href="https://github.com/williesu7" target="_blank">Willie Su</a>,
+ and I coded a program addressing quarantine isolation. I led project 
+management, content creation, and wireframing. Utilizing Java, Git, 
+GitHub, and the command line, I assisted my teammates with building 
+methods, stylizing the graphical user interface (GUI), writing unit 
+testing, and code management.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m635edfd766f2189a22ebb7fb9f6fd4bf64058f5af5e098e3a5b01" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  3
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7f5586fb-d1da-4b9f-8f88-d54cd9841265_rw_1200.png?h=126183f3c822f822a295d1c6e76106c9" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7f5586fb-d1da-4b9f-8f88-d54cd9841265_rw_600.png?h=2c922f261264b0cfc0f0536070421d0b 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/7f5586fb-d1da-4b9f-8f88-d54cd9841265_rw_1200.png?h=126183f3c822f822a295d1c6e76106c9 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Quaranteen_files/7f5586fb-d1da-4b9f-8f88-d54cd9841265_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/7f5586fb-d1da-4b9f-8f88-d54cd9841265_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/7f5586fb-d1da-4b9f-8f88-d54cd9841265_rw_1200.png 1070w">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/07adc638-8eb5-4a00-9355-b223a4f2efa8_rw_1200.png?h=ee72fccfb599f9c65d38afc42aa231ce" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/07adc638-8eb5-4a00-9355-b223a4f2efa8_rw_600.png?h=1d657ded39964507debc14638b44b3a1 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/07adc638-8eb5-4a00-9355-b223a4f2efa8_rw_1200.png?h=ee72fccfb599f9c65d38afc42aa231ce 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Quaranteen_files/07adc638-8eb5-4a00-9355-b223a4f2efa8_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/07adc638-8eb5-4a00-9355-b223a4f2efa8_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/07adc638-8eb5-4a00-9355-b223a4f2efa8_rw_1200.png 1070w">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/25da0c54-6230-4660-8434-66ca1381c220_rw_1200.png?h=2d52fc457f14e2e16b1d3d03bac7f755" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/25da0c54-6230-4660-8434-66ca1381c220_rw_600.png?h=9d9e0f60257f571289f81b81a779242b 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/25da0c54-6230-4660-8434-66ca1381c220_rw_1200.png?h=2d52fc457f14e2e16b1d3d03bac7f755 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Quaranteen_files/25da0c54-6230-4660-8434-66ca1381c220_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/25da0c54-6230-4660-8434-66ca1381c220_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/25da0c54-6230-4660-8434-66ca1381c220_rw_1200.png 1070w">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0691ef15-46ff-4756-9d31-b6a0eaee4625_rw_1200.png?h=34f11ea44896023d6c272b62ac02bfc5" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0691ef15-46ff-4756-9d31-b6a0eaee4625_rw_600.png?h=fc6192b3231ff494088a6a14687e8731 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0691ef15-46ff-4756-9d31-b6a0eaee4625_rw_1200.png?h=34f11ea44896023d6c272b62ac02bfc5 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Quaranteen_files/0691ef15-46ff-4756-9d31-b6a0eaee4625_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/0691ef15-46ff-4756-9d31-b6a0eaee4625_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/0691ef15-46ff-4756-9d31-b6a0eaee4625_rw_1200.png 1070w">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/005e9c0f-8cd9-472f-a8d3-ca6790d16f78_rw_1200.png?h=2afafce14a9bdc7a1a39c7e17c3283be" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/005e9c0f-8cd9-472f-a8d3-ca6790d16f78_rw_600.png?h=80b17440a940a629ef43bb337de83117 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/005e9c0f-8cd9-472f-a8d3-ca6790d16f78_rw_1200.png?h=2afafce14a9bdc7a1a39c7e17c3283be 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Quaranteen_files/005e9c0f-8cd9-472f-a8d3-ca6790d16f78_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/005e9c0f-8cd9-472f-a8d3-ca6790d16f78_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/005e9c0f-8cd9-472f-a8d3-ca6790d16f78_rw_1200.png 1070w">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_1200.png?h=4e9fb868cb00fde34135957bcdb4221d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_600.png?h=55bdbd1214d5bc1a2cc453472f45eab0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_1200.png?h=4e9fb868cb00fde34135957bcdb4221d 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Quaranteen_files/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_1200.png 1070w">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Pitch</div><div>Project
+ Summary: A small desktop program with a variety of modules to keep the 
+user informed, safe, healthy, and entertained while isolated at home.<br></div><div>Target
+ Audience: quarantined student teens in the US. This will essentially be
+ a quirky guide to flatten the curve and keep everyone safe and sound.</div><div>Key
+ Features: Counter for the # of days in quarantine, Tip of the Day, 
+Indoor exercise of the day, Book/TV show/Movie recommendation of the 
+day, Recipe of the day (like <a href="https://jamesoff.net/fun/random-recipe-generator/" target="_blank">Random Recipe Generator</a>), Sources (WHO)</div><div>Other
+ Potential Features: The gradient color changes each time the user opens
+ the program or with each new day, randomly from an assortment of 
+gradients, Quiz or Mad Libs generated randomly, “Quarantine Diary,” 
+Share them on Twitter, Facebook, Instagram and Tumblr, Ability to Write 
+on Margins, A Progress Bar that Never Ends?</div><div><br></div><div class="sub-title">The Final Iteration<br></div><div>After
+ three iterations, we ended up with a small desktop program containing 
+several tabs: Tip, Diary, Recommendation, Exercise, and Info. <br></div><div>The Tip, Recommendation, and Exercise tabs each read a .txt file and pull three random lines from it.<br></div><div>In the Diary tab, users can add entries, write whatever they want, see the previous entry and next entry, and delete entries.</div><div>The Info tab contains context about the project&nbsp; and links to read more about COVID-19. <br></div><div>See our demo:<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              <div class="project-module module video project-module-video js-js-project-module">
+    <div class="embed-dimensions" style="max-width: 1152px; max-height: 720px; margin: 0 auto;">
+    <div class="embed-aspect-ratio" style="padding-bottom: 62.5%; position: relative; height: 0px;">
+        <iframe title="Video Player" class="embed-content" src="Miles%20Lee%20-%20Quaranteen_files/embed.html" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+    </div>
+    </div>
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Ideation<br></div><div class="main-text">One
+ of our only constraints for this project was that we had to build a 
+desktop program that could be opened via the command line. It was March 
+2020, so COVID-19 was on all of our minds. We came up with a few ideas, 
+such as a quarantine fortune teller, a mad libs generator, a UI 
+generator, and a poem generator. We ended up building a less funny 
+version of our original quarantine fortune teller idea:</div><div class="main-text"><br><div>Quarantine survival guide “So You’ve Been Quarantined” but funny</div><div>Conceptually: It generates “tips” for each Quarantine day</div><div>Functionally: It strings together random words to form coherent sentences (like it knows how to)</div><div>“Day #[ridiculously long number]. Fortune: you will [x] [x] [x]“</div><div><a href="https://jamesoff.net/fun/random-recipe-generator/" target="_blank">Recipe thing</a>: it like takes a set of ingredients and spits out random combination</div><div>Tip of the day: [wash your hands 284829 times today.] [open your door. Then close it.] [sanitize your 40 inch TV screen]</div><div>Indoor
+ exercises: [run up and down your staircase 3 times] [lift your cat 5 
+reps for 2 sets on each arm] [stand up from your desk chair and walk 
+around your house for 10 minutes]</div><div>Book to read: “Dummies guide to ___” “Quarantiner’s Guide to ____” “How I Survived Quarantine With Only My ____ And My ____”</div></div><div class="sub-title">Wireframes</div><div class="main-text">We
+ pictured our desktop program as a small window with several tabs, 
+almost like a pocket-sized journal of sorts. A few of these tips are 
+what I might now call inadvisable (ie: “don’t go outside” not even for 
+sunlight?), but we didn’t know a lot about COVID-19 back then, and the 
+tips were generally well-intentioned and addressed our goal to “flatten 
+the curve and keep everyone safe and sound.”<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m635ee7ecaca070d23b0f64aab49c725fe664350d5b5f109ddd971" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  6
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="183.72921615202" style="width: 165px; flex-grow: 183.729;" data-width="1190" data-height="1684">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/32038ac9-646b-40e1-a052-1869fe8cf00e_rw_1200.jpg?h=bf690897e3597f65381c9abd1dc63a42" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/32038ac9-646b-40e1-a052-1869fe8cf00e_rw_600.jpg?h=6cbe3a805cf6f77d77a06a14f4d6e2c0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/32038ac9-646b-40e1-a052-1869fe8cf00e_rw_1200.jpg?h=bf690897e3597f65381c9abd1dc63a42 1190w,"  sizes="(max-width: 1190px) 100vw, 1190px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/32038ac9-646b-40e1-a052-1869fe8cf00e_rw_1200.jpg?h=bf690897e3597f65381c9abd1dc63a42" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/32038ac9-646b-40e1-a052-1869fe8cf00e_rw_600.jpg?h=6cbe3a805cf6f77d77a06a14f4d6e2c0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/32038ac9-646b-40e1-a052-1869fe8cf00e_rw_1200.jpg?h=bf690897e3597f65381c9abd1dc63a42 1190w,">
+      <span class="grid__item-filler" style="padding-bottom:141.51260504202%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="229.42992874109" style="width: 206px; flex-grow: 229.43;" data-width="1486" data-height="1684">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_1920.jpg?h=9dcc24f9164273fc0bf75423ba90ccbc" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_600.jpg?h=524e6f06ca2031e2a8a8bfad47a7338d 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_1200.jpg?h=f7a8ea5a557aaf4e923df7a98cdc43bb 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_1920.jpg?h=9dcc24f9164273fc0bf75423ba90ccbc 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_1920.jpg?h=9dcc24f9164273fc0bf75423ba90ccbc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_600.jpg?h=524e6f06ca2031e2a8a8bfad47a7338d 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_1200.jpg?h=f7a8ea5a557aaf4e923df7a98cdc43bb 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4294c54f-b5a8-49e9-bba9-a6188f7750db_rw_1920.jpg?h=9dcc24f9164273fc0bf75423ba90ccbc 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:113.32436069987%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="183.72921615202" style="width: 165px; flex-grow: 183.729;" data-width="1190" data-height="1684">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a13c1f34-609b-440c-86b8-a50f69d5d8e6_rw_1200.jpg?h=b28344d2673e01ab22c40c41116606a9" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a13c1f34-609b-440c-86b8-a50f69d5d8e6_rw_600.jpg?h=6e2eb0a4e1578a447dc1b892a158ef45 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a13c1f34-609b-440c-86b8-a50f69d5d8e6_rw_1200.jpg?h=b28344d2673e01ab22c40c41116606a9 1190w,"  sizes="(max-width: 1190px) 100vw, 1190px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a13c1f34-609b-440c-86b8-a50f69d5d8e6_rw_1200.jpg?h=b28344d2673e01ab22c40c41116606a9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a13c1f34-609b-440c-86b8-a50f69d5d8e6_rw_600.jpg?h=6e2eb0a4e1578a447dc1b892a158ef45 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a13c1f34-609b-440c-86b8-a50f69d5d8e6_rw_1200.jpg?h=b28344d2673e01ab22c40c41116606a9 1190w,">
+      <span class="grid__item-filler" style="padding-bottom:141.51260504202%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="203.18289786223" style="width: 183px; flex-grow: 203.183;" data-width="1316" data-height="1684">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_1920.jpg?h=f6875ff33ab955e480c3956f12b79a98" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_600.jpg?h=e1f6b35eac073ad656deec23d2d4e6fe 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_1200.jpg?h=3026e8295a342abf505f7125de9bf0f8 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_1920.jpg?h=f6875ff33ab955e480c3956f12b79a98 1316w,"  sizes="(max-width: 1316px) 100vw, 1316px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_1920.jpg?h=f6875ff33ab955e480c3956f12b79a98" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_600.jpg?h=e1f6b35eac073ad656deec23d2d4e6fe 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_1200.jpg?h=3026e8295a342abf505f7125de9bf0f8 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/54ad6adc-4480-410e-9ff8-913557f20450_rw_1920.jpg?h=f6875ff33ab955e480c3956f12b79a98 1316w,">
+      <span class="grid__item-filler" style="padding-bottom:127.96352583587%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="183.72921615202" style="width: 165px; flex-grow: 183.729;" data-width="1190" data-height="1684">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/51d44883-3028-4089-b1f5-c849bb062f6d_rw_1200.jpg?h=0f350fe59bcff9db782c3851a511a6d0" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/51d44883-3028-4089-b1f5-c849bb062f6d_rw_600.jpg?h=32f0bfcc6688e52e5f916a8d558351c2 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/51d44883-3028-4089-b1f5-c849bb062f6d_rw_1200.jpg?h=0f350fe59bcff9db782c3851a511a6d0 1190w,"  sizes="(max-width: 1190px) 100vw, 1190px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/51d44883-3028-4089-b1f5-c849bb062f6d_rw_1200.jpg?h=0f350fe59bcff9db782c3851a511a6d0" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/51d44883-3028-4089-b1f5-c849bb062f6d_rw_600.jpg?h=32f0bfcc6688e52e5f916a8d558351c2 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/51d44883-3028-4089-b1f5-c849bb062f6d_rw_1200.jpg?h=0f350fe59bcff9db782c3851a511a6d0 1190w,">
+      <span class="grid__item-filler" style="padding-bottom:141.51260504202%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="183.72921615202" style="width: 165px; flex-grow: 183.729;" data-width="1190" data-height="1684">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/90e4a163-94d4-45cc-a138-846031915475_rw_1200.jpg?h=dafe89a5025419af7ff413bc3328ebfd" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/90e4a163-94d4-45cc-a138-846031915475_rw_600.jpg?h=e775e8772abb333cc32877a1e51948c9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/90e4a163-94d4-45cc-a138-846031915475_rw_1200.jpg?h=dafe89a5025419af7ff413bc3328ebfd 1190w,"  sizes="(max-width: 1190px) 100vw, 1190px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/90e4a163-94d4-45cc-a138-846031915475_rw_1200.jpg?h=dafe89a5025419af7ff413bc3328ebfd" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/90e4a163-94d4-45cc-a138-846031915475_rw_600.jpg?h=e775e8772abb333cc32877a1e51948c9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/90e4a163-94d4-45cc-a138-846031915475_rw_1200.jpg?h=dafe89a5025419af7ff413bc3328ebfd 1190w,">
+      <span class="grid__item-filler" style="padding-bottom:141.51260504202%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_1920.jpg?h=2591f2c93fb3371e8ac36a48a1a3b97d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_600.jpg?h=071c1992471d4361ba04fcc302905fe3 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_1200.jpg?h=3a203e29fe89e22b7295073aae2aa669 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_1920.jpg?h=2591f2c93fb3371e8ac36a48a1a3b97d 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_1920.jpg?h=2591f2c93fb3371e8ac36a48a1a3b97d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_600.jpg?h=071c1992471d4361ba04fcc302905fe3 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_1200.jpg?h=3a203e29fe89e22b7295073aae2aa669 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0310e7e7-0f3d-4d0b-afe5-bdeaf51b8e6c_rw_1920.jpg?h=2591f2c93fb3371e8ac36a48a1a3b97d 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_1920.jpg?h=f18ff16a8b891c9c377f34e052c63cae" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_600.jpg?h=93013bbfef724ed929b5c3a4c1727801 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_1200.jpg?h=b0ea77a7f590fb12411fe401f7f02960 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_1920.jpg?h=f18ff16a8b891c9c377f34e052c63cae 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_1920.jpg?h=f18ff16a8b891c9c377f34e052c63cae" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_600.jpg?h=93013bbfef724ed929b5c3a4c1727801 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_1200.jpg?h=b0ea77a7f590fb12411fe401f7f02960 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/44ac7e70-e6a7-4e61-9813-518e059d2f9b_rw_1920.jpg?h=f18ff16a8b891c9c377f34e052c63cae 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_1920.jpg?h=c266eb4b4ec2efc1d27714039352a13b" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_600.jpg?h=9e78e3b3c13ff99458394cf9334bb520 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_1200.jpg?h=cb0d112d1d744c009b91a05d490a70af 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_1920.jpg?h=c266eb4b4ec2efc1d27714039352a13b 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_1920.jpg?h=c266eb4b4ec2efc1d27714039352a13b" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_600.jpg?h=9e78e3b3c13ff99458394cf9334bb520 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_1200.jpg?h=cb0d112d1d744c009b91a05d490a70af 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/784b9516-435c-4da6-be86-3040b712e066_rw_1920.jpg?h=c266eb4b4ec2efc1d27714039352a13b 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_1920.jpg?h=f909fd27cc09e8be10d9ff3cee54a380" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_600.jpg?h=1e73d863ee9e0d79e1c328ec768723b0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_1200.jpg?h=511dd45fb541f922195e689bfd28d3fe 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_1920.jpg?h=f909fd27cc09e8be10d9ff3cee54a380 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_1920.jpg?h=f909fd27cc09e8be10d9ff3cee54a380" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_600.jpg?h=1e73d863ee9e0d79e1c328ec768723b0 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_1200.jpg?h=511dd45fb541f922195e689bfd28d3fe 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8a6e8d54-b63a-41f8-a1a1-0318913ca4c0_rw_1920.jpg?h=f909fd27cc09e8be10d9ff3cee54a380 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_1920.jpg?h=908a6a025312c4c716bc9fd1d17a5205" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_600.jpg?h=d76d5307c644003a92d7e354a69856b7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_1200.jpg?h=06164c1a6da94de682bf9a136242daa7 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_1920.jpg?h=908a6a025312c4c716bc9fd1d17a5205 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_1920.jpg?h=908a6a025312c4c716bc9fd1d17a5205" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_600.jpg?h=d76d5307c644003a92d7e354a69856b7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_1200.jpg?h=06164c1a6da94de682bf9a136242daa7 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6298c1b6-9af2-4a95-918d-35bafef96a30_rw_1920.jpg?h=908a6a025312c4c716bc9fd1d17a5205 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_1920.jpg?h=b8c127e2b404e7f58cc67e8216e83cc1" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_600.jpg?h=eaf1dab9f1e1a85591952d0fb45e2b07 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_1200.jpg?h=2227085b98953b1a7917fbbe1ae9ca6c 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_1920.jpg?h=b8c127e2b404e7f58cc67e8216e83cc1 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_1920.jpg?h=b8c127e2b404e7f58cc67e8216e83cc1" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_600.jpg?h=eaf1dab9f1e1a85591952d0fb45e2b07 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_1200.jpg?h=2227085b98953b1a7917fbbe1ae9ca6c 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aa149320-5880-4451-afad-7b267532de67_rw_1920.jpg?h=b8c127e2b404e7f58cc67e8216e83cc1 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_1920.jpg?h=b450eacd0987c138697716cb0308e6f1" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_600.jpg?h=6abc30e8d0475007951bfec09c76812c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_1200.jpg?h=1401eec5734b04e70782887acfbba0ec 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_1920.jpg?h=b450eacd0987c138697716cb0308e6f1 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_1920.jpg?h=b450eacd0987c138697716cb0308e6f1" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_600.jpg?h=6abc30e8d0475007951bfec09c76812c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_1200.jpg?h=1401eec5734b04e70782887acfbba0ec 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/64c62871-f58c-4322-8f2b-f4f4aea011e2_rw_1920.jpg?h=b450eacd0987c138697716cb0308e6f1 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_1920.jpg?h=fd449f6c968c1ee3aed884f8d78c512c" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_600.jpg?h=2b2004a0c697cad1189c1f52a8e23679 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_1200.jpg?h=945fa580d68884edd1e7408eee8579b9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_1920.jpg?h=fd449f6c968c1ee3aed884f8d78c512c 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_1920.jpg?h=fd449f6c968c1ee3aed884f8d78c512c" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_600.jpg?h=2b2004a0c697cad1189c1f52a8e23679 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_1200.jpg?h=945fa580d68884edd1e7408eee8579b9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b58304e1-cbd2-45e8-b4ab-d678414bae73_rw_1920.jpg?h=fd449f6c968c1ee3aed884f8d78c512c 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_1920.jpg?h=4cea470a53338434ac6811fc11b599f1" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_600.jpg?h=79ffea62f27c4b6e0aa18cb02b8d87a6 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_1200.jpg?h=05dc5d00f0ed15a0a6b1da7c27745a63 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_1920.jpg?h=4cea470a53338434ac6811fc11b599f1 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_1920.jpg?h=4cea470a53338434ac6811fc11b599f1" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_600.jpg?h=79ffea62f27c4b6e0aa18cb02b8d87a6 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_1200.jpg?h=05dc5d00f0ed15a0a6b1da7c27745a63 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ff01ad6b-7da9-406f-81cc-f17323e60905_rw_1920.jpg?h=4cea470a53338434ac6811fc11b599f1 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_1920.jpg?h=287b81d4b51bd4971a4a7286784a2cbe" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_600.jpg?h=b99a29a94ac758b5528f9acc21d38d7c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_1200.jpg?h=80f61ccdee77e303207bc2a6761756a4 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_1920.jpg?h=287b81d4b51bd4971a4a7286784a2cbe 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_1920.jpg?h=287b81d4b51bd4971a4a7286784a2cbe" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_600.jpg?h=b99a29a94ac758b5528f9acc21d38d7c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_1200.jpg?h=80f61ccdee77e303207bc2a6761756a4 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cc34c1ff-a2a8-4ec0-b135-7ee6765b0a83_rw_1920.jpg?h=287b81d4b51bd4971a4a7286784a2cbe 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_1920.jpg?h=dff2ee98e353e11d02fc69a326cfea3b" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_600.jpg?h=ac18b2a2954777df08d7647411d519ff 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_1200.jpg?h=53623f10a4391f1855ee3fe2a9b25eba 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_1920.jpg?h=dff2ee98e353e11d02fc69a326cfea3b 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_1920.jpg?h=dff2ee98e353e11d02fc69a326cfea3b" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_600.jpg?h=ac18b2a2954777df08d7647411d519ff 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_1200.jpg?h=53623f10a4391f1855ee3fe2a9b25eba 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/624ef39e-31da-4db5-bbf9-6dc4285f001f_rw_1920.jpg?h=dff2ee98e353e11d02fc69a326cfea3b 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="267.56232686981" style="width: 175px; flex-grow: 267.562;" data-width="1486" data-height="1444">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_1920.jpg?h=d208e99fb571003dae99ae76697ee8ba" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_600.jpg?h=61b4a185d7b22945619cc812e12d9c85 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_1200.jpg?h=00da4455e44d5a1a9c40a9d905a7b020 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_1920.jpg?h=d208e99fb571003dae99ae76697ee8ba 1486w,"  sizes="(max-width: 1486px) 100vw, 1486px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_1920.jpg?h=d208e99fb571003dae99ae76697ee8ba" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_600.jpg?h=61b4a185d7b22945619cc812e12d9c85 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_1200.jpg?h=00da4455e44d5a1a9c40a9d905a7b020 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9719cc1-e9a1-494b-ac06-d221b3a91ef3_rw_1920.jpg?h=d208e99fb571003dae99ae76697ee8ba 1486w,">
+      <span class="grid__item-filler" style="padding-bottom:97.173620457604%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">User Stories<br></div><div>As
+ we solidified our idea, we came up with some user stories to put our 
+program into context and address possible user needs. We didn’t end up 
+building all of them, but might if we continued working on this project.<br></div><div>“As the user, I want a channel to enjoy myself, while stuck at home and lacking any social interaction :(“<br></div><div>The user (bored young adult) should be able to open the program</div><div>The user should be greeted with a pleasing interface/UI.</div><div>The user should have a default tip of the day that changes with each day.</div><div>The user should keep a counter for the current day of quarantine, starting from when they first started the program.</div><div>The
+ user should be able to click on each separate tab and view their 
+contents. The interface should change color according to the tabs.</div><div>The user should access a recipe they can cook while in quarantine to keep them occupied.</div><div>The user should be able to refresh the recipe if they are not satisfied with it.</div><div>The
+ user should be able to access up-to-date information about the 
+coronavirus and inform themselves on proper procedure to stay safe.</div><div>The
+ user should be able to write their own “quarantine diary,” each day 
+which will document their thoughts and feelings while in quarantine.</div><div>The user should be able to access previous entries of their “quarantine diary” to see how their response has changed.</div><div>The user can share their quarantine diary entries to social media to gain attention.</div><div>The user should be able to complete mini-quizzes that will educate them on coronavirus facts and safety etiquette.</div><div>The
+ user should be able to view book/tv/movie/song recommendations for that
+ day, which also change everyday. This is also refreshable.</div><div>The user should be able to create/fill-in mad libs.</div><div>The user should be able to view a progress bar that never ends, to show how screwed they are.</div><div>The
+ user should be able to view a checklist of objectives they should do 
+throughout the day in order to maintain their health and sanity.</div><div>The user should be able to check items off the checklist so they can feel a sense of satisfaction and progress.<br></div><div class="sub-title">Code Management<br></div><div>Following
+ best practices for coding management (the ones we learned in class, at 
+least), we meticulously created branches for different features, merged 
+commits to the master branch, made pull requests, and pushed to the 
+master branch, largely using git via the command line. View our (now 
+closed) <a href="https://github.com/wustlcse237sp20/project-quaranteens/pulls" target="_blank">pull requests</a> on GitHub.<br></div><div>We maintained a Kanban Board on the <a href="https://github.com/wustlcse237sp20/project-quaranteens/projects/1" target="_blank">Projects</a> page of our GitHub repo. Throughout the project, we opened and closed these issues:</div><div>The user should be able to access previous entries of their “quarantine diary” to see how their response has changed.</div><div>The
+ user should be able to write their own “quarantine diary,” each day 
+which will document their thoughts and feelings while in quarantine.</div><div>The
+ user should be able to click on each separate tab and view their 
+contents. The interface should change color according to the tabs.</div><div>The user should see a counter for the current day of quarantine, starting from when they first started the program.</div><div>The user should be able to view book/tv/movie/song recommendations for that day, which also change everyday.</div><div>The user should be able to view a progress bar that never ends, to show how screwed they are.</div><div>The user should be greeted with a pleasing interface/UI.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m635ede2a3302e08a56ec40c2475209c900a00367033433c01c66f" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  3
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e5d271a-366f-4fb3-8f4e-5f0421d3a403_rw_1200.png?h=8028e7ec3a56223881c116716d0a5a1f" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e5d271a-366f-4fb3-8f4e-5f0421d3a403_rw_600.png?h=631e5174bcdeed1955c6c7b27f93dc72 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e5d271a-366f-4fb3-8f4e-5f0421d3a403_rw_1200.png?h=8028e7ec3a56223881c116716d0a5a1f 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e5d271a-366f-4fb3-8f4e-5f0421d3a403_rw_1200.png?h=8028e7ec3a56223881c116716d0a5a1f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e5d271a-366f-4fb3-8f4e-5f0421d3a403_rw_600.png?h=631e5174bcdeed1955c6c7b27f93dc72 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e5d271a-366f-4fb3-8f4e-5f0421d3a403_rw_1200.png?h=8028e7ec3a56223881c116716d0a5a1f 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f830dab8-9970-419a-9181-48eb06732ef0_rw_1200.png?h=d28f655d68e3e27cad0f721d765be969" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f830dab8-9970-419a-9181-48eb06732ef0_rw_600.png?h=9d1545c0c49caa95988a6dd70fcaf9c4 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f830dab8-9970-419a-9181-48eb06732ef0_rw_1200.png?h=d28f655d68e3e27cad0f721d765be969 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f830dab8-9970-419a-9181-48eb06732ef0_rw_1200.png?h=d28f655d68e3e27cad0f721d765be969" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f830dab8-9970-419a-9181-48eb06732ef0_rw_600.png?h=9d1545c0c49caa95988a6dd70fcaf9c4 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f830dab8-9970-419a-9181-48eb06732ef0_rw_1200.png?h=d28f655d68e3e27cad0f721d765be969 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c74f761b-c293-440e-8f4d-f6019e7779a4_rw_1200.png?h=372e40c18d3509ed3d7df8c8c9b6f920" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c74f761b-c293-440e-8f4d-f6019e7779a4_rw_600.png?h=367023a246aee9eeaed9be1a95a696f1 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c74f761b-c293-440e-8f4d-f6019e7779a4_rw_1200.png?h=372e40c18d3509ed3d7df8c8c9b6f920 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c74f761b-c293-440e-8f4d-f6019e7779a4_rw_1200.png?h=372e40c18d3509ed3d7df8c8c9b6f920" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c74f761b-c293-440e-8f4d-f6019e7779a4_rw_600.png?h=367023a246aee9eeaed9be1a95a696f1 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c74f761b-c293-440e-8f4d-f6019e7779a4_rw_1200.png?h=372e40c18d3509ed3d7df8c8c9b6f920 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1bc29df6-94e3-493c-92e5-82c2144dd70a_rw_1200.png?h=029f036f67a9a775a1660ef2778b6795" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1bc29df6-94e3-493c-92e5-82c2144dd70a_rw_600.png?h=e20f3050c3782aeaa0710334bb4a2c47 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1bc29df6-94e3-493c-92e5-82c2144dd70a_rw_1200.png?h=029f036f67a9a775a1660ef2778b6795 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1bc29df6-94e3-493c-92e5-82c2144dd70a_rw_1200.png?h=029f036f67a9a775a1660ef2778b6795" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1bc29df6-94e3-493c-92e5-82c2144dd70a_rw_600.png?h=e20f3050c3782aeaa0710334bb4a2c47 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1bc29df6-94e3-493c-92e5-82c2144dd70a_rw_1200.png?h=029f036f67a9a775a1660ef2778b6795 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/53f2179f-4625-43aa-9749-631df8f255de_rw_1200.png?h=7a148a859ae196b0da19015a89eabd42" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/53f2179f-4625-43aa-9749-631df8f255de_rw_600.png?h=633f82b5c50f3a3a6e582ae9f4733b81 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/53f2179f-4625-43aa-9749-631df8f255de_rw_1200.png?h=7a148a859ae196b0da19015a89eabd42 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/53f2179f-4625-43aa-9749-631df8f255de_rw_1200.png?h=7a148a859ae196b0da19015a89eabd42" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/53f2179f-4625-43aa-9749-631df8f255de_rw_600.png?h=633f82b5c50f3a3a6e582ae9f4733b81 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/53f2179f-4625-43aa-9749-631df8f255de_rw_1200.png?h=7a148a859ae196b0da19015a89eabd42 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a483deff-7dcc-47f4-8c1c-0350047e3b1f_rw_1200.png?h=72c005410055fb81378e278c8765d84d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a483deff-7dcc-47f4-8c1c-0350047e3b1f_rw_600.png?h=50395629d03091c6df9a527f8d35e7b3 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a483deff-7dcc-47f4-8c1c-0350047e3b1f_rw_1200.png?h=72c005410055fb81378e278c8765d84d 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a483deff-7dcc-47f4-8c1c-0350047e3b1f_rw_1200.png?h=72c005410055fb81378e278c8765d84d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a483deff-7dcc-47f4-8c1c-0350047e3b1f_rw_600.png?h=50395629d03091c6df9a527f8d35e7b3 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a483deff-7dcc-47f4-8c1c-0350047e3b1f_rw_1200.png?h=72c005410055fb81378e278c8765d84d 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3233e0bc-c120-4c42-a215-af1e188091cc_rw_1200.png?h=bdec6e8a3565678b9623954f32abc80c" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3233e0bc-c120-4c42-a215-af1e188091cc_rw_600.png?h=fda0a9407db61b140f4c7d48e9c7b7fe 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3233e0bc-c120-4c42-a215-af1e188091cc_rw_1200.png?h=bdec6e8a3565678b9623954f32abc80c 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3233e0bc-c120-4c42-a215-af1e188091cc_rw_1200.png?h=bdec6e8a3565678b9623954f32abc80c" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3233e0bc-c120-4c42-a215-af1e188091cc_rw_600.png?h=fda0a9407db61b140f4c7d48e9c7b7fe 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3233e0bc-c120-4c42-a215-af1e188091cc_rw_1200.png?h=bdec6e8a3565678b9623954f32abc80c 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/28037815-f102-465e-b015-30c749a5190e_rw_1200.png?h=66df3992392f4b53c1c28a0c7ca015f6" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/28037815-f102-465e-b015-30c749a5190e_rw_600.png?h=5a8dc8a7f52644bda2465d6157648c84 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/28037815-f102-465e-b015-30c749a5190e_rw_1200.png?h=66df3992392f4b53c1c28a0c7ca015f6 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/28037815-f102-465e-b015-30c749a5190e_rw_1200.png?h=66df3992392f4b53c1c28a0c7ca015f6" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/28037815-f102-465e-b015-30c749a5190e_rw_600.png?h=5a8dc8a7f52644bda2465d6157648c84 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/28037815-f102-465e-b015-30c749a5190e_rw_1200.png?h=66df3992392f4b53c1c28a0c7ca015f6 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/124840bb-f3f9-4eaa-9766-ba164ee6301b_rw_1200.png?h=d5e740fa10f518b21ca0b791fcf67993" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/124840bb-f3f9-4eaa-9766-ba164ee6301b_rw_600.png?h=2d2c53d92a62409bf4f34b0a58e92eac 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/124840bb-f3f9-4eaa-9766-ba164ee6301b_rw_1200.png?h=d5e740fa10f518b21ca0b791fcf67993 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/124840bb-f3f9-4eaa-9766-ba164ee6301b_rw_1200.png?h=d5e740fa10f518b21ca0b791fcf67993" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/124840bb-f3f9-4eaa-9766-ba164ee6301b_rw_600.png?h=2d2c53d92a62409bf4f34b0a58e92eac 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/124840bb-f3f9-4eaa-9766-ba164ee6301b_rw_1200.png?h=d5e740fa10f518b21ca0b791fcf67993 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/460b2135-7acf-4a6e-a65b-4ebcd902d1bb_rw_1200.png?h=a2b482710bb798f7f252aac03b7f938f" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/460b2135-7acf-4a6e-a65b-4ebcd902d1bb_rw_600.png?h=e03696e6d5cfca0e8e06f22b5cc9c020 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/460b2135-7acf-4a6e-a65b-4ebcd902d1bb_rw_1200.png?h=a2b482710bb798f7f252aac03b7f938f 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/460b2135-7acf-4a6e-a65b-4ebcd902d1bb_rw_1200.png?h=a2b482710bb798f7f252aac03b7f938f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/460b2135-7acf-4a6e-a65b-4ebcd902d1bb_rw_600.png?h=e03696e6d5cfca0e8e06f22b5cc9c020 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/460b2135-7acf-4a6e-a65b-4ebcd902d1bb_rw_1200.png?h=a2b482710bb798f7f252aac03b7f938f 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c106c48-4e46-45d6-b1bf-584a686d2eb7_rw_1200.png?h=f1139647523fb862c14360ddf3d2faa2" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c106c48-4e46-45d6-b1bf-584a686d2eb7_rw_600.png?h=315ea3154f577abb3efebc2ca3c0725c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c106c48-4e46-45d6-b1bf-584a686d2eb7_rw_1200.png?h=f1139647523fb862c14360ddf3d2faa2 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c106c48-4e46-45d6-b1bf-584a686d2eb7_rw_1200.png?h=f1139647523fb862c14360ddf3d2faa2" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c106c48-4e46-45d6-b1bf-584a686d2eb7_rw_600.png?h=315ea3154f577abb3efebc2ca3c0725c 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c106c48-4e46-45d6-b1bf-584a686d2eb7_rw_1200.png?h=f1139647523fb862c14360ddf3d2faa2 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/080c07c8-9c6e-4b36-a3f9-42b7827444a9_rw_1200.png?h=c88794c0d0aea2d1f31e844816d32651" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/080c07c8-9c6e-4b36-a3f9-42b7827444a9_rw_600.png?h=760d2008bacbc5a2ca8797a22ba83744 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/080c07c8-9c6e-4b36-a3f9-42b7827444a9_rw_1200.png?h=c88794c0d0aea2d1f31e844816d32651 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/080c07c8-9c6e-4b36-a3f9-42b7827444a9_rw_1200.png?h=c88794c0d0aea2d1f31e844816d32651" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/080c07c8-9c6e-4b36-a3f9-42b7827444a9_rw_600.png?h=760d2008bacbc5a2ca8797a22ba83744 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/080c07c8-9c6e-4b36-a3f9-42b7827444a9_rw_1200.png?h=c88794c0d0aea2d1f31e844816d32651 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1ee23c4b-94be-4118-9670-daa3e7e920fc_rw_1200.png?h=f16ecc9a75f7a86352c74895fc9af84b" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1ee23c4b-94be-4118-9670-daa3e7e920fc_rw_600.png?h=b4d5b948c62bf3720044361816d0cb23 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1ee23c4b-94be-4118-9670-daa3e7e920fc_rw_1200.png?h=f16ecc9a75f7a86352c74895fc9af84b 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1ee23c4b-94be-4118-9670-daa3e7e920fc_rw_1200.png?h=f16ecc9a75f7a86352c74895fc9af84b" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1ee23c4b-94be-4118-9670-daa3e7e920fc_rw_600.png?h=b4d5b948c62bf3720044361816d0cb23 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1ee23c4b-94be-4118-9670-daa3e7e920fc_rw_1200.png?h=f16ecc9a75f7a86352c74895fc9af84b 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f3ba6365-2846-402e-8769-038905ff76b4_rw_1200.png?h=eaa3c2f2fc443291d52ad51478b452a1" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f3ba6365-2846-402e-8769-038905ff76b4_rw_600.png?h=992202d6194f3624ea53f97d3a167a10 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f3ba6365-2846-402e-8769-038905ff76b4_rw_1200.png?h=eaa3c2f2fc443291d52ad51478b452a1 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f3ba6365-2846-402e-8769-038905ff76b4_rw_1200.png?h=eaa3c2f2fc443291d52ad51478b452a1" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f3ba6365-2846-402e-8769-038905ff76b4_rw_600.png?h=992202d6194f3624ea53f97d3a167a10 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f3ba6365-2846-402e-8769-038905ff76b4_rw_1200.png?h=eaa3c2f2fc443291d52ad51478b452a1 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="259.51492537313" style="width: 361px; flex-grow: 259.515;" data-width="1070" data-height="1072">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6039db57-797a-4bbd-a011-f736fca0051e_rw_1200.png?h=6d4e2a38da702ee4d46252081c4022dc" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6039db57-797a-4bbd-a011-f736fca0051e_rw_600.png?h=cc04ec3a3225bed80dd12cbaaeee8363 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6039db57-797a-4bbd-a011-f736fca0051e_rw_1200.png?h=6d4e2a38da702ee4d46252081c4022dc 1070w,"  sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6039db57-797a-4bbd-a011-f736fca0051e_rw_1200.png?h=6d4e2a38da702ee4d46252081c4022dc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6039db57-797a-4bbd-a011-f736fca0051e_rw_600.png?h=cc04ec3a3225bed80dd12cbaaeee8363 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6039db57-797a-4bbd-a011-f736fca0051e_rw_1200.png?h=6d4e2a38da702ee4d46252081c4022dc 1070w,">
+      <span class="grid__item-filler" style="padding-bottom:100.18691588785%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Project Management</div><div><span>To
+ successfully complete this project, we needed to be able to communicate
+ asynchronously across time zones (CST and PST). I took notes during our
+ Zoom calls and created a Discord server with an #intro, #schedule, and 
+#general channel, as well as designated channels for each phase of the 
+project (#pitch, #iteration-1, #iteration-2, #iteration-3). Over the 
+course of two months, we collectively sent 589</span> messages in this server.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m635ee5cc5e8003ade7961b2f671577a7035ad6a6a60c30e20f36c" style="padding-top: px;
+padding-bottom: px;
+  width: 100%;
+  max-width: 800px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  1
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="444.86314449395" style="width: 798px; flex-grow: 444.863;" data-width="1920" data-height="1122">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_1920.png?h=eb75ab41e92fdbac8af4bb8d3e20c9d9" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_600.png?h=c008b7ebb92d7118fefe77c8d3c1d490 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_1200.png?h=abe2407fb08843f9e7685c8c51a59b0a 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_1920.png?h=eb75ab41e92fdbac8af4bb8d3e20c9d9 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_1920.png?h=eb75ab41e92fdbac8af4bb8d3e20c9d9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_600.png?h=c008b7ebb92d7118fefe77c8d3c1d490 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_1200.png?h=abe2407fb08843f9e7685c8c51a59b0a 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/80504e1b-a8ab-49fe-94d6-577e9bf735d0_rw_1920.png?h=eb75ab41e92fdbac8af4bb8d3e20c9d9 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.44494047619%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="444.86314449395" style="width: 798px; flex-grow: 444.863;" data-width="1920" data-height="1122">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_1920.png?h=92a9bacdb4fc3a719ba4d8f160aa67fb" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_600.png?h=1cd82acf7f9c1a36320195e466476bbb 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_1200.png?h=7e740f89394c8134132894034a550559 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_1920.png?h=92a9bacdb4fc3a719ba4d8f160aa67fb 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_1920.png?h=92a9bacdb4fc3a719ba4d8f160aa67fb" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_600.png?h=1cd82acf7f9c1a36320195e466476bbb 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_1200.png?h=7e740f89394c8134132894034a550559 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/178c2bbe-8cc2-4d1a-90e5-3d43aca85eff_rw_1920.png?h=92a9bacdb4fc3a719ba4d8f160aa67fb 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.44494047619%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="444.86314449395" style="width: 798px; flex-grow: 444.863;" data-width="1920" data-height="1122">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_1920.png?h=d41f1d4b8b5f76db0ca738202320754d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_600.png?h=abf3e4d7bd743853716788aa020520b7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_1200.png?h=dd4a6d26a80ba5d106ce0668b70d6b7c 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_1920.png?h=d41f1d4b8b5f76db0ca738202320754d 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_1920.png?h=d41f1d4b8b5f76db0ca738202320754d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_600.png?h=abf3e4d7bd743853716788aa020520b7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_1200.png?h=dd4a6d26a80ba5d106ce0668b70d6b7c 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/aca1adc5-fdc7-49c8-a214-f98c68fd1667_rw_1920.png?h=d41f1d4b8b5f76db0ca738202320754d 1920w,">
+      <span class="grid__item-filler" style="padding-bottom:58.44494047619%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Reception<br></div><div>“What
+ a fun little app. You’ve done a great job with this and though there 
+are some small bugs here and there that’s not a major concern to me. I 
+hope you enjoyed this project and were able to learn a lot from this 
+process. Based on what I can see this seems like a really fun group =)” 
+—Our professor Doug Shook<br></div><div><br></div><div class="sub-title">Attribution<br></div><div><a href="https://github.com/muzemils" target="_blank">Sonia Muzemil</a>, <a href="https://bylee.work/jduan.work/" target="_blank">Jefferson Duan</a>, and <a href="https://github.com/williesu7" target="_blank">Willie Su</a> collaborated on this project with me and did the heavy lifting during the coding and testing phase.<br></div><div><a href="https://www.cse.wustl.edu/~dshook/" target="_blank">Doug Shook</a> provided feedback and taught the class CSE 237 (Programming Tools and Techniques).</div><div>Exercise and wellness tips are courtesy of the World Health Organization (Europe Office).<br></div></div>
+</div>
+
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">Want to see more?</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/uxr-housing-usability" data-context="pages" data-identity="id:p606d33659daa17378cd426cb59613dc2726a0a34a4cebf8d5f44e">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x1920.png?h=85dd3fa5be6d7c0f29cff662b4024d57" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x640.png?h=1faacd5b599953b4f5af7a48a3b116b5 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x1280.png?h=85e2c1aad8042cf00a9c594b101546e7 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x1366.png?h=6ce1f14556f129decc3c9ffd2da2248e 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x1920.png?h=85dd3fa5be6d7c0f29cff662b4024d57 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x1920.png?h=85dd3fa5be6d7c0f29cff662b4024d57 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/82473289-435b-4eb9-923b-068407c56041_rwc_0x916x1920x1152x1920.png?h=85dd3fa5be6d7c0f29cff662b4024d57 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x1078.png?h=e73c886c781cc168bd5711ebbd588e1e" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x640.png?h=9816c4eb43dce9d732e5452256255c76 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x1078.png?h=e73c886c781cc168bd5711ebbd588e1e 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x1078.png?h=e73c886c781cc168bd5711ebbd588e1e 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x1078.png?h=e73c886c781cc168bd5711ebbd588e1e 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x1078.png?h=e73c886c781cc168bd5711ebbd588e1e 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c2f0cbdd-8f4f-4cd0-b2c9-c1cdd7e36c1f_rwc_0x181x1078x646x1078.png?h=e73c886c781cc168bd5711ebbd588e1e 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Usability Testing: The Search</div>
+                            <div class="custom2 preserve-whitespace">UX research / Spring 2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/out-and-open" data-context="pages" data-identity="id:p60adc533e0c1757b09f1309c7eabc9124285f358d0427332d2c5a">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x1558.jpg?h=42b871567057bdfdefc8caf9b02f240e" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x640.jpg?h=d4ca74029fcac4d99bd07270b46a92ab 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x1280.jpg?h=fd624b304832217054d1bd9b73f0feab 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x1366.jpg?h=ca255556aa1f017ece5c06a0b18ae7ef 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x1920.jpg?h=1b97bf2bb4a481777f7209938580b4ed 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x1558.jpg?h=42b871567057bdfdefc8caf9b02f240e 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/6d694db5-2180-4d43-a686-deb43c13f955_rwc_191x148x1558x935x1558.jpg?h=42b871567057bdfdefc8caf9b02f240e 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x1558.jpg?h=5886970077a8a8ae23d15d710549aa82" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x640.jpg?h=5e01240ff1d80663af0b10e9c1e1a0ca 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x1280.jpg?h=00d4c987c27eb87660e8142473affa37 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x1366.jpg?h=d3ca8ccffdb85b8cfdbbf54079985aac 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x1920.jpg?h=124bb1e33f30634e4a28a41db382ee91 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x1558.jpg?h=5886970077a8a8ae23d15d710549aa82 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c09c9de2-8da0-47a0-a61d-5d172096203f_rwc_184x113x1558x935x1558.jpg?h=5886970077a8a8ae23d15d710549aa82 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Out and Open</div>
+                            <div class="custom2 preserve-whitespace">Coptic-bound book / Fall 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/prideful" data-context="pages" data-identity="id:p5db219c1d65edf7fe1d7fa76e066f4a3f2a141aa87ddec87379c2">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x640.png?h=bcfa31e77b8a084a8e3ca5229d3392e7 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1280.png?h=61ae39d82df58cc2db39f8d581f05ba2 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1366.png?h=048f0230be5563f0f4e375d32d168b3f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x640.png?h=1446b3418ac414f10c59478e1ec61982 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1280.png?h=fccc7821dd8a54f81a6526da0438e99c 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1366.png?h=49bce0ceb01092c4187404e852fe697f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Prideful</div>
+                            <div class="custom2 preserve-whitespace">Website prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/blind-eye" data-context="pages" data-identity="id:p5dc5a570a28e6f7cc001adcf2be559b3c1724ec5a97eb17dcbbe4">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x3840.png?h=2fb44d4d8bfd62ff02eb2c3107f94f86" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x640.png?h=425fc0ade50e944738acdfb120529912 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x1280.png?h=a0f76d35cfaaa4461171a1e73d77f73d 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x1366.png?h=121131c01fbcef5b53e51213649fefe5 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x1920.png?h=12644dfa6c9928b3a7b831f5af2da1d0 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x2560.png?h=193f64be9e20e7dfbed6cf9cada30fde 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x3840.png?h=2fb44d4d8bfd62ff02eb2c3107f94f86 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x4320.png?h=1f5426cc2965d4bf0b72784416535b36" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x640.png?h=6627f7ef657428a14caef222f95b23f9 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x1280.png?h=a411a59df4a1a55b6174e4eb91027fb1 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x1366.png?h=d56f1650a0d8c4c968314c0c75b7b6f0 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x1920.png?h=a0ddd1dc7110a4ed1187dd3dbd0d44cc 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x2560.png?h=639b787b1b97c50a1c827004dd5b90ca 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x4320.png?h=1f5426cc2965d4bf0b72784416535b36 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Turning a Blind Eye</div>
+                            <div class="custom2 preserve-whitespace">Data visualization / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/motion" data-context="pages" data-identity="id:p5fc210e87b6fcfca20a7dd718f0b82eec1d50ca1ca2503af148d9">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x640.gif?h=11b9b8a1b2aabae061005179b759618c 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x640.gif?h=3af1e7e611d50f111992d2fde15b3115 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Motion and Animation</div>
+                            <div class="custom2 preserve-whitespace">Making things move / 2019 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/destination-marfa" data-context="pages" data-identity="id:p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_car_4x3.png?h=a936ccd0ca83b62f7399973a95726764" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x640.png?h=fc4b989d9b3a285caa80e48ee46ed60c 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1280.png?h=5d3a3497ad7ca7b38ffa07f3b0fbff4e 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1366.png?h=8362c4963131eefc19b3b402f39046e0 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1920.png?h=4e2739f9a712c152139fc50383a094de 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x2560.png?h=9870a546c4aaf759f6f3b24a61721e31 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x5120.png?h=ac0469f02c761242b1bed0d6f97138cc 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x1920.png?h=958e25835665ad722fd938f93e88c5c6" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x640.png?h=23f6502baa8f14bc49120e80f00229fc 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x1280.png?h=38b58e36f2cd8ab030a1a4b555e0e057 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x1366.png?h=ee95a7f8b4e315abf06fc205bfff9ffe 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x1920.png?h=958e25835665ad722fd938f93e88c5c6 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x1920.png?h=958e25835665ad722fd938f93e88c5c6 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x1920.png?h=958e25835665ad722fd938f93e88c5c6 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Destination Marfa</div>
+                            <div class="custom2 preserve-whitespace">Mobile app prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/sketchbook" data-context="pages" data-identity="id:p5db7473de6f27978bb7ca1cfa679b2497901882d722e193d4fe7f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x3.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2889.jpg?h=9c4804e7889b04ee8c32ff1fc3767bd5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x640.jpg?h=fe3d71d0068cb36ba2e026e66a8bace0 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1280.jpg?h=134a3daa9cd160d6ddb8f5856c3e1d32 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1366.jpg?h=7bc2b6963ff3c0e4547f08b2353177c0 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1920.jpg?h=d18dd92752bbaaea57ee23ea927263f2 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2560.jpg?h=a8f125938f4ed2a7e4b8983c730f155d 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2889.jpg?h=9c4804e7889b04ee8c32ff1fc3767bd5 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x640.png?h=a7c62e3fc6538dc415cc03d8c1cbd31f 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1280.png?h=03b5d7be67988f61536381430fc10a4c 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1366.png?h=8ae9c6c4b7e3d0eb1a20d9188616dfc9 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Sketchbook and Studies</div>
+                            <div class="custom2 preserve-whitespace">Foundations / 2017 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/sam-fox-calendar" data-context="pages" data-identity="id:p5db221ce0a2d2ec30bac9c906847f4abc8fc85481cb16e1132de3">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x640.png?h=08a8931f43fbca6ebe236c600011694e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1280.png?h=557473dbadb6aa6db87630224a3240b4 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1366.png?h=ecd57cff1f38d491e7be8b15e894ea71 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x640.jpg?h=5ae3868bbc8b2f5edf15a99cf77896d8 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1280.jpg?h=eabb76bcab4233f931109652c7abae02 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1366.jpg?h=070f26725df0db1845f50ce3f610c805 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Sam Fox Calendar</div>
+                            <div class="custom2 preserve-whitespace">Double-sided poster / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/drawbot" data-context="pages" data-identity="id:p5e20d3410d00f3771dd2396fbee01874a36096b35ea6630b4e3dc">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x3840.jpg?h=2a6a423ad7418c1a2c52618e1c66a619" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x640.jpg?h=abc416d27169a318610eceb62873a01d 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x1280.jpg?h=3b8267d0259985d8012238115460da25 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x1366.jpg?h=e6b9892a6252f9cb6308ba59d7c058c4 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x1920.jpg?h=db0c6470279c7f2e3689234877952d84 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x2560.jpg?h=752f4dd8ba83ede786854016dc531d4f 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x3840.jpg?h=2a6a423ad7418c1a2c52618e1c66a619 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1558.png?h=8ee5417f7769dead68ef7ec4e3c41b93" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x640.png?h=2e9d68867f3ee4001b857eca116a250e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1280.png?h=c13182e955394a3f6e32b00dd255bcef 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1366.png?h=0b8f326646f36264d51f6fcd9292c9e9 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1920.png?h=f87dd223b9f55bf34e82a76c48529cdf 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1558.png?h=8ee5417f7769dead68ef7ec4e3c41b93 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1558.png?h=8ee5417f7769dead68ef7ec4e3c41b93 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">DrawBot Explorations</div>
+                            <div class="custom2 preserve-whitespace">Creative coding / Spring 2020 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/client" data-context="pages" data-identity="id:p5fae0a29a62870471771ee7f8e8ac433cc2d0f47bfa1e15b6173d">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x640.jpg?h=3ddf042e6092af979086ebf6335968f0 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1280.jpg?h=ad3bf4b91d14e94617aa3ddb52f21e98 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1366.jpg?h=6c8904d39575c33b4845f3440313df85 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Quaranteen_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png?h=8f90ad53929df801d1aa48ff4abdecb9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x640.png?h=298d729ed8e5b8fc81a1d2f8d8ddb1e5 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1280.png?h=7d066647a4c9a4025592ac18112ecdff 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1366.png?h=364d68f84ad528fc07cf96a2e24e6c7d 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1920.png?h=d4d922744143aca5e7f34c4ec6e35f8f 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x2560.png?h=5de9be265bb26255be7391dda27da799 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png?h=8f90ad53929df801d1aa48ff4abdecb9 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Client Work</div>
+                            <div class="custom2 preserve-whitespace">PR Materials for clients / 2018 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  © Miles Lee 2022. All rights reserved. Last updated December 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":38,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"UA-57221920-3","anonymization":false}};</script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Quaranteen_files/translations"></script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Quaranteen_files/main.js"></script><div class="js-lightbox-wrap offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"><div data-slide-id="2" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden">
+        <div class="grid__image-wrapper">
+          <img src="Miles%20Lee%20-%20Quaranteen_files/25da0c54-6230-4660-8434-66ca1381c220_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/25da0c54-6230-4660-8434-66ca1381c220_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/25da0c54-6230-4660-8434-66ca1381c220_rw_1200.png 1070w" sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </div></div></div></div><div data-slide-id="5" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden">
+        <div class="grid__image-wrapper">
+          <img src="Miles%20Lee%20-%20Quaranteen_files/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_1200.png" srcset="Miles%20Lee%20-%20Quaranteen_files/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_600.png 600w, Miles%20Lee%20-%20Quaranteen_files/fde78671-8bcc-48dc-87eb-a4e484d426e8_rw_1200.png 1070w" sizes="(max-width: 1070px) 100vw, 1070px">
+        <div>
+      </div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>

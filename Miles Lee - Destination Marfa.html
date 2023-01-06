@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html class="wf-dblv-i4-active wf-dblv-i5-active wf-dblv-n4-active wf-dblv-n5-active wf-vkzk-n4-active wf-vkzk-n5-active wf-vkzk-n7-active wf-yyqq-i4-active wf-yyqq-i6-active wf-yyqq-n4-active wf-yyqq-n5-active wf-yyqq-n6-active wf-yyqq-n7-active wf-yyqq-n8-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="Miles%20Lee%20-%20Destination%20Marfa_files/nr-1216.min.js"></script><script async="" src="Miles%20Lee%20-%20Destination%20Marfa_files/google-analytics_analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="wustl,washu,portfolio,interaction design,design,graphic design,ui/ux design,user experience,ui/ux,college,intern,design intern,sam fox,bread lee,miles lee,washington university,st louis,dallas,texas,austin,washington university in,rob giampietro,designer,design internship,internship">
+      <meta name="description" content="A guide for new travelers visiting beloved desert art town Marfa, Texas">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Miles Lee - Destination Marfa">
+      <meta property="og:description" content="A guide for new travelers visiting beloved desert art town Marfa, Texas">
+      <meta property="og:image" content="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63a26ff3-7baa-4ef1-b2fe-03bb8174c54b_rwc_0x0x3315x2210x3315.jpg?h=e5d2f5c276737cec3ba1a9442964c365">
+        <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/983fae17-2ff3-4346-8243-8ad84f425f9e_carw_1x1x32.png?h=3f91ef71ed99140263ea59549b2bbe0b">
+        <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Destination%20Marfa_files/main.css" type="text/css">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Destination%20Marfa_files/7166a30b8cfe1ee808ef74c8376041df1673044032.css" type="text/css">
+    <link rel="canonical" href="https://bylee.work/destination-marfa">
+      <title>Miles Lee - Destination Marfa</title>
+    <script type="text/javascript" src="Miles%20Lee%20-%20Destination%20Marfa_files/-NcbJ3-LIZeZjCpL2DLsm9RNzzp6oRa4w_6L3LRy9WqfezjffHYEBsJzwD9oF.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script><style type="text/css">@font-face{font-family:dblv;src:url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/330541/00000000000000007735943a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/l?subset_id=2&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/d?subset_id=2&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/a?subset_id=2&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/l?subset_id=2&fvd=n8&v=3) format("woff2"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/d?subset_id=2&fvd=n8&v=3) format("woff"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/a?subset_id=2&fvd=n8&v=3) format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header  js-fixed-nav" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="https://bylee.work/home" class="preserve-whitespace">MILES LEE</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932" data-hover-hint="pageHeader" data-hover-hint-id="p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">Destination Marfa</h1>
+            <p class="description">A guide for new travelers visiting beloved desert art town Marfa, Texas</p>
+            <div class="custom1 preserve-whitespace">Prototyping, Wireframing, UI, Mobile app, Sketch / Spring 2019</div>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><div style="text-align:left;">When
+ prompted to create an app to serve as a guide to a selected site, I 
+chose the desert art town of Marfa, Texas.&nbsp;Marfa is a small arts 
+hub&nbsp;in West Texas, boasting site-specific installations by Donald 
+Judd, the fake Prada Marfa storefront, and a vibrant arts 
+community.&nbsp;I visited as a high school senior and was struck by the 
+close-knit community and one-of-a-kind sites there.&nbsp;</div><div style="text-align:left;">I
+ wanted my app to function as a guide for people visiting Marfa for the 
+first time. The user is able to create a schedule, explore options for 
+art, sights, food, and shops, edit their user profile, use a map, and 
+find more information about Marfa.</div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e1d6813481a2c6d9f4d1b086d9ad72d6eb23449444a6c175b443" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="572" style="width: 484px; flex-grow: 484;" data-width="1920" data-height="872">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c0960958-f5c7-4d59-a15f-660a238f0169_rw_1920.png?h=18672a102cfe08cde39f26ec0de4e20e" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c0960958-f5c7-4d59-a15f-660a238f0169_rw_600.png?h=7147b838a444034b79f5edd26956b1cf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c0960958-f5c7-4d59-a15f-660a238f0169_rw_1200.png?h=7c900b60426077359d118c1a1ba260ce 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c0960958-f5c7-4d59-a15f-660a238f0169_rw_1920.png?h=18672a102cfe08cde39f26ec0de4e20e 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Destination%20Marfa_files/c0960958-f5c7-4d59-a15f-660a238f0169_rw_1920.png" sizes="1103px" srcset="Miles%20Lee%20-%20Destination%20Marfa_files/c0960958-f5c7-4d59-a15f-660a238f0169_rw_600.png 600w, Miles%20Lee%20-%20Destination%20Marfa_files/c0960958-f5c7-4d59-a15f-660a238f0169_rw_1200.png 1200w, Miles%20Lee%20-%20Destination%20Marfa_files/c0960958-f5c7-4d59-a15f-660a238f0169_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:45.454545454545%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e1d681a7067a2a84a69ea9a01f1b8e67a8cdef494634ea9a517c" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="572" style="width: 484px; flex-grow: 484;" data-width="1920" data-height="872">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_1920.png?h=f72a901570255d17111f2166da98013b" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_600.png?h=0c85e6a8cde193820972a9c927679279 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_1200.png?h=72f47518dc321557814c569d06d6c73f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_1920.png?h=f72a901570255d17111f2166da98013b 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Destination%20Marfa_files/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_1920.png" sizes="1103px" srcset="Miles%20Lee%20-%20Destination%20Marfa_files/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_600.png 600w, Miles%20Lee%20-%20Destination%20Marfa_files/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_1200.png 1200w, Miles%20Lee%20-%20Destination%20Marfa_files/449201fe-0cd0-4943-bfde-dbe339f0f5c3_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:45.454545454545%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>Mentorship provided by <a href="https://www.rebeccaleffellkoren.com/" target="_blank">Rebecca Leffell-Koren</a>.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">I
+ compiled research by looking at the navigation systems of existing 
+mobile apps I thought worked well and didn’t work well. I looked at apps
+ with bottom navigation bars, side navigation bars, and top navigation 
+bars.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e1d66f74a175845ad88748742785b6418e041472f4e9358e34cd" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1650" data-height="1275">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_1920.png?h=392deee0950a79c9e601c5b5714447bc" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_600.png?h=fd921b379c816112f98e99498f0e5e69 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_1200.png?h=20fd2e6c0df0d6a6518f6f61981d4c53 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_1920.png?h=392deee0950a79c9e601c5b5714447bc 1650w,"  sizes="(max-width: 1650px) 100vw, 1650px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_1920.png?h=392deee0950a79c9e601c5b5714447bc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_600.png?h=fd921b379c816112f98e99498f0e5e69 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_1200.png?h=20fd2e6c0df0d6a6518f6f61981d4c53 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ccda8d55-0c47-492b-a3ca-7323592998b9_rw_1920.png?h=392deee0950a79c9e601c5b5714447bc 1650w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1650" data-height="1275">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_1920.png?h=d0a306129bef1d6db7296dbf58ce41a4" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_600.png?h=78125234c8c93946688bf0cd646b261f 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_1200.png?h=85d63c195e265210c37515fb37ad76f6 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_1920.png?h=d0a306129bef1d6db7296dbf58ce41a4 1650w,"  sizes="(max-width: 1650px) 100vw, 1650px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_1920.png?h=d0a306129bef1d6db7296dbf58ce41a4" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_600.png?h=78125234c8c93946688bf0cd646b261f 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_1200.png?h=85d63c195e265210c37515fb37ad76f6 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/701ed114-cf9c-45f0-a7ee-18e0fa40fb5a_rw_1920.png?h=d0a306129bef1d6db7296dbf58ce41a4 1650w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1650" data-height="1275">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_1920.png?h=85c82840565d21502486f35b57de6e72" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_600.png?h=bf90f7036c45a343d520c9ddb87a52bf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_1200.png?h=ce319d18c147215e737eb258378f3bfe 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_1920.png?h=85c82840565d21502486f35b57de6e72 1650w,"  sizes="(max-width: 1650px) 100vw, 1650px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_1920.png?h=85c82840565d21502486f35b57de6e72" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_600.png?h=bf90f7036c45a343d520c9ddb87a52bf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_1200.png?h=ce319d18c147215e737eb258378f3bfe 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4e79a861-2f56-498d-aa1d-93f2aec6258d_rw_1920.png?h=85c82840565d21502486f35b57de6e72 1650w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">Looking
+ at my research, I made thumbnails of my app using different kinds of 
+navigation bars. I tried mostly a bottom navigation bar and a hamburger 
+menu. Low-fidelity wireframing allowed me to visualize the layout of 
+different app screens using each navigation option.&nbsp;After creating 
+high-fidelity wireframes using different navigation types, I found that 
+the hamburger menu became redundant. For the app’s home screen, I wanted
+ my user to clearly see different entry points, but with the hamburger 
+menu, the user would have access to the entry points in two different 
+layouts (on the screen and in the hamburger menu). This felt too much 
+like the WUSTL mobile app’s confusing navigation system. I decided to 
+use a bottom bar navigation instead.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e1d68e0785be478cdd6d65bdff553a5c7984b1d3f292b21da450" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_1920.png?h=0ea09a5851267906a65044f0b3e74c7f" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_600.png?h=a26ab6c8644e0f3017180068e8b46fa7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_1200.png?h=93e1826a55f55f56b5e2df011ec02751 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_1920.png?h=0ea09a5851267906a65044f0b3e74c7f 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_1920.png?h=0ea09a5851267906a65044f0b3e74c7f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_600.png?h=a26ab6c8644e0f3017180068e8b46fa7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_1200.png?h=93e1826a55f55f56b5e2df011ec02751 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fee00677-e790-4741-99f6-638edb053142_rw_1920.png?h=0ea09a5851267906a65044f0b3e74c7f 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_1920.png?h=61c40ae05df0bc274322cf2038373e9f" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_600.png?h=682df8ff2213ff3149e2c1169d2d07b1 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_1200.png?h=1c9659eaee834dd2834145f712a715fc 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_1920.png?h=61c40ae05df0bc274322cf2038373e9f 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_1920.png?h=61c40ae05df0bc274322cf2038373e9f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_600.png?h=682df8ff2213ff3149e2c1169d2d07b1 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_1200.png?h=1c9659eaee834dd2834145f712a715fc 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/180e6b20-655e-4414-a56a-8edde621dd1a_rw_1920.png?h=61c40ae05df0bc274322cf2038373e9f 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_1920.png?h=d6a63c3e14a3030d3a8baba913dc8742" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_600.png?h=c8a357933f1a97040a44075ef59f7f40 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_1200.png?h=6eb09080174615ba4ca972ba07ba58a5 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_1920.png?h=d6a63c3e14a3030d3a8baba913dc8742 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_1920.png?h=d6a63c3e14a3030d3a8baba913dc8742" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_600.png?h=c8a357933f1a97040a44075ef59f7f40 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_1200.png?h=6eb09080174615ba4ca972ba07ba58a5 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/777947fe-cb67-4f5a-b4c5-d34e89d7eea3_rw_1920.png?h=d6a63c3e14a3030d3a8baba913dc8742 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_1920.png?h=b9dfbb8669758ad9b5ce89c748d2ebc6" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_600.png?h=7544f0ab3719f203a271e35635fb2460 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_1200.png?h=96c3aa28d31ddc5ff4f891e6d490e2aa 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_1920.png?h=b9dfbb8669758ad9b5ce89c748d2ebc6 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_1920.png?h=b9dfbb8669758ad9b5ce89c748d2ebc6" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_600.png?h=7544f0ab3719f203a271e35635fb2460 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_1200.png?h=96c3aa28d31ddc5ff4f891e6d490e2aa 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/545d98ee-2b99-49e5-a0f9-36c12027191f_rw_1920.png?h=b9dfbb8669758ad9b5ce89c748d2ebc6 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_1920.png?h=272efcdf0f228614e942c934ff25cc6d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_600.png?h=eaf42a843a748cb22b792eddcd2fae5a 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_1200.png?h=7a4fe77d21cfcc6a3f588f700689146b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_1920.png?h=272efcdf0f228614e942c934ff25cc6d 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_1920.png?h=272efcdf0f228614e942c934ff25cc6d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_600.png?h=eaf42a843a748cb22b792eddcd2fae5a 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_1200.png?h=7a4fe77d21cfcc6a3f588f700689146b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/eb76f43e-0bf3-4e64-ac83-0c1e63655b9e_rw_1920.png?h=272efcdf0f228614e942c934ff25cc6d 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_1920.png?h=e632cd4b1c16b91710688a9d578b9965" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_600.png?h=13b3e98ffd29e7293cefadcf0183b1bd 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_1200.png?h=4edd99922ecd1a356fcd32f538bab79e 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_1920.png?h=e632cd4b1c16b91710688a9d578b9965 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_1920.png?h=e632cd4b1c16b91710688a9d578b9965" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_600.png?h=13b3e98ffd29e7293cefadcf0183b1bd 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_1200.png?h=4edd99922ecd1a356fcd32f538bab79e 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63ffe474-854e-48d9-bd39-4ea861c53032_rw_1920.png?h=e632cd4b1c16b91710688a9d578b9965 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">I
+ wanted my app’s color scheme to represent the overall sense of Marfa I 
+received when visiting. I struggled between portraying Marfa’s more 
+modernist art side versus its Southwestern desert town side. I pulled 
+many different color palettes from colorhunt.co for inspiration, and 
+ended up with a color scheme more reminiscent of the latter.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e1d696c366eb794e8ae8738f46ad14486c3c6398ff2ccf44835e" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_1920.png?h=36ce77852114393f99729523e30f738d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_600.png?h=71e87955a48c01ac1259033ced781603 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_1200.png?h=f706b522b66016fa76df1dbf20feca93 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_1920.png?h=36ce77852114393f99729523e30f738d 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_1920.png?h=36ce77852114393f99729523e30f738d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_600.png?h=71e87955a48c01ac1259033ced781603 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_1200.png?h=f706b522b66016fa76df1dbf20feca93 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/def5e53d-aa81-4515-abab-207d2154cff2_rw_1920.png?h=36ce77852114393f99729523e30f738d 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_1920.png?h=a1a3dcf756078da35b950c5dc2edbdc0" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_600.png?h=b03c20e10e67ae32f693428f42d4f755 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_1200.png?h=23930625d1283a95ecb44f9a2d714f7c 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_1920.png?h=a1a3dcf756078da35b950c5dc2edbdc0 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_1920.png?h=a1a3dcf756078da35b950c5dc2edbdc0" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_600.png?h=b03c20e10e67ae32f693428f42d4f755 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_1200.png?h=23930625d1283a95ecb44f9a2d714f7c 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/877dc23a-937d-435d-a988-9cfd46647473_rw_1920.png?h=a1a3dcf756078da35b950c5dc2edbdc0 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_1920.png?h=6d5b7bc42a4b4f2c7926cf50fc4f2fcc" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_600.png?h=be7084255e0be30dfd24c1507bbf0303 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_1200.png?h=f98c59155d462d6dc121e05070bb2ec8 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_1920.png?h=6d5b7bc42a4b4f2c7926cf50fc4f2fcc 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_1920.png?h=6d5b7bc42a4b4f2c7926cf50fc4f2fcc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_600.png?h=be7084255e0be30dfd24c1507bbf0303 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_1200.png?h=f98c59155d462d6dc121e05070bb2ec8 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91f6a5f4-f5ea-423b-952a-3598cb8ee12c_rw_1920.png?h=6d5b7bc42a4b4f2c7926cf50fc4f2fcc 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_1920.png?h=8084b91a5a319db2fbf3b431f6def9dc" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_600.png?h=1d3256fdc9f640ed69a1620e4cc08853 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_1200.png?h=c1dd307883d8001ef67840d6ff076470 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_1920.png?h=8084b91a5a319db2fbf3b431f6def9dc 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_1920.png?h=8084b91a5a319db2fbf3b431f6def9dc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_600.png?h=1d3256fdc9f640ed69a1620e4cc08853 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_1200.png?h=c1dd307883d8001ef67840d6ff076470 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/71bd25ad-82de-4e3e-b880-80cee71718ac_rw_1920.png?h=8084b91a5a319db2fbf3b431f6def9dc 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_1920.png?h=e2ca0ac243922a55d3857eb662efdb0f" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_600.png?h=268c8c3191ad48d1ae622a6cecb70ed2 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_1200.png?h=bd21a005e257104293f56d4f3ff54132 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_1920.png?h=e2ca0ac243922a55d3857eb662efdb0f 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_1920.png?h=e2ca0ac243922a55d3857eb662efdb0f" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_600.png?h=268c8c3191ad48d1ae622a6cecb70ed2 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_1200.png?h=bd21a005e257104293f56d4f3ff54132 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ac11c1ec-cfc9-422e-b355-26eec3ca40a1_rw_1920.png?h=e2ca0ac243922a55d3857eb662efdb0f 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_1920.png?h=9ea88cc0cecb13cc05d52456c67e1e75" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_600.png?h=d564f80aa11ce4bc3eac02367b1407c7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_1200.png?h=bc5faee3c3e21e8658414f642d16a769 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_1920.png?h=9ea88cc0cecb13cc05d52456c67e1e75 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_1920.png?h=9ea88cc0cecb13cc05d52456c67e1e75" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_600.png?h=d564f80aa11ce4bc3eac02367b1407c7 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_1200.png?h=bc5faee3c3e21e8658414f642d16a769 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/dee4578d-89d2-4290-8c7e-296935448f24_rw_1920.png?h=9ea88cc0cecb13cc05d52456c67e1e75 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">For
+ the final prototypes of my app, I created 5 pages—a Schedule, Explore, 
+User, Map, and FAQ page—each accessible through the bottom bar 
+navigation.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e1d6a00f25ad2f5680204111068f70f6a3151c195c36a3c0cf32" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_1920.png?h=a16fc3fdbe034f8fec88c862a1435cb9" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_600.png?h=76c356f3524a990e855927676cc4ef8e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_1200.png?h=2bcd7851fabf26d1de311d20491a6224 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_1920.png?h=a16fc3fdbe034f8fec88c862a1435cb9 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_1920.png?h=a16fc3fdbe034f8fec88c862a1435cb9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_600.png?h=76c356f3524a990e855927676cc4ef8e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_1200.png?h=2bcd7851fabf26d1de311d20491a6224 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f22d6403-78fc-4add-8b90-110d1955eaee_rw_1920.png?h=a16fc3fdbe034f8fec88c862a1435cb9 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_1920.png?h=a461a5866e242d0a898a07d8199e5530" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_600.png?h=a7c4825206713c5b874002b03e14d4d5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_1200.png?h=7af64fa44e1584b36cc3ca2be1d77eaa 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_1920.png?h=a461a5866e242d0a898a07d8199e5530 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_1920.png?h=a461a5866e242d0a898a07d8199e5530" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_600.png?h=a7c4825206713c5b874002b03e14d4d5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_1200.png?h=7af64fa44e1584b36cc3ca2be1d77eaa 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fd317ee1-30de-4c6c-9a0e-7cbbc177f527_rw_1920.png?h=a461a5866e242d0a898a07d8199e5530 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_1920.png?h=eb691a9ff05cd901f8b0ebda725ba408" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_600.png?h=58e5560a902b4b6a1886e06ba1d5f7e9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_1200.png?h=d31a514e1447fbe745ed20665a27e679 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_1920.png?h=eb691a9ff05cd901f8b0ebda725ba408 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_1920.png?h=eb691a9ff05cd901f8b0ebda725ba408" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_600.png?h=58e5560a902b4b6a1886e06ba1d5f7e9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_1200.png?h=d31a514e1447fbe745ed20665a27e679 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4699f3-7837-46ed-bb08-d48f00ec866a_rw_1920.png?h=eb691a9ff05cd901f8b0ebda725ba408 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_1920.png?h=859317df1a6af1a6fc724ec9c1fad0fd" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_600.png?h=0ef44b7a1a2e3655f997cac70edf8410 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_1200.png?h=50d4d382da7de5ddcfa644a7c3768854 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_1920.png?h=859317df1a6af1a6fc724ec9c1fad0fd 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_1920.png?h=859317df1a6af1a6fc724ec9c1fad0fd" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_600.png?h=0ef44b7a1a2e3655f997cac70edf8410 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_1200.png?h=50d4d382da7de5ddcfa644a7c3768854 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/127197d4-a0e4-4efe-8141-e657cb474d4f_rw_1920.png?h=859317df1a6af1a6fc724ec9c1fad0fd 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_1920.png?h=7ef716f99c3799babb587dcd0d7aa3b0" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_600.png?h=ab595d0c9d22a93715eff32ad609ffb9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_1200.png?h=20f16bb6cb85e9107ebcf542a6f9ff77 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_1920.png?h=7ef716f99c3799babb587dcd0d7aa3b0 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_1920.png?h=7ef716f99c3799babb587dcd0d7aa3b0" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_600.png?h=ab595d0c9d22a93715eff32ad609ffb9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_1200.png?h=20f16bb6cb85e9107ebcf542a6f9ff77 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ebeb2681-0339-4d0d-8703-829ee22ebb66_rw_1920.png?h=7ef716f99c3799babb587dcd0d7aa3b0 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_1920.png?h=fb297f0186b699aa1b80059aea4a584c" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_600.png?h=82429ee88cca5c6aec65c0eaa6aa0fdd 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_1200.png?h=f6ed19034754104ed77b182539478ebd 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_1920.png?h=fb297f0186b699aa1b80059aea4a584c 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_1920.png?h=fb297f0186b699aa1b80059aea4a584c" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_600.png?h=82429ee88cca5c6aec65c0eaa6aa0fdd 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_1200.png?h=f6ed19034754104ed77b182539478ebd 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5b03637c-c7d4-4dd4-bfc4-7cd2b53a86f1_rw_1920.png?h=fb297f0186b699aa1b80059aea4a584c 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;">This
+ project allowed me to create a comprehensive mobile app design. I 
+designed one mobile app design as a sophomore in high school, but hadn’t
+ gone through such a thorough process like this to produce wireframes 
+that really kept design principles and user experience in mind. I’m 
+grateful that I was able to get a taste of designing for mobile screens 
+with tools like Sketch and InVision (I used Photoshop for this in high 
+school, yikes), and I hope to design many more.&nbsp;</div><div style="text-align:left;">If
+ I were to continue to work on this project, I rework or further develop
+ the user’s different points of entry. With this app, I spent most of my
+ time developing the Explore page, but not nearly enough time developing
+ the other pages, especially the Map and F.A.Q. pages. I also received 
+feedback to make sure that the search bar is accessible in every screen.
+ Many apps have a search page as a main entry point (for example, the 
+Apple App Store has a search page at its bottom menu bar).</div></div>
+</div>
+
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">Want to see more?</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/quaranteen" data-context="pages" data-identity="id:p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x640.png?h=65c965e33691ab134477d4a94daefd2c 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x640.png?h=e61ec5ced5d35b89004b18256b466889 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Quaranteen</div>
+                            <div class="custom2 preserve-whitespace">A Java program for quarantine isolation / Spring 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/sam-fox-calendar" data-context="pages" data-identity="id:p5db221ce0a2d2ec30bac9c906847f4abc8fc85481cb16e1132de3">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x640.png?h=08a8931f43fbca6ebe236c600011694e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1280.png?h=557473dbadb6aa6db87630224a3240b4 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1366.png?h=ecd57cff1f38d491e7be8b15e894ea71 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/00b75917-24c8-490c-a192-0ee64dca321d_rwc_0x0x1920x1152x1920.png?h=4ad0ac096c4065f86c0425666feef683 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x640.jpg?h=5ae3868bbc8b2f5edf15a99cf77896d8 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1280.jpg?h=eabb76bcab4233f931109652c7abae02 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1366.jpg?h=070f26725df0db1845f50ce3f610c805 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c7033439-3074-4040-bde9-d30a359c6038_rwc_0x41x1817x1090x1817.jpg?h=ae03be979d754b3a72d486074b6fd85d 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Sam Fox Calendar</div>
+                            <div class="custom2 preserve-whitespace">Double-sided poster / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/meet-me-in-st-louis" data-context="pages" data-identity="id:p5e1d4b5f6cb18bd4431034c6a977edf9ffeab160ea824b84be138">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png?h=fff5bdf1fdf37620266a12a46de32907" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x640.png?h=2a66b4462e3467f59a76e5e5cd4d17f9 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1280.png?h=7bcea23585ac750a2b261f91f1b6a992 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1366.png?h=5299977cea0fd79088352d86aa6acbf8 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png?h=fff5bdf1fdf37620266a12a46de32907 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png?h=fff5bdf1fdf37620266a12a46de32907 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png?h=fff5bdf1fdf37620266a12a46de32907 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x3587.jpg?h=d2a79f1ba940d8a6db94499034b6d35e" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x640.jpg?h=5ab93d0346f944ed7d01bec77065b526 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x1280.jpg?h=b739cabe413e6c1fd38d7c0bccf97e8e 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x1366.jpg?h=a4cec7b9b223a7f05f8ec4804c431ea1 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x1920.jpg?h=ee0810cfc1995fb2fc307f65241e2c4b 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x2560.jpg?h=2d48f83007ec83759874bced3716a593 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x3587.jpg?h=d2a79f1ba940d8a6db94499034b6d35e 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Meet Me in St. Louis</div>
+                            <div class="custom2 preserve-whitespace">Postcard packaging / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/motion" data-context="pages" data-identity="id:p5fc210e87b6fcfca20a7dd718f0b82eec1d50ca1ca2503af148d9">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x640.gif?h=11b9b8a1b2aabae061005179b759618c 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x640.gif?h=3af1e7e611d50f111992d2fde15b3115 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Motion and Animation</div>
+                            <div class="custom2 preserve-whitespace">Making things move / 2019 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/client" data-context="pages" data-identity="id:p5fae0a29a62870471771ee7f8e8ac433cc2d0f47bfa1e15b6173d">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x640.jpg?h=3ddf042e6092af979086ebf6335968f0 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1280.jpg?h=ad3bf4b91d14e94617aa3ddb52f21e98 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1366.jpg?h=6c8904d39575c33b4845f3440313df85 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png?h=8f90ad53929df801d1aa48ff4abdecb9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x640.png?h=298d729ed8e5b8fc81a1d2f8d8ddb1e5 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1280.png?h=7d066647a4c9a4025592ac18112ecdff 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1366.png?h=364d68f84ad528fc07cf96a2e24e6c7d 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1920.png?h=d4d922744143aca5e7f34c4ec6e35f8f 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x2560.png?h=5de9be265bb26255be7391dda27da799 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png?h=8f90ad53929df801d1aa48ff4abdecb9 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Client Work</div>
+                            <div class="custom2 preserve-whitespace">PR Materials for clients / 2018 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/snowden" data-context="pages" data-identity="id:p5db2213d013dd3fcbf2dd7c54196b1e17a0914d324885bff140b3">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png?h=f4536a9ed7677f6d57fbbebfe393a0bb" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x640.png?h=763ae93ae04a83274d4c3dec7f93b798 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png?h=f4536a9ed7677f6d57fbbebfe393a0bb 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png?h=f4536a9ed7677f6d57fbbebfe393a0bb 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png?h=f4536a9ed7677f6d57fbbebfe393a0bb 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png?h=f4536a9ed7677f6d57fbbebfe393a0bb 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png?h=f4536a9ed7677f6d57fbbebfe393a0bb 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x1920.jpg?h=32ac975c1bf9fdd14830ef09346d7e42" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x640.jpg?h=af2bf0b0857c01f7df4eba86bfa38eea 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x1280.jpg?h=dcef282da2ed7480d82c56d957294ba5 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x1366.jpg?h=13af5643a750ebffb206e6e0d2e5c2ed 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x1920.jpg?h=32ac975c1bf9fdd14830ef09346d7e42 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x1920.jpg?h=32ac975c1bf9fdd14830ef09346d7e42 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x1920.jpg?h=32ac975c1bf9fdd14830ef09346d7e42 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Snowden</div>
+                            <div class="custom2 preserve-whitespace">Monogram design / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/the-odyssey" data-context="pages" data-identity="id:p5ec4c4cbebe016b454b89f61c8eef56c880fd343634f124d47ac0">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x1920.jpg?h=3a70ac16f506adffc359e2e3f24c8490" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x640.jpg?h=6b778bddc89d5d8d8a7902aa832e9945 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x1280.jpg?h=b6e2be3b7ed519d1f434310f62a8a186 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x1366.jpg?h=f8019bc88eca9b7448ed57e3021d30c2 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x1920.jpg?h=3a70ac16f506adffc359e2e3f24c8490 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x1920.jpg?h=3a70ac16f506adffc359e2e3f24c8490 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x1920.jpg?h=3a70ac16f506adffc359e2e3f24c8490 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_car_4x3.jpg?h=20bedc5e6fe66c99051312f253f3e8d6" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x640.jpg?h=21ab5a57c26691c0e4b5bd2b02fde3d7 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x1280.jpg?h=cfe4c8a28655a46fd482eb46ab8a2cee 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x1366.jpg?h=285114d0de4e903026c7cbff732fdc65 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x1920.jpg?h=e586b392c9183d14de393ad49e28c15e 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x2560.jpg?h=d01099ce1ffe7db3d79fa8e6b32919c5 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x5120.jpg?h=4a2a52c55785433ea04caec2479e9829 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">The Odyssey</div>
+                            <div class="custom2 preserve-whitespace">Book jacket / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/high-lonesome" data-context="pages" data-identity="id:p5db2206e538beae88cc13c40d92326860dd7eaac9d7224fb52faa">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x3840.jpg?h=67bdff54112b1283ec563b6a251416a4" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x640.jpg?h=2b8103ae78704157f1faa01fdb7f33e3 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x1280.jpg?h=04d694c32b4b5b8ccaaff3f498168820 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x1366.jpg?h=22a7e4d12b63b1d47ad30a98f409a0ad 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x1920.jpg?h=dc65482088aaa8e7b0ad90fb10395277 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x2560.jpg?h=054b8bf65086dfee2c7e92a6e0346d3a 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x3840.jpg?h=67bdff54112b1283ec563b6a251416a4 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x4800.jpg?h=b59f9b8fd80b01b2e255a44e4247151d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x640.jpg?h=3a3a7db85af7d55941c3aecb51305085 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x1280.jpg?h=fed288df24bc5a421efb1934d86d37f3 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x1366.jpg?h=e297842e0bb64f54daa153e841ad8f8f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x1920.jpg?h=5104bc10cc91a3f8acf9f286436a1291 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x2560.jpg?h=7ad535c9d0f7288c3b8f0f9b620a46e2 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x4800.jpg?h=b59f9b8fd80b01b2e255a44e4247151d 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">A High &amp; Lonesome Sound</div>
+                            <div class="custom2 preserve-whitespace">Large poster / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/prideful" data-context="pages" data-identity="id:p5db219c1d65edf7fe1d7fa76e066f4a3f2a141aa87ddec87379c2">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x640.png?h=bcfa31e77b8a084a8e3ca5229d3392e7 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1280.png?h=61ae39d82df58cc2db39f8d581f05ba2 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1366.png?h=048f0230be5563f0f4e375d32d168b3f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x640.png?h=1446b3418ac414f10c59478e1ec61982 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1280.png?h=fccc7821dd8a54f81a6526da0438e99c 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1366.png?h=49bce0ceb01092c4187404e852fe697f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Prideful</div>
+                            <div class="custom2 preserve-whitespace">Website prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/illustration" data-context="pages" data-identity="id:p5e20d54b9e7e7209092c8e5876c7266375f1225c1b611d1e7e85f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x640.jpg?h=dcb1f15d54d956e6b682769657a44d7e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1280.jpg?h=6c35edfc550d3cd10313f0216de72fbd 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1366.jpg?h=7e247673064a0620cd23258b4602c1ec 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Destination%20Marfa_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg?h=482ae299c4001178a7b551290a2710ae" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x640.jpg?h=4818d994613852dd85f89265a08533fc 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1280.jpg?h=57e2485b6e53f5211e228c551415c2d7 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1366.jpg?h=4edc4200725b35ff6df88d497d39a8a4 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1920.jpg?h=ba7c7a30d080fd8a402df778e870d5a1 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg?h=482ae299c4001178a7b551290a2710ae 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg?h=482ae299c4001178a7b551290a2710ae 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Illustration</div>
+                            <div class="custom2 preserve-whitespace">Color and shape / 2017 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  © Miles Lee 2022. All rights reserved. Last updated December 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":33,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"UA-57221920-3","anonymization":false}};</script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Destination%20Marfa_files/translations"></script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Destination%20Marfa_files/main.js"></script><div class="js-lightbox-wrap offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>

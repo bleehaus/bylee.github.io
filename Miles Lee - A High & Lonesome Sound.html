@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="wf-dblv-i4-active wf-dblv-i5-active wf-dblv-n4-active wf-dblv-n5-active wf-vkzk-n4-active wf-vkzk-n5-active wf-vkzk-n7-active wf-yyqq-i4-active wf-yyqq-i6-active wf-yyqq-n4-active wf-yyqq-n5-active wf-yyqq-n6-active wf-yyqq-n7-active wf-yyqq-n8-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/nr-1216.min.js"></script><script async="" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/google-analytics_analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="wustl,washu,portfolio,interaction design,design,graphic design,ui/ux design,user experience,ui/ux,college,intern,design intern,sam fox,bread lee,miles lee,washington university,st louis,dallas,texas,austin,washington university in,rob giampietro,designer,design internship,internship">
+      <meta name="description" content="Getting acquainted with the nine main instruments of Bluegrass Music">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Miles Lee - A High &amp; Lonesome Sound">
+      <meta property="og:description" content="Getting acquainted with the nine main instruments of Bluegrass Music">
+      <meta property="og:image" content="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63a26ff3-7baa-4ef1-b2fe-03bb8174c54b_rwc_0x0x3315x2210x3315.jpg?h=e5d2f5c276737cec3ba1a9442964c365">
+        <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/983fae17-2ff3-4346-8243-8ad84f425f9e_carw_1x1x32.png?h=3f91ef71ed99140263ea59549b2bbe0b">
+        <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/main.css" type="text/css">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/dfc1fe4ff55bf06742f5aaf584d06fa91673043920.css" type="text/css">
+    <link rel="canonical" href="https://bylee.work/high-lonesome">
+      <title>Miles Lee - A High &amp; Lonesome Sound</title>
+    <script type="text/javascript" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/-NcbJ3-LIZeZjCpL2DLsm9RNzzp6oRa4w_6L3LRy9WqfezjffHYEBsJzwD9oF.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script><style type="text/css">@font-face{font-family:dblv;src:url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/330541/00000000000000007735943a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/l?subset_id=2&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/d?subset_id=2&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/a?subset_id=2&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/l?subset_id=2&fvd=n8&v=3) format("woff2"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/d?subset_id=2&fvd=n8&v=3) format("woff"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/a?subset_id=2&fvd=n8&v=3) format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header js-fixed-nav" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="https://bylee.work/home" class="preserve-whitespace">MILES LEE</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5db2206e538beae88cc13c40d92326860dd7eaac9d7224fb52faa" data-hover-hint="pageHeader" data-hover-hint-id="p5db2206e538beae88cc13c40d92326860dd7eaac9d7224fb52faa">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">A High &amp; Lonesome Sound</h1>
+            <p class="description">Getting acquainted with the nine main instruments of Bluegrass Music</p>
+            <div class="custom1 preserve-whitespace">20x30 inch Poster, Illustrator, Content Strategy / Spring 2019</div>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5db2206e538beae88cc13c40d92326860dd7eaac9d7224fb52faa">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><span style="font-family:vkzk; font-weight:400;"><span style="color:#000000;" class="texteditor-inline-color">This
+ is a poster showcasing&nbsp;the instruments of Bluegrass music. 
+Assigned the topic Bluegrass music, I conducted research to narrow down 
+on one focal point: the instruments.</span></span></div><div style="text-align:left;"><span style="font-family:vkzk; font-weight:400;"><span style="color:#000000;" class="texteditor-inline-color">I
+ learned how to be deliberate with my composition and placement 
+choices.&nbsp;Additionally, since the poster served as&nbsp;an 
+informational piece for those unfamiliar with Bluegrass music, I decided
+ my images needed to carry a lot of information, which&nbsp;my previous 
+imagery wasn't doing.</span></span></div></div>
+</div>
+
+              
+              
+              
+              
+              <div class="js-project-module project-module module button project-module-button" data-id="m5db87b9b3ef340b90c51804707856ca819cc63a54368279062c77" style=" padding-top: px;
+padding-bottom: px;
+">
+    <div class="button-container" style="">
+      
+      <a href="https://issuu.com/by.lee/docs/lee_miles_collection_sp19_process_book_pages" target="_blank" class="button-module preserve-whitespace--nowrap">View My Process</a>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5db220890e4be8aa0fe6112d7d08958b19a4f952b3d7a0e987cd7" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="208" style="width: 176px; flex-grow: 176;" data-width="3840" data-height="4800">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_3840.jpg?h=3ab0a0b0d26a7b312879cc15eab113d5" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_600.jpg?h=5ad7c922955d4daf17a137ce8530c478 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_1200.jpg?h=75012ed56dc7daa1b823b76aa2fa0df0 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_1920.jpg?h=eab35e8034572501562ba4e3abec0384 1920w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_3840.jpg?h=3ab0a0b0d26a7b312879cc15eab113d5 3840w,"  sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_3840.jpg" sizes="1103px" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_600.jpg 600w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_1200.jpg 1200w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_1920.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_3840.jpg 3840w">
+      <span class="grid__item-filler" style="padding-bottom:125%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>Mentorship provided by&nbsp;<a href="https://www.dbdowd.com/" target="_blank">D.B.&nbsp;Dowd</a>.</div></div>
+</div>
+
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">Want to see more?</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/drawbot" data-context="pages" data-identity="id:p5e20d3410d00f3771dd2396fbee01874a36096b35ea6630b4e3dc">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x384.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x640.jpg 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x128.jpg 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x136.jpg 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x192.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x256.jpg 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x384.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x15.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x64.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x12.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x13.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x19.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x15.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x15.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">DrawBot Explorations</div>
+                            <div class="custom2 preserve-whitespace">Creative coding / Spring 2020 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/quaranteen" data-context="pages" data-identity="id:p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Quaranteen</div>
+                            <div class="custom2 preserve-whitespace">A Java program for quarantine isolation / Spring 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/snowden" data-context="pages" data-identity="id:p5db2213d013dd3fcbf2dd7c54196b1e17a0914d324885bff140b3">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/939b2c03-d910-4663-906b-aebb8de02fec_rwc_92x46x849x509x849.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x640.jpg 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c4dc4f2-594d-4058-aa43-2a840aece098_rwc_0x139x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Snowden</div>
+                            <div class="custom2 preserve-whitespace">Monogram design / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/prideful" data-context="pages" data-identity="id:p5db219c1d65edf7fe1d7fa76e066f4a3f2a141aa87ddec87379c2">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1280.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1366.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1280.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1366.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Prideful</div>
+                            <div class="custom2 preserve-whitespace">Website prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/datamatch" data-context="pages" data-identity="id:p6020406e493a36cc377f2470a8afde20aac645059c9d18da1e8d6">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1280.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1366.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x640.jpg 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Datamatch</div>
+                            <div class="custom2 preserve-whitespace">Publicity campaign / 2019 to 2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/motion" data-context="pages" data-identity="id:p5fc210e87b6fcfca20a7dd718f0b82eec1d50ca1ca2503af148d9">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x640.gif 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x640.gif 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Motion and Animation</div>
+                            <div class="custom2 preserve-whitespace">Making things move / 2019 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/sketchbook" data-context="pages" data-identity="id:p5db7473de6f27978bb7ca1cfa679b2497901882d722e193d4fe7f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x6.jpg 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x17_002.jpg 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1.jpg 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x17_004.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x17_003.jpg 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x168.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x128.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x136.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x168.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x168.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x168.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Sketchbook and Studies</div>
+                            <div class="custom2 preserve-whitespace">Foundations / 2017 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/client" data-context="pages" data-identity="id:p5fae0a29a62870471771ee7f8e8ac433cc2d0f47bfa1e15b6173d">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x640.jpg 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1280.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1366.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1920.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x2560.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Client Work</div>
+                            <div class="custom2 preserve-whitespace">PR Materials for clients / 2018 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/destination-marfa" data-context="pages" data-identity="id:p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_car_4x3.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1280.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1366.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1920.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x2560.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x5120.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x128.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x136.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Destination Marfa</div>
+                            <div class="custom2 preserve-whitespace">Mobile app prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/meet-me-in-st-louis" data-context="pages" data-identity="id:p5e1d4b5f6cb18bd4431034c6a977edf9ffeab160ea824b84be138">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x640.png 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1280.png 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1366.png 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f09b06cf-ce77-4a66-be7a-c5726cd863ba_rwc_0x0x1681x1200x1681.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x3587.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x640.jpg 640w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x1280.jpg 1280w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x1366.jpg 1366w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x1920.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x2560.jpg 2560w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/f4324808-954c-4e3b-9c01-ab12c8deab1c_rwc_0x0x3587x2560x3587.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Meet Me in St. Louis</div>
+                            <div class="custom2 preserve-whitespace">Postcard packaging / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  © Miles Lee 2022. All rights reserved. Last updated December 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":31,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5db2206e538beae88cc13c40d92326860dd7eaac9d7224fb52faa","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"UA-57221920-3","anonymization":false}};</script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/translations"></script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/main.js"></script><div class="js-lightbox-wrap offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"><div data-slide-id="0" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden">
+        <div class="grid__image-wrapper">
+          <img src="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_3840.jpg" srcset="Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_600.jpg 600w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_1200.jpg 1200w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_1920.jpg 1920w, Miles%20Lee%20-%20A%20High%20&amp;%20Lonesome%20Sound_files/a7542437-18dc-4196-b5d4-6d5c8173455f_rw_3840.jpg 3840w" sizes="(max-width: 3840px) 100vw, 3840px">
+        <div>
+      </div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>

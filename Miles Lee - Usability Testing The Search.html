@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html class="wf-dblv-i4-active wf-dblv-i5-active wf-dblv-n4-active wf-dblv-n5-active wf-vkzk-n4-active wf-vkzk-n5-active wf-vkzk-n7-active wf-yyqq-i4-active wf-yyqq-i6-active wf-yyqq-n4-active wf-yyqq-n5-active wf-yyqq-n6-active wf-yyqq-n7-active wf-yyqq-n8-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/nr-1216.min.js"></script><script async="" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/google-analytics_analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="wustl,washu,portfolio,interaction design,design,graphic design,ui/ux design,user experience,ui/ux,college,intern,design intern,sam fox,bread lee,miles lee,washington university,st louis,dallas,texas,austin,washington university in,rob giampietro,designer,design internship,internship">
+      <meta name="description" content="UX Research exploring the search for off-campus housing and transparency for WashU students">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Miles Lee - Usability Testing: The Search">
+      <meta property="og:description" content="UX Research exploring the search for off-campus housing and transparency for WashU students">
+      <meta property="og:image" content="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63a26ff3-7baa-4ef1-b2fe-03bb8174c54b_rwc_0x0x3315x2210x3315.jpg?h=e5d2f5c276737cec3ba1a9442964c365">
+        <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/983fae17-2ff3-4346-8243-8ad84f425f9e_carw_1x1x32.png?h=3f91ef71ed99140263ea59549b2bbe0b">
+        <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/main.css" type="text/css">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/7261b491a17015d5f0ac030d352c20131673042888.css" type="text/css">
+    <link rel="canonical" href="https://bylee.work/uxr-housing-usability">
+      <title>Miles Lee - Usability Testing: The Search</title>
+    <script type="text/javascript" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/-NcbJ3-LIZeZjCpL2DLsm9RNzzp6oRa4w_6L3LRy9WqfezjffHYEBsJzwD9oF.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script><style type="text/css">@font-face{font-family:dblv;src:url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/330541/00000000000000007735943a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/l?subset_id=2&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/d?subset_id=2&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/a?subset_id=2&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/l?subset_id=2&fvd=n8&v=3) format("woff2"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/d?subset_id=2&fvd=n8&v=3) format("woff"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/a?subset_id=2&fvd=n8&v=3) format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header js-fixed-nav on-scroll" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="https://bylee.work/home" class="preserve-whitespace">MILES LEE</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p606d33659daa17378cd426cb59613dc2726a0a34a4cebf8d5f44e" data-hover-hint="pageHeader" data-hover-hint-id="p606d33659daa17378cd426cb59613dc2726a0a34a4cebf8d5f44e">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">Usability Testing: The Search</h1>
+            <p class="description">UX Research exploring the search for off-campus housing and transparency for WashU students</p>
+            <div class="custom1 preserve-whitespace">UX Research, Affinity Mapping, User Personas, Usability Testing, Figma / Spring 2021</div>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p606d33659daa17378cd426cb59613dc2726a0a34a4cebf8d5f44e">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>This phase of usability testing&nbsp;is a continuation of my UX Research project, “The Search.” Please read <a href="https://bylee.work/uxr-housing" target="_blank" data-selected-page-id="p606cfce4bb04b70564ab711fd131ea267f156bab68794731f180a">my case study</a>&nbsp;for
+ more context. Also note that any wireframes on this page aren’t my best
+ work—I could definitely iterate on them, but being nitty gritty about 
+wireframes&nbsp;wasn’t my main focus here.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              <div class="js-project-module project-module module button project-module-button" data-id="m606d370d579753c4ae9222a9935d18414084d629e5d4d2aa930ee" style=" padding-top: px;
+padding-bottom: px;
+">
+    <div class="button-container" style="">
+      <a href="https://bylee.work/uxr-housing" class="button-module preserve-whitespace--nowrap">View my Case Study</a>
+      
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;" class="sub-title">Project Brief<div><br></div><div><span style="font-family:yyqq; font-weight:600;">Challenge: </span>Improve the apartment finding experience for WashU students looking to rent off-campus units</div><div><span><span style="font-family:yyqq; font-weight:600;">Goals:</span> </span>Foster
+ more open, direct communication between current residents and potential
+ residents. Remove landlords as middlemen between current residents and 
+potential residents (at least in early stages).</div><div><span style="font-family:yyqq; font-weight:600;">Solution: </span>A digital community-made map of apartments in surrounding neighborhoods with rent transparency<br></div><div><span style="font-family:yyqq; font-weight:600;">Timeline:</span> February 2021 to March 2021<br></div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m606d3365b8c499b62ba9489c7c3acddc0165188d86bfb3a7d5b25" style="padding-top: px;
+padding-bottom: px;
+  width: 50%;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="337.28038507822" style="width: 168.64px; flex-grow: 168.64;" data-width="1078" data-height="831">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/345c5d85-090f-493c-99e3-eb6ab69ecbf4_rw_1200.png?h=32df13342ffad114789420d4d5256126" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/345c5d85-090f-493c-99e3-eb6ab69ecbf4_rw_600.png?h=8850aa837987109e13dafba254e252c4 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/345c5d85-090f-493c-99e3-eb6ab69ecbf4_rw_1200.png?h=32df13342ffad114789420d4d5256126 1078w," alt="A meme I used when recruiting people for usability testing" sizes="(max-width: 1078px) 100vw, 1078px">
+            <div class="grid__image-caption-lightbox">
+              <h6 class="grid__caption-text">A meme I used when recruiting people for usability testing</h6>
+            </div>
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/345c5d85-090f-493c-99e3-eb6ab69ecbf4_rw_1200.png" alt="A meme I used when recruiting people for usability testing" sizes="553px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/345c5d85-090f-493c-99e3-eb6ab69ecbf4_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/345c5d85-090f-493c-99e3-eb6ab69ecbf4_rw_1200.png 1078w">
+        <div class="grid__image-caption">
+          <h6 class="grid__caption-text">A meme I used when recruiting people for usability testing</h6>
+        </div>
+      <span class="grid__item-filler" style="padding-bottom:77.08719851577%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">The Plan<br></div><div>Objectives:
+ Is this concept useful? How can it be expanded or shrunk? Simple or 
+complex version? Is there information overload? Privacy concerns, 
+contact info<br></div><div>Assumptions and Hypotheses: People might be 
+skeptical or concerned about submitting their address and rent. Possible
+ confusion about timing (ie: what part of the apartment search it’d be 
+helpful for). People may have experience with filling out forms and 
+viewing databases or maps.<br></div><div>Methods: Asynchronous A/B 
+testing for simple vs complex options, through sites like Maze or 
+Usability Hub. Think aloud protocol for synchronous testing.<br></div><div><div>Measuring success: Results show distinct preference for one option over the other</div></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m606d3366b53a5842fca4fc9d811fe7431770428ae3838b3e8dc0c" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="428.8" style="width: 362.831px; flex-grow: 362.831;" data-width="1920" data-height="1164">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_1920.png?h=5d9812979054e78d47d5dc9a390b309e" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_600.png?h=16a77e7fb8c542f5b311a8368f1c1251 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_1200.png?h=ff9876ff4877af38c31a7cc037933ecf 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_1920.png?h=5d9812979054e78d47d5dc9a390b309e 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_1920.png" sizes="548px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/76d8f5e9-02f9-4257-bd2c-d286945ee3b6_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:60.634328358209%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="426" style="width: 360.462px; flex-grow: 360.462;" data-width="1920" data-height="1171">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1920.png?h=02190a53eef43708bfc6b8a1a7f38474" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_600.png?h=46eaec61b6678e563bc420416407b643 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1200.png?h=1e460f764fc61df8427e952dd5dfeec9 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1920.png?h=02190a53eef43708bfc6b8a1a7f38474 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1920.png" sizes="545px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:61.032863849765%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Asynchronous Testing: A/B, First Click</div><div>I used <a href="https://usabilityhub.com/">Usability Hub</a>
+ for asynchronous testing. I gathered 26 responses (as of the end of 
+March 29). All responses were received within 24 hours.&nbsp;</div><div>To
+ recruit respondents, I posted my survey in three Discord servers (one 
+design server with 2,000+ members, one programming server with 1,200+ 
+members, and one game server with 490+ members) and one WashU-related 
+GroupMe with 200+ members. For the WashU GroupMe only, instead of 
+sharing the direct Usability Hub link, I shared a <a href="https://forms.gle/3ojud56o3zUz2Pum8">Google Form</a> with optional followup questions.&nbsp;</div><div>Usability Hub Responses: 26 total.&nbsp;<a href="https://app.usabilityhub.com/tests/521b1ef12f2/results/e5d576a178f5?%7B%22viewState%22:%7B%22clickSelections%22:%5B%7B%22_clientId%22:%22iEQPZz5_SGncqmp8npsac%22,%22xa%22:0.42735042735042733,%22ya%22:0.1267605633802817,%22xb%22:0.8229548229548229,%22yb%22:0.8108651911468814,%22usability_test_section_screenshot_id%22:883844%7D,%7B%22_clientId%22:%22xo39pyB_JX1py-CHQgZIC%22,%22xa%22:0,%22ya%22:0.806841046277666,%22xb%22:0.2454212454212454,%22yb%22:1,%22usability_test_section_screenshot_id%22:883844%7D%5D%7D%7D">View responses on Usability Hub</a>​​​​​​​</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m606d3366c2008e85dfba35ab57b0213b65c77ab172df4941e4909" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="  3
+">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="529.73941368078" style="width: 356px; flex-grow: 529.739;" data-width="1920" data-height="942">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_1920.png?h=5ce7ade6c0998cc1383879373e5e49cb" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_600.png?h=6a20d117441d4041b1f3e30ab954aa9f 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_1200.png?h=dae90b816a19fb460a3f48dca83a5e6a 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_1920.png?h=5ce7ade6c0998cc1383879373e5e49cb 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_1920.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3127e9e1-1415-481b-858b-ddafb08c5eb2_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:49.080735411671%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="680.46025104603" style="width: 458px; flex-grow: 680.46;" data-width="1920" data-height="733">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_1920.png?h=d681ea88244345468172d9e44a4bf0af" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_600.png?h=6a41580a10c39db1f7613022b31c30a5 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_1200.png?h=5ece5883db4574900c8ccfa459b390b0 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_1920.png?h=d681ea88244345468172d9e44a4bf0af 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_1920.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/18bcdb89-64aa-4529-9f94-b214f583b90b_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:38.209432454037%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="398.11505507956" style="width: 268px; flex-grow: 398.115;" data-width="1920" data-height="1253">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23086295-66ae-49b0-ae4f-db320609d257_rw_1920.png?h=078f2c481c67b6e7baf0425e14f7128d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23086295-66ae-49b0-ae4f-db320609d257_rw_600.png?h=c3270f74f7e7c536596e958995dd1fb9 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23086295-66ae-49b0-ae4f-db320609d257_rw_1200.png?h=dca33d1eac626eed8caed716e8ad683f 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/23086295-66ae-49b0-ae4f-db320609d257_rw_1920.png?h=078f2c481c67b6e7baf0425e14f7128d 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/23086295-66ae-49b0-ae4f-db320609d257_rw_1920.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/23086295-66ae-49b0-ae4f-db320609d257_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/23086295-66ae-49b0-ae4f-db320609d257_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/23086295-66ae-49b0-ae4f-db320609d257_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:65.307753796962%;"></span>
+    </div>
+    <div class="js-grid-spacer"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>1. Preference
+ Test: [Sheet] [Map]&nbsp;You are using a peer-reviewed database of 
+apartments near your college campus. If you were trying to find units 
+that cost less than $1,000 a month, which view would you choose?</div><div>Responses (as of the end of March 29): 35% for&nbsp;Sheet, 65% for&nbsp;Map</div><div>Usability
+ Hub: Map is performing better, and the difference is 95.0% likely to be
+ statistically significant. This means that you can be confident that it
+ is actually better, and not performing better due to random chance.</div><div><br></div><div>2. Preference Test: [Sheet] [Map]&nbsp;If you were trying to find units within 2 miles from campus, which view would you choose?</div><div>Responses (as of the end of March 29): 12% for&nbsp;Sheet, 88% for Map</div><div>Usability
+ Hub: Map is performing better, and the difference is 99.0% likely to be
+ statistically significant. This means that you can be very confident 
+that it is actually better, and not performing better due to random 
+chance.</div><div><br></div><div>3. First Click: [Map] Where would you click to add a new location to the map?</div><div>Responses (as of the end of March 29): see heat map</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">WashU Responses</div><div>For the WashU GroupMe only, instead of sharing the direct Usability Hub link I shared a <a href="https://forms.gle/3ojud56o3zUz2Pum8">Google Form</a>
+ with optional WashU-specific followup questions. These 9 responses are 
+included in the 26 Usability Hub responses, since I asked the WashU 
+respondents to fill out the survey (even if they didn’t respond to any 
+questions) and the Usability Hub test. Basically, at least 9 of the 26 
+respondents on Usability Hub were WashU students. The survey questions 
+and responses are as follows:</div><div><br></div><div>Please click <a href="https://app.usabilityhub.com/do/521b1ef12f2/396b" target="_blank">the link below</a> to complete a 5-minute quiz! There are no wrong answers—I’m just trying to gauge your reactions.</div><div>If you would like to elaborate on any of your answers for the 5-minute quiz, please do so here. [Long answer text]</div><div>Responses (as of the end of March 29):</div><div>“I
+ have a terrible sense of direction/spatial awareness, so if there’s a 
+map option, I’m always going to pick it. Otherwise I’ll have no idea 
+where anything is!”</div><div><br></div><div>What’s a feature you would 
+want to see in a peer-reviewed database of apartments (and other 
+locations) around WashU? [Long answer text]</div><div>Responses (as of the end of March 29):</div><div>“Bias report! I’m afraid people will disguise their biases as logic, i.e. equating majority black as dangerous.”</div><div>“Maybe a question-asking section?”</div><div>“reviews on the landlord! i don’t like my landlord and i want to post a review where other people can see it.”</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m606d3366d5ffc275042a5250e51671a327ecf77a1057bae133f1a" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="315.23121387283" style="width: 266.734px; flex-grow: 266.734;" data-width="1678" data-height="1384">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/190c60c8-4242-415e-aed8-efac5a87f47e_rw_1920.png?h=dddd4fa3da46ca4ab1c151a59c6060ca" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/190c60c8-4242-415e-aed8-efac5a87f47e_rw_600.png?h=3530a7b92dd6fd42e1f3baad1858917b 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/190c60c8-4242-415e-aed8-efac5a87f47e_rw_1200.png?h=d18e44696ed641b60c658c0c0bdb5786 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/190c60c8-4242-415e-aed8-efac5a87f47e_rw_1920.png?h=dddd4fa3da46ca4ab1c151a59c6060ca 1678w,"  sizes="(max-width: 1678px) 100vw, 1678px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/190c60c8-4242-415e-aed8-efac5a87f47e_rw_1920.png" sizes="462px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/190c60c8-4242-415e-aed8-efac5a87f47e_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/190c60c8-4242-415e-aed8-efac5a87f47e_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/190c60c8-4242-415e-aed8-efac5a87f47e_rw_1920.png 1678w">
+      <span class="grid__item-filler" style="padding-bottom:82.479141835518%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="430.25641025641" style="width: 364.063px; flex-grow: 364.063;" data-width="1678" data-height="1014">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cca9b64d-8b66-4572-887f-720eecd0e771_rw_1920.png?h=170b2092b2c91bd6679d0480069839d7" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cca9b64d-8b66-4572-887f-720eecd0e771_rw_600.png?h=6beb5b7ce5d090ed8253ac601c9ee3bf 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cca9b64d-8b66-4572-887f-720eecd0e771_rw_1200.png?h=da1f657c45942bb7358eafe438209fe4 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/cca9b64d-8b66-4572-887f-720eecd0e771_rw_1920.png?h=170b2092b2c91bd6679d0480069839d7 1678w,"  sizes="(max-width: 1678px) 100vw, 1678px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cca9b64d-8b66-4572-887f-720eecd0e771_rw_1920.png" sizes="631px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cca9b64d-8b66-4572-887f-720eecd0e771_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cca9b64d-8b66-4572-887f-720eecd0e771_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cca9b64d-8b66-4572-887f-720eecd0e771_rw_1920.png 1678w">
+      <span class="grid__item-filler" style="padding-bottom:60.429082240763%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Synchronous Testing: Think Aloud</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m606d3366e3b60dbfb3e1442aa1750188046d77b1cc33af3ca6581" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="332.02435312024" style="width: 280.944px; flex-grow: 280.944;" data-width="1678" data-height="1314">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_1920.png?h=8197b239fb1c060d79ed27c9f075d5a0" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_600.png?h=b5dde86e111b6a7c03ae693f69ad5081 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_1200.png?h=21d3b7b04191951acd1b671166bc8762 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_1920.png?h=8197b239fb1c060d79ed27c9f075d5a0 1678w,"  sizes="(max-width: 1678px) 100vw, 1678px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_1920.png" sizes="463px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/85f51b16-c7ae-455a-9ca9-b1ee76b44cb3_rw_1920.png 1678w">
+      <span class="grid__item-filler" style="padding-bottom:78.307508939213%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="451.63561076605" style="width: 382.153px; flex-grow: 382.153;" data-width="1678" data-height="966">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_1920.png?h=0b0f05ca5f8302a85baff8c9f4aefb68" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_600.png?h=1675abfd52ffbccc3a5940b1eba41cc3 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_1200.png?h=ae84e1914d4616c9536e18338acc09de 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_1920.png?h=0b0f05ca5f8302a85baff8c9f4aefb68 1678w,"  sizes="(max-width: 1678px) 100vw, 1678px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_1920.png" sizes="630px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b15ef84d-edba-4104-852c-6d2cb8eaa2db_rw_1920.png 1678w">
+      <span class="grid__item-filler" style="padding-bottom:57.568533969011%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Affinity Mapping</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m606d3366f1940a34620b0f668c1048feb9aff0955fa4a91701f94" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="117.34513274336" style="width: 99.292px; flex-grow: 99.292;" data-width="1920" data-height="4254">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1920.png?h=132abddc8dabde479c2f4b5379fa4ef0" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_600.png?h=700563c831a64a3a7e392ca23e4994ad 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1200.png?h=e10947a53dfcad5a15f8dd3138dea182 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1920.png?h=132abddc8dabde479c2f4b5379fa4ef0 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1920.png" sizes="1103px" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:221.56862745098%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Map vs. Sheet</div><div>In
+ terms of preference and A/B testing, the map view was most widely 
+preferred to the sheet view. I initially provided the sheet view as the 
+“simple” option in terms of feasibility/effort by organization. In my 
+first synchronous usability test (I called them interviews, but that’s 
+probably a misnomer) when my interviewee instinctively leaned towards 
+the map view, I was sort of surprised because I felt it would appear 
+more cluttered. But it might actually be the other way around. It seems 
+that, especially for those unfamiliar with the area, the visuals a map 
+provides are crucial to finding apartments.</div><div>“Instantly the map is more easier to approach because I'm more familiar with the orientation.” AL, interview</div><div>“I
+ have a terrible sense of direction/spatial awareness, so if there’s a 
+map option, I’m always going to pick it. Otherwise I’ll have no idea 
+where anything is!” Anonymous, survey</div><div>“This one is definitely a
+ lot more appealing to me because you can see visually where the 
+apartments are. The spreadsheet is a lot of info at once. I’d rather 
+click on a listing to learn more abt it that way versus a spreadsheet as
+ the initial screen. It wouldn’t be as inviting.” A, interview</div><div><br></div><div>Another option is to enable both map and sheet view.</div><div>“Hand
+ in hand they could work best with each other. I can see myself looking 
+at the sheet first and then the map. They both have their own benefits. 
+So mixing might help.” AL, interview</div><div>“What if it could switch 
+between description and map? So you can keep this location thing perma 
+but transpose these depending on user needs. Or you can switch between 
+tabs like in an Excel spreadsheet.” W, interview</div><div><br></div><div class="sub-title">Usability</div><div>Both
+ interviewees “A” and “W” didn’t recognize the classic filter symbol. 
+Perhaps something like a gear icon or a sliding scale icon would be more
+ recognizable?</div><div>“I don’t know what the funnel shapes are supposed to be.” A, interview</div><div>“Also not sure what the [filter] shape is meant to be a flashlight?” W, interview</div><div><br></div><div>To add a new location to the map, interviewees and usability testers (via <a href="https://docs.google.com/document/d/1DNQBKahyhrENjzGM_C26S7AsG2z8nR1vWNYvy3TdUu0/edit?usp=sharing">my first click question on Usability Hub</a>)
+ felt like they could either click the area in the bottom left with a 
+“+” sign (my intended “add location” area) or somewhere on the map 
+(similar to creating location markers in Google Maps). Enabling both of 
+those options seems like a good function to have.</div><div>“Not really 
+sure what [add location] function is unless you have the ability to type
+ in specific address and add it to search results. It wouldn't make 
+sense because you’re looking for an apartment.” A, interview</div><div>“I’m
+ assuming you can add an apartment here. Which is weird because you can 
+only add location and no details, so I wonder how that works.” W, 
+interview</div><div><br></div><div>On the map view, I noticed some 
+confusion around the top area. I intended to mimic a website’s header, 
+short description, and navigation links, but I feel like there should be
+ less clutter of information in that particular area. This can be 
+consolidated in future iterations.</div><div>“This looks like a filter 
+dropdown box. Not sure what. Maybe this highlighted thing is a search 
+bar. So the left must be a dropdown box.” W, interview</div><div><br></div><div class="sub-title">Scope of Concept</div><div>I
+ wonder if I can re-center, re-frame, or re-consider the transparent 
+peer to peer aspect of this project. I worry that it got a bit lost in 
+the sheets/map. I’m not really interested in creating a new Zillow or 
+something—I want this particular project to fill a more specific niche.</div><div>“In some ways it reminds me of Zillow.” A, interview</div><div><br></div><div>Some examples of community-made “maps” are <a href="https://wustl.maps.arcgis.com/apps/Cascade/index.html?appid=d650dce414924b07b35a591d1202a6b5">Mapping LGBTQ St. Louis</a>, <a href="https://docs.google.com/spreadsheets/d/16g_jO90DhzSc0Rt3dw8XiQxAO0HsdfUhF9Zn2Od49Fg/edit#gid=0">SQSHBook</a>, <a href="https://www.google.com/maps/d/u/0/viewer?mid=1yxk-FPDSwSf50Fwrw9fKVNLefiA&amp;ll=38.67000822309934%2C-90.44944975000003&amp;z=10">Map of LGBT Affirming Businesses</a>, and <a href="https://dear-new-york.com/#">Dear New York</a>.&nbsp;</div><div>Interviewee
+ “A” was skeptical of Dear New York: “I feel like a lot of comments are 
+like stupid shit that no one gives a shit about. Like I don't care if 
+you saw a mouse there five years ago. I don’t care if you wrote about 
+how the apartment was cold.” A, interview</div><div>“Overall I feel like
+ people’s comments aren’t going to be relevant to most people unless 
+they’re made with the specific goal to make it relevant to future 
+tenants.” A, interview</div><div>Interviewee “W” emphasized the 
+importance of reviews. “A lot of people still look at reviews. 
+Especially with apartments that are very similar. Around 600 or 700, 
+there's a lot in this area. So that’d be useful. To tell the difference 
+between them. Otherwise you’re making a blind guess. Unless you’re 
+taking tours.” W, interview</div><div>“I got a good idea of what 
+apartment has because I looked at individual websites, but not a good 
+idea about the environment or how people rated. So if I had that 
+information it would contribute a lot.” AL, interview</div><div><br></div><div class="sub-title">Possibilities for Shifting the Scope</div><div>A
+ free-for-all map where users could submit any and all of their thoughts
+ about particular areas or locations. This can be like “I really liked 
+living in Skinker-Debaliviere” or “This street had a lot of people who 
+threw loud parties when I lived here two years ago.”</div><div><br></div><div>A
+ map where users can submit any and all thoughts about housing units, 
+regardless of whether they lived there or not. If someone had a friend 
+who lived in [x] apartment and felt from visiting that they wouldn’t 
+recommend [x], they could comment that on the map.</div><div><br></div><div>A
+ map that includes solely information about landlords (or property 
+managers). Would show which units/buildings belong to which landlords. 
+Users can leave ratings on landlords, like using a 5-star system, a 
+scale system (“How satisfied are/were you with this landlord? 1 being 
+very dissatisfied and 10 being very satisfied”), or a yes or no/thumbs 
+up thumbs down question (“Would you recommend this landlord?”). This 
+would not allow for reviews, since that has the possibility of <a href="https://www.forbes.com/sites/ericgoldman/2013/08/12/blasting-your-landlord-online-pick-your-words-wisely/?sh=741d8c9519a1">getting users into legal trouble if their landlord notices and claims libel</a>!
+ But when people are leaving ratings, they could opt-in to provide some 
+contact information if curious people want to directly ask them about 
+their experiences with that landlord. That could invite legal troubles 
+as well, though, like if a landlord or landlord-affiliated person 
+contacted the user pretending to be a student looking for housing.</div><div>“I
+ wanna avoid all shitty landlords. So it might be nice to see like, 
+‘this unit is owned by []’ and be able to see what people have said 
+about this person.” A, interview</div><div>“It’s hard to know what 
+landlords own what specific apartments. That might be a good function, 
+like filter by landlord. To avoid the gross ones.” A, interview</div><div>“It could be like a ‘yes or no: have you had any trouble with your landlord?’ And you can explain.” W, interview</div><div>“reviews on the landlord! i don’t like my landlord and i want to post a review where other people can see it.” Anonymous, survey</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title" style="text-align:left;">Key Takeaways<br></div><div style="text-align:left;">If
+ I continued working on this project, I would draft new lo-fi wireframes
+ exploring the possible scopes listed above. I’d see if I could do more 
+concept testing even before usability testing to get a clearer sense of 
+possible solutions.</div><div><div class="sub-title"><div class="sub-title" style="text-align:left;"><span>More UX Research</span><br></div><div style="text-align:left;"><a href="https://bylee.work/venmo-together" target="_self" data-selected-page-id="p63419a698985bc74aaf83feced23b943fafd2ff36319cf8cbf8fc">Case Study: Venmo Together</a></div><div style="text-align:left;"><a href="https://bylee.work/uxr-housing" target="_self" data-selected-page-id="p606cfce4bb04b70564ab711fd131ea267f156bab68794731f180a">Case Study : The Search</a></div></div><div class="sub-title" style="text-align:left;">Attribution</div><div style="text-align:left;">Mentorship from <a href="https://www.erikaharano.com/" target="_blank">erika harano</a>​​​​​​​</div><div style="text-align:left;"><a href="https://fonts.google.com/specimen/Inter?category=Sans+Serif&amp;query=inter" target="_blank">Inter</a> by Rasmus Andersson</div><div style="text-align:left;"><a href="https://www.ibm.com/plex/" target="_blank">IBM Plex Sans</a>&nbsp;designed by Mike Abbink, IBM BX&amp;D, in collaboration with Bold Monday</div><div style="text-align:left;">Figma templates: Figma for Education (User Personas), <a href="https://www.figma.com/@saroj" target="_blank">Saroj Shahi</a>&nbsp;(User Journeys), <a href="https://www.figma.com/community/file/863795778249989015" target="_blank">UX Theatre</a>&nbsp;(Post-It notes)</div><div style="text-align:left;">Tools used: Figma, Google Forms, Google Slides</div></div></div>
+</div>
+
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">Want to see more?</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/prideful" data-context="pages" data-identity="id:p5db219c1d65edf7fe1d7fa76e066f4a3f2a141aa87ddec87379c2">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x640.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1280.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1366.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x640.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1280.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1366.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Prideful</div>
+                            <div class="custom2 preserve-whitespace">Website prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/illustration" data-context="pages" data-identity="id:p5e20d54b9e7e7209092c8e5876c7266375f1225c1b611d1e7e85f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1280.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1366.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1920.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Illustration</div>
+                            <div class="custom2 preserve-whitespace">Color and shape / 2017 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/the-odyssey" data-context="pages" data-identity="id:p5ec4c4cbebe016b454b89f61c8eef56c880fd343634f124d47ac0">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/27583f25-7f17-40f6-b626-0c3a38483896_rwc_0x322x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_car_4x3.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x1280.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x1366.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x1920.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x2560.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/8fb954cb-4474-48f0-883f-da4905b22401_carw_4x3x5120.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">The Odyssey</div>
+                            <div class="custom2 preserve-whitespace">Book jacket / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/datamatch" data-context="pages" data-identity="id:p6020406e493a36cc377f2470a8afde20aac645059c9d18da1e8d6">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x640.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1280.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1366.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/69c04565-e2c9-417d-92af-68c22c0df6c7_rwc_0x0x1920x1152x1920.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/d62ddb4d-96d3-4834-adbd-d4c0c6abf052_rwc_0x706x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Datamatch</div>
+                            <div class="custom2 preserve-whitespace">Publicity campaign / 2019 to 2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/client" data-context="pages" data-identity="id:p5fae0a29a62870471771ee7f8e8ac433cc2d0f47bfa1e15b6173d">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x128.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x136.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x192.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x640.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1280.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1366.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1920.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x2560.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Client Work</div>
+                            <div class="custom2 preserve-whitespace">PR Materials for clients / 2018 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/january-2020" data-context="pages" data-identity="id:p62131509d345d6acc23195ce07de6a7301a4cbafacb89830c0693">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x1771x2.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x1771x6.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x1771x1.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x17_003.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x17_002.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x17_004.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/9224c327-f843-4ef6-843f-5140af796f5b_rwc_241x389x2951x1771x2.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x1771x2.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x1771x6.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x1771x1.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x17_002.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x17_004.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x17_003.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/723daa3b-0166-4719-a642-1f03d5635d60_rwc_228x335x2951x1771x2.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">January 2020</div>
+                            <div class="custom2 preserve-whitespace">Original comic / Spring 2022</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/motion" data-context="pages" data-identity="id:p5fc210e87b6fcfca20a7dd718f0b82eec1d50ca1ca2503af148d9">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x640.gif 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x640.gif 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Motion and Animation</div>
+                            <div class="custom2 preserve-whitespace">Making things move / 2019 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/destination-marfa" data-context="pages" data-identity="id:p5db738ac88a345e94de807d9514ee589ca74bcf03842c139cf932">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_car_4x3.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x640.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1280.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1366.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x1920.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x2560.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/531df986-c104-433f-ab66-80d6262c95c0_carw_4x3x5120.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x640.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x128.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x136.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/0f67526e-b1c5-4949-87bf-6c783946978a_rwc_0x122x1920x1152x192.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Destination Marfa</div>
+                            <div class="custom2 preserve-whitespace">Mobile app prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/drawbot" data-context="pages" data-identity="id:p5e20d3410d00f3771dd2396fbee01874a36096b35ea6630b4e3dc">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x384.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x128.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x136.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x192.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x256.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x384.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x15.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x64.png 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x12.png 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x13.png 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x19.png 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x15.png 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x15.png 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">DrawBot Explorations</div>
+                            <div class="custom2 preserve-whitespace">Creative coding / Spring 2020 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/queery" data-context="pages" data-identity="id:p62183c0d349b36c39377f230deaf186c82d425fca08df3c8a8875">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x3840.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x1280.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x1366.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x1920.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x2560.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/cdc46a37-407c-43c4-b7b0-57ccbeb11cd8_rwc_0x87x3840x2304x3840.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy image-loaded" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x3840.jpg" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x640.jpg 640w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x1280.jpg 1280w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x1366.jpg 1366w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x1920.jpg 1920w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x2560.jpg 2560w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/303a509e-4da1-4a54-bf4b-6736f1042a03_rwc_0x87x3840x2304x3840.jpg 5120w" sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Welcome to QUEERY</div>
+                            <div class="custom2 preserve-whitespace">Packaging / Fall 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  © Miles Lee 2022. All rights reserved. Last updated December 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":31,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p606d33659daa17378cd426cb59613dc2726a0a34a4cebf8d5f44e","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"UA-57221920-3","anonymization":false}};</script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/translations"></script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/main.js"></script><div class="js-lightbox-wrap offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"><div data-slide-id="10" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden">
+        <div class="grid__image-wrapper">
+          <img src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1920.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/5d313d04-3f9f-42f7-8ad1-156ae5058ef8_rw_1920.png 1920w" sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </div></div></div></div><div data-slide-id="2" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden">
+        <div class="grid__image-wrapper">
+          <img src="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1920.png" srcset="Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_600.png 600w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1200.png 1200w, Miles%20Lee%20-%20Usability%20Testing%20The%20Search_files/4f37bcf0-c502-4086-99e1-6ef2a1b72e0d_rw_1920.png 1920w" sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>

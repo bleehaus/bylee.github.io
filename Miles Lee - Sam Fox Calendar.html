@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html class="wf-dblv-i4-active wf-dblv-i5-active wf-dblv-n4-active wf-dblv-n5-active wf-vkzk-n4-active wf-vkzk-n5-active wf-vkzk-n7-active wf-yyqq-i4-active wf-yyqq-i6-active wf-yyqq-n4-active wf-yyqq-n5-active wf-yyqq-n6-active wf-yyqq-n7-active wf-yyqq-n8-active wf-active" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8"><script src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/nr-1216.min.js"></script><script async="" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/google-analytics_analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="wustl,washu,portfolio,interaction design,design,graphic design,ui/ux design,user experience,ui/ux,college,intern,design intern,sam fox,bread lee,miles lee,washington university,st louis,dallas,texas,austin,washington university in,rob giampietro,designer,design internship,internship">
+      <meta name="description" content="Large double-sided poster advertising Sam Fox School lectures">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@AdobePortfolio">
+      <meta property="og:title" content="Miles Lee - Sam Fox Calendar">
+      <meta property="og:description" content="Large double-sided poster advertising Sam Fox School lectures">
+      <meta property="og:image" content="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/63a26ff3-7baa-4ef1-b2fe-03bb8174c54b_rwc_0x0x3315x2210x3315.jpg?h=e5d2f5c276737cec3ba1a9442964c365">
+        <link rel="icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/983fae17-2ff3-4346-8243-8ad84f425f9e_carw_1x1x32.png?h=3f91ef71ed99140263ea59549b2bbe0b">
+        <link rel="apple-touch-icon" href="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3c682dba-ddc5-4da4-8b14-a01299303e7a_carw_1x1x180.png?h=486be76311788236d39c253d9f44c025">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/main.css" type="text/css">
+      <link rel="stylesheet" href="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/705d75c3bc5c1df949c31e289d2c2cc71673042888.css" type="text/css">
+    <link rel="canonical" href="https://bylee.work/sam-fox-calendar">
+      <title>Miles Lee - Sam Fox Calendar</title>
+    <script type="text/javascript" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/-NcbJ3-LIZeZjCpL2DLsm9RNzzp6oRa4w_6L3LRy9WqfezjffHYEBsJzwD9oF.js" async="" onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script><style type="text/css">@font-face{font-family:dblv;src:url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/e2f7ec/00000000000000007735944e/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/l?subset_id=2&fvd=i5&v=3) format("woff2"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/d?subset_id=2&fvd=i5&v=3) format("woff"),url(https://use.typekit.net/af/1955ba/00000000000000007735944c/30/a?subset_id=2&fvd=i5&v=3) format("opentype");font-weight:500;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/bda79b/00000000000000007735944d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:dblv;src:url(https://use.typekit.net/af/330541/00000000000000007735943a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/330541/00000000000000007735943a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c3941c/00000000000000007735c13d/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/5edda4/00000000000000007735c14a/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:vkzk;src:url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/5636ba/00000000000000007735c15a/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/794c97/00000000000000007735c868/30/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/l?subset_id=2&fvd=i6&v=3) format("woff2"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/d?subset_id=2&fvd=i6&v=3) format("woff"),url(https://use.typekit.net/af/5a5e55/00000000000000007735c874/30/a?subset_id=2&fvd=i6&v=3) format("opentype");font-weight:600;font-style:italic;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/c66587/00000000000000007735c865/30/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/79ad64/00000000000000007735c86b/30/a?subset_id=2&fvd=n5&v=3) format("opentype");font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/723f02/00000000000000007735c871/30/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/e8ed45/00000000000000007735c879/30/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:yyqq;src:url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/l?subset_id=2&fvd=n8&v=3) format("woff2"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/d?subset_id=2&fvd=n8&v=3) format("woff"),url(https://use.typekit.net/af/7e55b1/00000000000000007735c87c/30/a?subset_id=2&fvd=n8&v=3) format("opentype");font-weight:800;font-style:normal;font-stretch:normal;font-display:auto;}</style>
+<style type="text/css"></style></head>
+  <body class="link-transition">  <div class="page-background-video page-background-video-with-panel">
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header js-fixed-nav on-scroll" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="https://bylee.work/home">Work</a></div>
+                <div class="gallery-title"><a href="https://bylee.work/archive">Archive</a></div>
+      <div class="page-title">
+        <a href="https://bylee.work/info">Info</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text  ">
+              <a href="https://bylee.work/home" class="preserve-whitespace">MILES LEE</a>
+
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5db221ce0a2d2ec30bac9c906847f4abc8fc85481cb16e1132de3" data-hover-hint="pageHeader" data-hover-hint-id="p5db221ce0a2d2ec30bac9c906847f4abc8fc85481cb16e1132de3">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">Sam Fox Calendar</h1>
+            <p class="description">Large double-sided poster advertising Sam Fox School lectures</p>
+            <div class="custom1 preserve-whitespace">Double-sided Poster, Branding, Content Strategy, InDesign / Fall 2019</div>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5db221ce0a2d2ec30bac9c906847f4abc8fc85481cb16e1132de3">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div style="text-align:left;"><span style="font-family:vkzk;font-weight:400;"><span style="color:#000000;" class="texteditor-inline-color">I
+ designed a hypothetical double-sided calendar poster for the semester's
+ events at the Sam Fox School of Design &amp; Visual Arts. Several times
+ throughout this project, I wondered,&nbsp;“what If I made something 
+completely different?</span></span><span class="texteditor-inline-color" style="color:#000000;"></span></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5db221f49bfd605668f604984cf68303048cd421560933ec2f2da" style="padding-top: 0px;
+padding-bottom: 40px;
+  width: 100%;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="299.18936035465" style="width: 253.16px; flex-grow: 253.16;" data-width="1817" data-height="1579">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1920.jpg?h=9eb7c24be3965222aacb37e8d1226853" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_600.jpg?h=4f6d8b6380172a3de8b522323573a44e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1200.jpg?h=e530c2a6d666af9a4e034b85cfe42eec 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1920.jpg?h=9eb7c24be3965222aacb37e8d1226853 1817w,"  sizes="(max-width: 1817px) 100vw, 1817px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1920.jpg" sizes="1105px" srcset="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_600.jpg 600w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1200.jpg 1200w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1920.jpg 1817w">
+      <span class="grid__item-filler" style="padding-bottom:86.901485965878%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div><br></div><div>When
+ I was first assigned this project, I was excited to explore grids and 
+typographic systems. I had designed and illustrated monthly calendars 
+for my campus job, Ursa’s Nite Life, but had never designed an event 
+calendar containing multiple months. I began to consider type size, 
+scale, colors, image treatment, grid systems, and layout.&nbsp;<br></div><div>I
+ thought about what I as a viewer would want to see emphasized on a 
+calendar, and first explored emphasizing the event date using scale. I 
+chose to include the day of the week because I personally need that 
+extra piece of information while looking at an event flyer to quickly 
+decide if I am able to attend or not.&nbsp;</div><div>In early 
+iterations, I explored differentiating between types of events 
+(lectures, exhibits, film screenings, and miscellaneous) by using a 
+color key. I picked these colors from the Sam Fox logo. One of my 
+biggest problems with those layouts was the ambiguity to which the 
+events flow chronologically. I felt that one could easily mistake, say, 
+an October event for a September event due to the top to bottom flow.</div><div>To
+ address the problem, I explicitly grouped events by month and made it 
+so the viewer would read the events from left to right rather than from 
+top to bottom. I felt that this iteration was more intuitive (monthly 
+calendars read from left to right) and allowed for more white space.</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5e21661044a8c454ad848575348d63e9404152baa41963e469deb" style="padding-top: 0px;
+padding-bottom: 40px;
+  width: 100%;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_1920.png?h=20f30f66b2e2f549cbc374ed0cff77de" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_600.png?h=c20cc71b5435b17ada769cfaa6933a38 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_1200.png?h=09835d7882e2ae6ae9b2dea36ee6eac7 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_1920.png?h=20f30f66b2e2f549cbc374ed0cff77de 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_1920.png" sizes="363px" srcset="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_600.png 600w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_1200.png 1200w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b278f2c9-c56e-4eff-9df6-d02d9bbc6ea5_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_1920.png?h=41f7695b3cbe84b0311ca1461a1b2553" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_600.png?h=2814162b24a6c3dbe2cd0736f096a8fb 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_1200.png?h=17d259f8fe70289c37e1df70dadfb70b 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_1920.png?h=41f7695b3cbe84b0311ca1461a1b2553 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_1920.png" sizes="363px" srcset="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_600.png 600w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_1200.png 1200w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/d60ebfb6-ffa4-451b-9a7a-1b693358cfa2_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_1920.png?h=948ca13cbc6d1da2e4b2f1d0593fd7fc" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_600.png?h=64d2e67c8a685187e516f861ab945ad8 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_1200.png?h=215b8edff5af203880cabee496c50143 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_1920.png?h=948ca13cbc6d1da2e4b2f1d0593fd7fc 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy image-loaded" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_1920.png" sizes="363px" srcset="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_600.png 600w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_1200.png 1200w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/c6d160d1-4787-4b69-9893-cfe2cd39afd5_rw_1920.png 1920w">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>At the start 
+of this project, I remember thinking “what If I used tangrams to create a
+ fox?” but pushed that idea aside. But at this point, I re-entertained 
+that idea. This is, after all, the Sam Fox School—despite being named 
+after a real person, Sam Fox is a very image-driven name.&nbsp;Why 
+tangrams? Much like events in a month or disciplines in the Sam Fox 
+School or schools within a university, they’re shapes that fit together 
+to create one larger shape (a perfect square). They’re extremely old 
+puzzles that people still use today to create shapes of any kind, 
+including foxes.&nbsp;I created tangrams and constructed a fox out of 
+them.</div><div>After finally deciding to move forward with my tangram 
+idea, I created iterations of the front and the back, a whopping 36 in 
+total. My original desire was to have tangram pieces scattered around on
+ one side and the fox on the other side to let the viewer have a little 
+“aha!” moment when they realize the fox was made from the same shapes. 
+However, this ultimately did not pan out due to the somewhat awkward 
+negative space the fox creates around itself.&nbsp;<br></div><div>While 
+iterating, I carefully considered how each side relates to the other. 
+This included making many, many adjustments such as tweaking leading 
+between different paragraph styles, debating whether or not to rotate 
+the tangrams on the back, how the tangrams interacted with the text, 
+what colors to make the tangrams on both sides, placement and treatment 
+of logo, how to highlight certain events, how to display the names of 
+artists and lecturers on the front, and finalizing typefaces (Din and 
+Intro) and the color palette.&nbsp;</div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module media_collection project-module-media_collection" data-id="m5fef9332837f5a1b510f43234996467f4ccc5e4a450e55e41e622" style="padding-top: px;
+padding-bottom: px;
+">
+  <div class="grid--main js-grid-main grid--ready" data-grid-max-images="
+  ">
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_1920.png?h=5087109b8a91cec25f3f0991b9f3a03d" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_600.png?h=355d60500031404adbd837f7f37b1d4e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_1200.png?h=f431fcac78a80d7e08bbb8f3f3c01f27 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_1920.png?h=5087109b8a91cec25f3f0991b9f3a03d 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_1920.png?h=5087109b8a91cec25f3f0991b9f3a03d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_600.png?h=355d60500031404adbd837f7f37b1d4e 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_1200.png?h=f431fcac78a80d7e08bbb8f3f3c01f27 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/f74db247-4caf-47cd-b633-5116b8586687_rw_1920.png?h=5087109b8a91cec25f3f0991b9f3a03d 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_1920.png?h=8808c926152f7f6d40e9415a511dfec5" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_600.png?h=13de3030904c1a315da8a94049f8e977 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_1200.png?h=0fe49a2b80ad1c6c81a15209f5ee6dea 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_1920.png?h=8808c926152f7f6d40e9415a511dfec5 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_1920.png?h=8808c926152f7f6d40e9415a511dfec5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_600.png?h=13de3030904c1a315da8a94049f8e977 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_1200.png?h=0fe49a2b80ad1c6c81a15209f5ee6dea 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5270a0df-5e74-4c8b-95d2-93383540eb03_rw_1920.png?h=8808c926152f7f6d40e9415a511dfec5 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="grid__item-container js-grid-item-container lightbox-link hoverable" data-flex-grow="336.47058823529" style="width: 284.706px; flex-grow: 284.706;" data-width="1920" data-height="1483">
+      <script type="text/html" class="js-lightbox-slide-content">
+        <div class="grid__image-wrapper">
+          <img src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_1920.png?h=c144cc82a701c6ba7ff44bfd90ac158e" srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_600.png?h=150ba64d7ef5b10cd67fa463d8f2ac11 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_1200.png?h=6510c4d9051f4d33463e294caa4bcfc6 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_1920.png?h=c144cc82a701c6ba7ff44bfd90ac158e 1920w,"  sizes="(max-width: 1920px) 100vw, 1920px">
+        <div>
+      </script>
+      <img class="grid__item-image js-grid__item-image grid__item-image-lazy js-lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_1920.png?h=c144cc82a701c6ba7ff44bfd90ac158e" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_600.png?h=150ba64d7ef5b10cd67fa463d8f2ac11 600w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_1200.png?h=6510c4d9051f4d33463e294caa4bcfc6 1200w,https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b5dcdd65-4e1e-4a6d-9463-99bbb7c32e60_rw_1920.png?h=c144cc82a701c6ba7ff44bfd90ac158e 1920w," sizes="361px" data-sizes="361px">
+      <span class="grid__item-filler" style="padding-bottom:77.272727272727%;"></span>
+    </div>
+    <div class="js-grid-spacer" style="display: none;"></div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>For critique,
+ our professors brought in designers from the Sam Fox publicity office. 
+Audrey Westcott, Senior Graphic Designer, explained what kind of 
+features the office would hypothetically look for in a Sam Fox calendar.
+ Her main points included: having “Sam Fox School of Design &amp; Visual
+ Arts” instead of just “Sam Fox,” whether the design can be carried over
+ to the Spring semester, if all artists and guest lecturers are treated 
+well (due to the time and energy they are putting into the school), and 
+if there is a clear sense of hierarchy throughout.&nbsp;</div><div>I 
+appreciated her insight on what a client would be looking for. If I were
+ to redo this project, I would think more carefully about giving guest 
+lecturers the same importance as artists (though she did acknowledge 
+that Ai Weiwei is a hugely important figure in the art world and 
+therefore a good selling point).&nbsp;</div><div>The first thing she 
+said about my calendar was that she enjoyed the fox. I appreciated this 
+because I was a bit hesitant to put a smaller version of the fox in my 
+poster, albeit on both sides of it. She also enjoyed the color palette 
+and clear hierarchy. One thing my professor pointed out was that the 
+“School of Design &amp; Visual Arts Fall 2019 Events” on the front was 
+set in Din, which felt too condensed for that block of text. After 
+critique, I set that text in Intro and the artist/lecture list in Din to
+ alleviate that problem.<br></div><div>If you’re interested in reading more of my process, you can do so on Issuu at the link below.</div></div>
+</div>
+
+              
+              
+              
+              
+              <div class="js-project-module project-module module button project-module-button" data-id="m5db78774e41c80f11a81fd825cf16db3e5237ac38c2310a81ba6a" style=" padding-top: px;
+padding-bottom: px;
+">
+    <div class="button-container" style="">
+      
+      <a href="https://issuu.com/by.lee/docs/lee_miles_to_clarity_process_book_pages" target="_blank" class="button-module preserve-whitespace--nowrap">View My Process</a>
+    </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div>After this 
+project, my professors actually recommended me for a position as an 
+intern at the Sam Fox Office of Communications. I began working with the
+ office in January 2020. Creating posters for the Sam Fox public lecture
+ series taught me a lot about how to make variety within branding 
+guidelines.<br></div></div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module text project-module-text align- js-project-module e2e-site-project-module-text">
+  <div class="rich-text js-text-editable module-text"><div class="sub-title">Attribution</div><div style="text-align:left;">DIN Text Pro designed by&nbsp;Panos Vassiliou for&nbsp;<a href="https://www.parachutefonts.com/typefaces/allfonts/din-text-pro" target="_blank">Parachute</a>. DIN is&nbsp;part of Sam Fox’s visual branding system.<br></div><div style="text-align:left;">Intro
+ designed by&nbsp;Svetoslav Simov for Fontfabric. I used Intro a lot for
+ any and all graphics in&nbsp;early high school, then convinced my 
+Publicity co-Chair in Pride Alliance to use it as one of our two 
+typefaces for the year.</div><div style="text-align:left;">Mentorship provided by <a href="https://www.yankandlimey.com/" target="_blank">Ben Franklin</a></div><div style="text-align:left;">Valuable feedback provided by Audrey Westcott and my classmates</div></div>
+</div>
+
+              
+              
+              
+              
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">Want to see more?</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/prideful" data-context="pages" data-identity="id:p5db219c1d65edf7fe1d7fa76e066f4a3f2a141aa87ddec87379c2">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x640.png?h=bcfa31e77b8a084a8e3ca5229d3392e7 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1280.png?h=61ae39d82df58cc2db39f8d581f05ba2 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1366.png?h=048f0230be5563f0f4e375d32d168b3f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b11b936c-e312-4d4f-bb96-aae6c20f1a98_rwc_0x0x1439x863x1439.png?h=ff3b4dfa2a5f718eba2fc56ef1bf0ea5 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x640.png?h=1446b3418ac414f10c59478e1ec61982 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1280.png?h=fccc7821dd8a54f81a6526da0438e99c 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1366.png?h=49bce0ceb01092c4187404e852fe697f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b2b98b1f-7b2d-4104-988b-4b561710c38e_rwc_0x0x1439x863x1439.png?h=dca3c3b1827dedef2a613ea0701888df 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Prideful</div>
+                            <div class="custom2 preserve-whitespace">Website prototype / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/sketchbook" data-context="pages" data-identity="id:p5db7473de6f27978bb7ca1cfa679b2497901882d722e193d4fe7f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x3.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2889.jpg?h=9c4804e7889b04ee8c32ff1fc3767bd5" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x640.jpg?h=fe3d71d0068cb36ba2e026e66a8bace0 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1280.jpg?h=134a3daa9cd160d6ddb8f5856c3e1d32 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1366.jpg?h=7bc2b6963ff3c0e4547f08b2353177c0 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x1920.jpg?h=d18dd92752bbaaea57ee23ea927263f2 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2560.jpg?h=a8f125938f4ed2a7e4b8983c730f155d 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/8e3d5b7c-24eb-4f54-9e53-e312dabf9a78_rwc_472x761x2889x1733x2889.jpg?h=9c4804e7889b04ee8c32ff1fc3767bd5 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x640.png?h=a7c62e3fc6538dc415cc03d8c1cbd31f 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1280.png?h=03b5d7be67988f61536381430fc10a4c 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1366.png?h=8ae9c6c4b7e3d0eb1a20d9188616dfc9 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4c147308-bf6e-46fc-8a3d-0d974ec7368b_rwc_0x313x1681x1008x1681.png?h=838804dab233be0f86963a9d243ecd47 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Sketchbook and Studies</div>
+                            <div class="custom2 preserve-whitespace">Foundations / 2017 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/client" data-context="pages" data-identity="id:p5fae0a29a62870471771ee7f8e8ac433cc2d0f47bfa1e15b6173d">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x640.jpg?h=3ddf042e6092af979086ebf6335968f0 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1280.jpg?h=ad3bf4b91d14e94617aa3ddb52f21e98 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1366.jpg?h=6c8904d39575c33b4845f3440313df85 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/473571f0-e44d-4365-abe1-2317fa4d0d9b_rwc_0x244x1920x1152x1920.jpg?h=a81c3a00296629798cf9357d033f2dbb 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png?h=8f90ad53929df801d1aa48ff4abdecb9" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x640.png?h=298d729ed8e5b8fc81a1d2f8d8ddb1e5 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1280.png?h=7d066647a4c9a4025592ac18112ecdff 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1366.png?h=364d68f84ad528fc07cf96a2e24e6c7d 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x1920.png?h=d4d922744143aca5e7f34c4ec6e35f8f 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x2560.png?h=5de9be265bb26255be7391dda27da799 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9ac7acd5-54f2-45ba-98e7-b8868023f65e_rwc_0x0x3840x2304x3840.png?h=8f90ad53929df801d1aa48ff4abdecb9 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Client Work</div>
+                            <div class="custom2 preserve-whitespace">PR Materials for clients / 2018 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/drawbot" data-context="pages" data-identity="id:p5e20d3410d00f3771dd2396fbee01874a36096b35ea6630b4e3dc">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x3840.jpg?h=2a6a423ad7418c1a2c52618e1c66a619" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x640.jpg?h=abc416d27169a318610eceb62873a01d 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x1280.jpg?h=3b8267d0259985d8012238115460da25 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x1366.jpg?h=e6b9892a6252f9cb6308ba59d7c058c4 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x1920.jpg?h=db0c6470279c7f2e3689234877952d84 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x2560.jpg?h=752f4dd8ba83ede786854016dc531d4f 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/3e925cf8-4396-4b7a-a417-cdf6c269f4c9_rwc_0x558x3840x2304x3840.jpg?h=2a6a423ad7418c1a2c52618e1c66a619 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1558.png?h=8ee5417f7769dead68ef7ec4e3c41b93" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x640.png?h=2e9d68867f3ee4001b857eca116a250e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1280.png?h=c13182e955394a3f6e32b00dd255bcef 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1366.png?h=0b8f326646f36264d51f6fcd9292c9e9 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1920.png?h=f87dd223b9f55bf34e82a76c48529cdf 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1558.png?h=8ee5417f7769dead68ef7ec4e3c41b93 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/b9b686ad-8719-4769-8529-46904c5a1d7f_rwc_177x170x1558x935x1558.png?h=8ee5417f7769dead68ef7ec4e3c41b93 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">DrawBot Explorations</div>
+                            <div class="custom2 preserve-whitespace">Creative coding / Spring 2020 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/sam-fox-spaces" data-context="pages" data-identity="id:p5fefa9f21d9bf4fd195beb31d4525b6bc2eb33213ae40e382b966">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x3840.jpg?h=8c9f493f75bef75a3e9cbfb1fa2ec98a" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x640.jpg?h=20a2c4a9f0e83e3a2904285bb88b552b 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x1280.jpg?h=0d122eb97a18bc445d26bf84653e909e 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x1366.jpg?h=a2b768d2b6f190641d201f4dca6c143c 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x1920.jpg?h=76b2e71c5b1ef6069d2476cf58d736d7 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x2560.jpg?h=e2e251dd562cb6fe25a654fb37d773ff 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/5f49ccc2-f981-4900-8697-4157d5c362d9_rwc_0x87x3840x2304x3840.jpg?h=8c9f493f75bef75a3e9cbfb1fa2ec98a 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x1000.gif?h=ce10c7b9a94d42008e372aa4a92a7bcd" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x640.gif?h=1d59122137d38aa643034850695d1e56 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x1000.gif?h=ce10c7b9a94d42008e372aa4a92a7bcd 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x1000.gif?h=ce10c7b9a94d42008e372aa4a92a7bcd 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x1000.gif?h=ce10c7b9a94d42008e372aa4a92a7bcd 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x1000.gif?h=ce10c7b9a94d42008e372aa4a92a7bcd 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/0b3eb220-bf99-456a-988c-7611f7f747b8_rwc_0x72x1000x600x1000.gif?h=ce10c7b9a94d42008e372aa4a92a7bcd 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Sam Fox Spaces</div>
+                            <div class="custom2 preserve-whitespace">Mobile app prototype / Fall 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/high-lonesome" data-context="pages" data-identity="id:p5db2206e538beae88cc13c40d92326860dd7eaac9d7224fb52faa">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x3840.jpg?h=67bdff54112b1283ec563b6a251416a4" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x640.jpg?h=2b8103ae78704157f1faa01fdb7f33e3 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x1280.jpg?h=04d694c32b4b5b8ccaaff3f498168820 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x1366.jpg?h=22a7e4d12b63b1d47ad30a98f409a0ad 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x1920.jpg?h=dc65482088aaa8e7b0ad90fb10395277 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x2560.jpg?h=054b8bf65086dfee2c7e92a6e0346d3a 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/4df14461-64c7-4c50-9110-e876dd15cffa_rwc_0x2478x3840x2304x3840.jpg?h=67bdff54112b1283ec563b6a251416a4 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x4800.jpg?h=b59f9b8fd80b01b2e255a44e4247151d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x640.jpg?h=3a3a7db85af7d55941c3aecb51305085 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x1280.jpg?h=fed288df24bc5a421efb1934d86d37f3 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x1366.jpg?h=e297842e0bb64f54daa153e841ad8f8f 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x1920.jpg?h=5104bc10cc91a3f8acf9f286436a1291 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x2560.jpg?h=7ad535c9d0f7288c3b8f0f9b620a46e2 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/c54d0709-4169-4bac-8331-8a09209b6f44_rwc_0x0x4800x2880x4800.jpg?h=b59f9b8fd80b01b2e255a44e4247151d 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">A High &amp; Lonesome Sound</div>
+                            <div class="custom2 preserve-whitespace">Large poster / Spring 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/illustration" data-context="pages" data-identity="id:p5e20d54b9e7e7209092c8e5876c7266375f1225c1b611d1e7e85f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x640.jpg?h=dcb1f15d54d956e6b682769657a44d7e 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1280.jpg?h=6c35edfc550d3cd10313f0216de72fbd 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1366.jpg?h=7e247673064a0620cd23258b4602c1ec 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/66afb991-c03d-465c-9508-95968831fe71_rwc_0x349x1920x1152x1920.jpg?h=1cd05969f7d81f3c3cb044ca93d2f08d 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x32.jpg" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg?h=482ae299c4001178a7b551290a2710ae" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x640.jpg?h=4818d994613852dd85f89265a08533fc 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1280.jpg?h=57e2485b6e53f5211e228c551415c2d7 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1366.jpg?h=4edc4200725b35ff6df88d497d39a8a4 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1920.jpg?h=ba7c7a30d080fd8a402df778e870d5a1 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg?h=482ae299c4001178a7b551290a2710ae 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/fa045500-05f7-4096-814d-3b5d4552aabe_rwc_0x580x1466x880x1466.jpg?h=482ae299c4001178a7b551290a2710ae 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Illustration</div>
+                            <div class="custom2 preserve-whitespace">Color and shape / 2017 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/quaranteen" data-context="pages" data-identity="id:p635ed8860354bcc00f3688938df7c200f1fe8201b29e3628d50b0">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x640.png?h=65c965e33691ab134477d4a94daefd2c 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/ea4cdf6d-1af7-49ed-bea2-2463a9f54b16_rwc_0x0x1070x642x1070.png?h=c2e1833035c416d66fd08b9eb972c60b 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x640.png?h=e61ec5ced5d35b89004b18256b466889 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/91580daa-c98f-4b6d-9de8-16ce3a8d659d_rwc_0x0x1070x642x1070.png?h=97874d2c6a5924d4acbbc228a74f71e3 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Quaranteen</div>
+                            <div class="custom2 preserve-whitespace">A Java program for quarantine isolation / Spring 2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/motion" data-context="pages" data-identity="id:p5fc210e87b6fcfca20a7dd718f0b82eec1d50ca1ca2503af148d9">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x640.gif?h=11b9b8a1b2aabae061005179b759618c 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/2fa5766f-ede2-42fd-a300-c88459196ed8_rwc_0x74x1025x615x1025.gif?h=48868b6316e59a5e9f04cfb415dadf16 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x32.gif" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x640.gif?h=3af1e7e611d50f111992d2fde15b3115 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/1af9a380-5a01-4ef6-95ae-3bbaa67bf88c_rwc_0x163x1000x600x1000.gif?h=93e58e4dc1d5530dab3e5a1facbdfcdc 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Motion and Animation</div>
+                            <div class="custom2 preserve-whitespace">Making things move / 2019 to present</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space has-rollover" href="https://bylee.work/blind-eye" data-context="pages" data-identity="id:p5dc5a570a28e6f7cc001adcf2be559b3c1724ec5a97eb17dcbbe4">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x3840.png?h=2fb44d4d8bfd62ff02eb2c3107f94f86" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x640.png?h=425fc0ade50e944738acdfb120529912 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x1280.png?h=a0f76d35cfaaa4461171a1e73d77f73d 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x1366.png?h=121131c01fbcef5b53e51213649fefe5 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x1920.png?h=12644dfa6c9928b3a7b831f5af2da1d0 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x2560.png?h=193f64be9e20e7dfbed6cf9cada30fde 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/9b73a56a-9e4d-4757-8948-4f5090d53064_rwc_0x2426x3840x2304x3840.png?h=2fb44d4d8bfd62ff02eb2c3107f94f86 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                            <div class="cover cover-normal has-rollover">
+
+            <img class="cover__img js-lazy" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x32.png" data-src="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x4320.png?h=1f5426cc2965d4bf0b72784416535b36" data-srcset="https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x640.png?h=6627f7ef657428a14caef222f95b23f9 640w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x1280.png?h=a411a59df4a1a55b6174e4eb91027fb1 1280w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x1366.png?h=d56f1650a0d8c4c968314c0c75b7b6f0 1366w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x1920.png?h=a0ddd1dc7110a4ed1187dd3dbd0d44cc 1920w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x2560.png?h=639b787b1b97c50a1c827004dd5b90ca 2560w, https://cdn.myportfolio.com/7251db90-4d40-4c71-b719-38118349926b/db350477-9fd8-4cf3-99c0-591b0998432e_rwc_0x0x4320x2592x4320.png?h=1f5426cc2965d4bf0b72784416535b36 5120w" data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(6000px / 2)">
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Turning a Blind Eye</div>
+                            <div class="custom2 preserve-whitespace">Data visualization / Fall 2019</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">↑</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"></path>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  © Miles Lee 2022. All rights reserved. Last updated December 2022
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":32,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5db221ce0a2d2ec30bac9c906847f4abc8fc85481cb16e1132de3","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false},"googleAnalytics":{"trackingCode":"UA-57221920-3","anonymization":false}};</script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/translations"></script>
+  <script type="text/javascript" src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/main.js"></script><div class="js-lightbox-wrap offscreen" id="lightbox-wrap">
+    
+  <div class="js-blocking" id="lightbox-blocking">
+    <span class="lightbox-spinner"></span>
+  </div>
+
+    <div class="js-lightbox-inner-wrap" id="lightbox-inner-wrap">
+      <div class="js-img-wrap" id="lightbox-img-wrap">
+        
+  <div class="lightbox-extra control prev js-control js-prev">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M36.8,36.4L30.3,30l6.5-6.4l-3.5-3.4l-10,9.8l10,9.8L36.8,36.4z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control next js-control js-next">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="60" height="60" viewBox="0 0 60 60" xml:space="preserve">
+      <circle class="lightbox-icon-bg" cx="30" cy="30" r="30"></circle>
+      <path class="lightbox-icon-arrow" d="M24.2,23.5l6.6,6.5l-6.6,6.5l3.6,3.5L37.8,30l-10.1-9.9L24.2,23.5z"></path>
+    </svg>
+  </div>
+
+        
+  <div class="lightbox-extra control close js-control js-close">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <circle class="lightbox-icon-bg" cx="50" cy="50" r="47.5"></circle>
+      <polygon class="lightbox-icon-close" points="64.5,39.8 60.2,35.5 50,45.7 39.8,35.5 35.5,39.8 45.7,50 35.5,60.2 39.8,64.5 50,54.3 60.2,64.5 64.5,60.2 54.3,50"></polygon>
+    </svg>
+  </div>
+
+        <div class="lightbox-contents js-contents"><div data-slide-id="0" class="js-slide offscreen"><div class="js-slide-content lightbox-content hidden">
+        <div class="grid__image-wrapper">
+          <img src="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1920.jpg" srcset="Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_600.jpg 600w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1200.jpg 1200w, Miles%20Lee%20-%20Sam%20Fox%20Calendar_files/a4e3b05d-fb83-40be-bbd7-6a1603b1a33c_rw_1920.jpg 1817w" sizes="(max-width: 1817px) 100vw, 1817px">
+        <div>
+      </div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>
